@@ -1,6 +1,6 @@
 project:
   type: book
-  output-dir: _site
+  output-dir: docs
   
 book:
   title: "Study on Marine Genetic Resources"
