@@ -50,7 +50,6 @@ In order to introduce the reader to the issues involved in patent data, we will 
 # fig-cap: A summary overview of first filings of INPADOC patent families at the USPTO, the European Patent Office and the Patent Cooperation Treaty that mention marine organisms (including model organisms). Applicants data excludes individuals.
 knitr::include_graphics("images/images2024/patents/Figure 2.1_any_marine.png")
 ```
-
 [Figure 45: A summary overview of first filings of INPADOC patent families at the USPTO, the European Patent Office and the Patent Cooperation Treaty that mention marine organisms (including model organisms). (Applicants data excludes individuals).]{style="font-size: 0.9em; color: grey;"}
 
 These organisms were associated with a total of 53,768 first filings (INPADOC patent families) between 1990 and 2021. Trends in first filings display an overall rising trend across this period before encountering a data cliff due to the lag times between the filing of an application and its publication (at least 24 months). This illustrates a major issue with patent data in the form of *timeliness*. In short, we are always observing historic activity with recent activity hidden from view due to lag times between filing and publication. In observing trends in first filings note that patent data for first filings always displays a data cliff at least three/four years prior to the present date and this should not be interpreted as representing a decline in activity.
@@ -72,7 +71,6 @@ These organisms were associated with a total of 53,768 first filings (INPADOC pa
 # fig-cap: A summary overview of global patent family members consisting of applications and grants involving marine organisms (including model organisms). Applicants data excludes individuals.
 knitr::include_graphics("images/images2024/patents/Figure 2.2 Families Dashboard.png")
 ```
-
 [Figure 46: A summary overview of global patent family members consisting of applications and grants involving marine organisms (including model organisms). (Applicants data excludes individuals).]{style="font-size: 0.9em; color: grey;"}
 
 In comparing [[**Figure *46***]{.underline}](#fig-patent-family-overview) with [[**Figure *45***]{.underline}](#fig-patent-overview) we can immediately detect a change of scale, notably in the graph displaying trends. This reflects the radical multiplier effects created by international patent instruments such as the Patent Cooperation Treaty and regional instruments such as the European Patent Convention. Under the Patent Cooperation Treaty an applicant can submit a single application which is then transmitted to multiple patent offices of their choice. The application will then be republished as an application in that country and, where relevant, may be republished as a patent grant. This change of scale can also clearly be seen in the ranked data for patent family countries and in this case refers to the countries, as markets, where protection is being sought.
@@ -92,7 +90,6 @@ An important purpose of this overview is to introduce different ways of counting
 # fig-cap: Rankings first filings of patent applications involving marine organisms from OBIS.
 knitr::include_graphics("images/images2024/patents/Figure 2.3 Taxonomy.png")
 ```
-
 [Figure 47: Rankings first filings of patent applications involving marine organisms from OBIS.]{style="font-size: 0.9em; color: grey;"}
 
 In considering [[**Figure *47***]{.underline}](#fig-patent-taxonomy) we are immediately struck by the prominence of fungi in the patent data, whereas we might ordinarily associate the marine environment with animals (Animalia), plants (Plantae) and bacteria. The presence of widespread and widely used fungi such as *Saccharomyces cerevisiae* and *Aspergillus niger*, *Aspergillus fumigatus* and plants such as *Beta vulgaris* (common beetroot) and *Beta vulgaris maritima* (sea beet) suggesting that something may be amiss with the data. It is only as we move further down the list towards *Cocos nucifera* (coconut) and the bioluminescent jellyfish *Aequorea victoria* that we move into more obviously marine territory. An issue here is the widespread use of organisms as research tools, such as *S. cerevisiae*, and the ubiquity of some organisms across environments making it difficult to clearly distinguish organisms by environment.
@@ -116,7 +113,6 @@ Following a similar approach to that used for the scientific literature, we can 
 # fig-cap: Rankings of first filings for marine only organisms and patent claims
 knitr::include_graphics("images/images2024/patents/Figure 2.5 marinenonly Taxonomy.png")
 ```
-
 [Figure 48: Rankings of first filings for marine only organisms and patent claims]{style="font-size: 0.9em; color: grey;"}
 
 [[**Figure *48***]{.underline}](#fig-patent-marineonly-taxonomy) reveals that applying this filter removes some of the major model organisms and research tools such as *S. cerevisiae* from the rankings thus improving the resolution of the data. Note, however, that in the process we will lose examples where a strain of such organisms were collected from a marine environment. We are, however, with the possible exception of some of the fungi in the list, more clearly in the territory of marine organisms through the application of this filter.
@@ -130,7 +126,6 @@ knitr::include_graphics("images/images2024/patents/Figure 2.5 marinenonly Taxono
 # fig-cap: Trends in first filings for marine only organisms (applicants data excludes individuals)
 knitr::include_graphics("images/images2024/patents/Figure 2.6 marineonly Overview.png")
 ```
-
 [Figure 49: Trends in first filings for marine only organisms (Applicants data excludes individuals).]{style="font-size: 0.9em; color: grey;"}
 
 [[**Figure *50***]{.underline}](#fig-patent-marineonly-familyfilings) displays global trends in demand linked to first filings in the form of demand for protection in multiple markets around the world.
@@ -142,7 +137,6 @@ knitr::include_graphics("images/images2024/patents/Figure 2.6 marineonly Overvie
 # fig-cap: Trends in global family members for marine only organisms (applicants data excludes individuals)
 knitr::include_graphics("images/images2024/patents/Figure 2.7 marineonly Families Dashboard.png")
 ```
-
 [Figure 50: Trends in global family members for marine only organisms (Applicants data excludes individuals).]{style="font-size: 0.9em; color: grey;"}
 
 In considering [[**Figure *50***]{.underline}](#fig-patent-marineonly-familyfilings) we can observe that activity has narrowed in terms of overall levels of activity to less than 15,000 publications per year and that both the relative country rankings and the applicants involved in global level activity have begun to shift.
@@ -158,7 +152,6 @@ We can go a step further by refining this data to species that have been recorde
 # fig-cap: Rankings of first filings for ABNJ organisms
 knitr::include_graphics("images/images2024/patents/Figure 2.8 abnj Taxonomy.png")
 ```
-
 [Figure 51: Rankings of first filings for ABNJ organisms]{style="font-size: 0.9em; color: grey;"}
 
 **Figure *52*** displays an overview of trends in activity for organisms that have been recorded in ABNJ.
@@ -170,7 +163,6 @@ knitr::include_graphics("images/images2024/patents/Figure 2.8 abnj Taxonomy.png"
 # fig-cap: Rankings of first filings for ABNJ organisms (applicants data excludes individuals who are inventors)
 knitr::include_graphics("images/images2024/patents/Figure 2.9 abnj Overview.png")
 ```
-
 [Figure 52: Rankings of first filings for ABNJ organisms (Applicants data excludes individuals).]{style="font-size: 0.9em; color: grey;"}
 
 In considering [[**Figure *52***]{.underline}](#fig-patent-abnj-trends), note that activity is less than 500 filings per year and is concentrated in Pharmaceuticals and Biotechnology. Data on applicants is also beginning to shift with companies such as Novozymes rather dramatically falling in the rankings based on first filings. A similar picture also begins to emerge with respect to global demand for protection in [[**Figure *53***]{.underline}](#fig-patent-abnj-families).
@@ -184,7 +176,6 @@ An important feature of patent data is that companies may rise and fall over tim
 # fig-cap: Rankings of Patent Family Members for ABNJ organisms (applicants data excludes individuals who are inventors)
 knitr::include_graphics("images/images2024/patents/Figure 2.10 abnj Families Dashboard.png")
 ```
-
 [Figure 53: Rankings of Patent Family Members for ABNJ organisms (Applicants data excludes individuals).]{style="font-size: 0.9em; color: grey;"}
 
 ### ABNJ Only
@@ -201,7 +192,6 @@ When ranked in terms of the appearance of an organism in the claims of patent do
 # fig-cap: Overview of ABNJ Only Organisms in Patent Filings and Patent Claims
 knitr::include_graphics("images/images2024/patents/Figure 2.11 abnjonly Taxonomy.png")
 ```
-
 [Figure 54: Overview of ABNJ Only Organisms in Patent Filings and Patent Claims]{style="font-size: 0.9em; color: grey;"}
 
 Turning now to trends in activity, [[**Figure *55***]{.underline}](#fig-patent-abnjonly-trends) reveals that filing activity involving marine organisms that may exist only in ABNJ is typically under 150 filings per year. Taking into account that the classification of ABNJ only organisms is dependent on the accuracy of OBIS data, in reality trends are likely to be somewhat lower than this already limited activity suggests. Nevertheless, while activity is limited there is a rising trend overall, bearing in mind the lag time with more recent data.
@@ -212,7 +202,6 @@ Turning now to trends in activity, [[**Figure *55***]{.underline}](#fig-patent-a
 # fig-cap: Overview of Trends for ABNJ Only Organisms in Patent Filings
 knitr::include_graphics("images/images2024/patents/Figure 2.12 abnjonly Overview.png")
 ```
-
 [Figure 55: Overview of Trends for ABNJ Only Organisms in Patent Filings]{style="font-size: 0.9em; color: grey;"}
 
 [[**Figure *56***]{.underline}](#fig-patent-abnjonly-family) displays overall global demand for patent protection linked to the first filings above. Again we observe a rising trend peaking at around 1,200 publications of applications and grants referencing these species globally.
@@ -223,7 +212,6 @@ knitr::include_graphics("images/images2024/patents/Figure 2.12 abnjonly Overview
 # fig-cap: Overview of Global Demand for Patent Protection involving ABNJ only organisms
 knitr::include_graphics("images/images2024/patents/Figure 2.13 abnjonly Families Dashboard.png")
 ```
-
 [Figure 56: Overview of Global Demand for Patent Protection involving ABNJ only organisms]{style="font-size: 0.9em; color: grey;"}
 
 ### Refining using Occurrence Records
@@ -233,19 +221,16 @@ The analysis of the ABNJ Only group presented above in [[**Figure 54**]{.underli
 One approach to this challenge is to identify a proxy metric that can assist with filtering the data. In the present research we have used a working ‘ABNJ only’ grouping of organisms identified using an OBIS snapshot based on recorded occurrences of an organism outside national jurisdiction. The use of occurrence records in definitional exercises offers a potential metric for assessing the status of an organism as belonging inside or outside an ABNJ grouping, that is occurrence counts. Table 7 displays the organisms within the ABNJ only group ranked by the number of occurrence records in ABNJ using the data from OBIS.
 
 [Table 7: The ABNJ Only grouping ranked on occurrence records]{style="font-size: 0.9em; color: grey;"}
-
 ```{r}
 #| echo: false
-#| label: fig-patent-abnjonly-occurrence-table
+##| label: fig-patent-abnjonly-occurrence-table
 knitr::include_graphics("images/images2024/patents_table_1.png")
 ```
 
-[Table 8: The tail of the ABNJ Only grouping ranked on occurrence records
-]{style="font-size: 0.9em; color: grey;"}
-
+[Table 8: The tail of the ABNJ Only grouping ranked on occurrence records]{style="font-size: 0.9em; color: grey;"}
 ```{r}
 #| echo: false
-#| label: fig-patent-abnjonly-table-end
+##| label: fig-patent-abnjonly-table-end
 knitr::include_graphics("images/images2024/patents_table_2.png")
 ```
 
@@ -259,7 +244,6 @@ For the present we will display the data for organisms with ten or more occurren
 # fig-cap: Overview of ABNJ Only Organisms in Patent Filings and Patent Claims (refined)
 knitr::include_graphics("images/images2024/patents/Figure 2.13 abnjonlyrefined Taxonomy.png")
 ```
-
 [Figure 57: Overview of ABNJ Only Organisms in Patent Filings and Patent Claims (refined)]{style="font-size: 0.9em; color: grey;"}
 
 [[**Figure *58***]{.underline}](#fig-patent-abnjonlyrefined-trends) displays trends in first filings for the refined set of ABNJ only organisms. This reveals that while there is a rising trend in first filings there are under 40 filings per year.
@@ -270,7 +254,6 @@ knitr::include_graphics("images/images2024/patents/Figure 2.13 abnjonlyrefined T
 # fig-cap: Overview of Trends for ABNJ Only Organisms in Patent Filings (refined)
 knitr::include_graphics("images/images2024/patents/Figure 2.14 abnjonlyrefined Overview.png")
 ```
-
 [Figure 58: Overview of Trends for ABNJ Only Organisms in Patent Filings (refined on occurrence counts)]{style="font-size: 0.9em; color: grey;"}
 
 [[**Figure *59***]{.underline}](#fig-patent-abnjonlyrefined-family) sets out trends in global demand for protection based on the first filings in [[**Figure *58***]{.underline}](#fig-patent-abnjonlyrefined-trends).
@@ -281,7 +264,6 @@ knitr::include_graphics("images/images2024/patents/Figure 2.14 abnjonlyrefined O
 # fig-cap: Overview of Global Demand for Patent Protection involving ABNJ only organisms (refined)
 knitr::include_graphics("images/images2024/patents/Figure 2.14 abnjonlyrefined Families.png")
 ```
-
 [Figure 59: Overview of Global Demand for Patent Protection involving ABNJ only organisms (refined on occurrence counts)]{style="font-size: 0.9em; color: grey;"}
 
 An interesting feature of the ABNJ refined grouping is that Universities, public research organisations and governments become more prominent in the data. For the University of California we observe activity in relation to the claimed potential use of the Gaussia luc luciferase enzyme from the copepod Gaussia princeps as part of an invention that claims to provide a treatment for the genetic neurological disorder known as Angelman Syndrome ([*WO2021035181A1*](https://www.lens.org/lens/patent/126-962-360-243-871/frontpage?l=en)). A second application made jointly with Dainton Biosciences makes extensive reference to the use of the Gaussia luc luciferase as part of an invention for the treatment of Parkinson’s disease ([*WO2020190970A1*](https://www.lens.org/lens/patent/121-315-817-437-658/fulltext?l=en)). The focus of the invention is a small-molecule inhibitor of pathogenic a-synuclein activity and the Gaussia luciferase is mentioned as a luciferase that can be used in a method for identifying a compound along with a luciferase from the deep sea bioluminescent shrimp *Oplophorus gracilirostris*. While the luciferases are not the central focus of the invention it demonstrates the broader importance of luciferases from the marine environment. A novel application concerning Diatom Based Vaccines was filed by the University of California and Synaptic Research in 2011 that claims a diatom comprising an antigen that is heterologous to the diatom or mixed with or attached to the diatom. In this case the focus appears to be on the use of the diatom as a delivery vehicle for antigens with a range of diatoms mentioned on the family level with *Thalassiosira pseudonana* (the first marine phytoplankton to be sequenced) as the preferred diatom with the ABNJ located diatom *Thalassiosira nordenskioeldii* appearing in the description ([*WO2013063388A1*](https://www.lens.org/lens/patent/194-578-800-326-874/frontpage?l=en)). However, this novel approach does not appear to have resulted in a significant patent family worldwide beyond a patent grant in the United States. This suggests the applicants did not move the claimed invention into production. However, the patent document is cited by 5 later filings and the wider scientific literature suggests significant interest in the use of diatoms in vaccinology among other fields of application[^patent_activity_for_marine_genetic_resources-8].
@@ -315,7 +297,6 @@ In total, across all data between 1990 and 2021 we identified 30,695 taxonomic a
 
 knitr::include_graphics("images/images2024/patents/sequences/seq_marine_taxonomy_dashnoard.png")
 ```
-
 [Figure 60: Overview of Marine Only Organisms Appearing in Patent Sequence Data]{style="font-size: 0.9em; color: grey;"}
 
 We identified a total of 1,833 taxonomic names in this grouping appearing in 3,571 patent families and 17,097 patent publications worldwide. Trends in activity for the marine only groupings are presented in [[**Figure 61**]{.underline}](#fig-patent-marine-seq-overview).
@@ -326,7 +307,6 @@ We identified a total of 1,833 taxonomic names in this grouping appearing in 3,5
 # fig-cap: Overview of Activity for Marine Only Organisms in Patent Sequence Listings
 knitr::include_graphics("images/images2024/patents/sequences/marine_seq_overview.png")
 ```
-
 [Figure 61: Overview of Activity for Marine Only Organisms in Patent Sequence Listings]{style="font-size: 0.9em; color: grey;"}
 
 In considering these results, as we might expect the top results are dominated by *Vibrio cholerae* followed by *Aequorea victoria* (the bioluminescent jellyfish) and the fungus *Trichoderma harzianum* discussed above*.* Note however that the number of first filings of patent families is relatively low and exhibits a peak of 219 filings in 2017 in the data to 2021. [[**Figure 61**]{.underline}](#fig-patent-marine-seq-overview) clearly demonstrates that there is a rising trend in the filing of patent applications that contain marine organisms in sequence listings. However, the number of filings is relatively modest and has remained modest over time when compared with other areas of patent activity.
@@ -339,7 +319,6 @@ As we filter the data to the ‘ABNJ’ grouping of organisms we identified a to
 # fig-cap: ABNJ Organisms in Patent Sequence Listings
 knitr::include_graphics("images/images2024/patents/sequences/abnj_seq_overview.png")
 ```
-
 [Figure 62: ABNJ Organisms in Patent Sequence Listings]{style="font-size: 0.9em; color: grey;"}
 
 As we move into the ABNJ grouping in sequence listings we observe the emergence of the abundant marine cyanobacteria *Trichodesmium erythraeum*, the archaeon *Thermoplasma acidophilum* (originally isolated in a coal refuse heap) and *Psychroflexus torquis* originally isolated from Antarctic sea ice along with the hydrocarbon degrading *Marinobacter hydrocarbonoclasticus* and the deep sea bacterium *Zunongwangia profunda* (Bowman et al. (1998), Qin et al. (2010)). As this suggests, access to sequence data while narrowing our view significantly, can also enrich the analysis by exposing novel organisms.
@@ -351,7 +330,6 @@ Finally, the sequence data for the ‘ABNJ only’ grouping of organisms narrows
 #| label: fig-patent-abnj-seq-overview-species
 knitr::include_graphics("images/images2024/patents/fig_63.png")
 ```
-
 [Figure 63: ABNJ Only Organisms in Patent Sequence Listings]{style="font-size: 0.9em; color: grey;"}
 
 [[**Figure *63***]{.underline}](#fig-patent-abnj-only-seq-overview) reveals that trends in first filings are now in the region of \~30 per year and fluctuate significantly from year to year. The top ranking species in the sequence listings in this data are the copepod *Gaussia princeps*, followed by the bioluminescent deep sea shrimp *Oplophorus gracilirostris*, the sea sponge *Suberites domuncula* and the red seabream *Pagrus major* and the fungus *Cladosporium herbarum.*
@@ -400,7 +378,6 @@ This broad typology continues to hold true even as our ability to interrogate an
 # fig-cap: Overview of Patent Places in the Description Sections of Patent Documents
 knitr::include_graphics("images/images2024/patents/Patent Places Overview.png")
 ```
-
 [Figure 64: Overview of Patent Places in the Description Sections of Patent Documents]{style="font-size: 0.9em; color: grey;"}
 
 In considering [[**Figure *64***]{.underline}](#fig-patent-places) we have chosen to display a selection of sentences from across the data that illustrates some of the issues involved in identifying activity from BBNJ. In some cases, such as line one in the Texts panel there is clear evidence of the collection of a sponge specimen using gardening shears from a named reef. It then needs to be determined whether Inner Fsar Reef falls inside the EEZ or is in ABNJ (Inner Fsar reef is in the Red Sea and therefore inside the EEZ). In this specific case, coordinates are also provided. However, in our experience reviewing patent documents this is very rare and coordinates may also be expressed in varying forms.
@@ -494,7 +471,6 @@ The patent description then goes on to provide examples of the nature and use of
 
 knitr::include_graphics("images/images2024/patents/Monosnap US_10280393_B2.pdf 2024-07-18 12-43-00.png")
 ```
-
 [Figure 65: A Ship Board Bioreactor]{style="font-size: 0.9em; color: grey;"}
 
 The figure is accompanied by the following description:
@@ -573,27 +549,27 @@ This patent application is part of a family with six members but does not, as fa
 
 Esterases are industrially important enzymes that break down ester bonds into alcohol and an acid and can be used in biorefinery applications such as biofuels. A late 1990s patent family from Recombinant Biocatalysis Inc ([*WO1997030160A1*](https://www.lens.org/lens/patent/194-284-808-956-754/fulltext?l=en)) focuses on esterases from newly identified polynucleotides and polypeptides[^patent_activity_for_marine_genetic_resources-20]. What is striking in this case is that the claimed polynucleotides were derived from multiple sources:
 
->    * The polynucleotides of this invention were originally recovered from genomic gene libraries derived from the following organisms:
-
->    * Staphylothermus marinus F 1 is a thermophilic sulfur archaea which was isolated in Vulcano, Italy. It grows optimally at 85°C (T~ma-~ = 98°C) at pH 6.5.
-
->    * Pyrodictium TAG1 1 is a thermophilic sulfur archaea which was isolated in the Middle Atlantic Ridge. It grows optimally at 103°C (T~max~ = 110°C) at pH 6.5. Archaeoglobus venificus SNP6 was isolated in the Middle Atlantic Ridge and grows optimally at 75 °C (T~max~ = 92 °C) at pH 6.9.
-
->    * Aquifex pyrophilus KOI 5a was isolated at Kolbeinsey Ridge, North of Iceland. This marine organism is a gram-negative, rod-shaped, strictly chemolithoautrophic, knall gas bacterium. It grows optimally at 85°C (T~max~ = 95°C) at pH 6.8.
-
->   * Ml ITL is a new species of Desulfurococcus which was isolated from Diamond Pool (formerly Jim’s Black Pool) in Yellowstone. The organism grows heterotrophically by fermentation of different organic materials (sulfur is not necessary) in grape-like aggregates optimally at 85 - 88°C in a low salt medium at pH 7.0.
-
->    * Thermococcus CL-2 was isolated in the North Cleft Segment of the Juan de Fuca Ridge from a severed alvinellid worm residing on a “black smoker” sulfϊde structure. This marine archaea forms pleomorphic cocci, and grows optimally at 88 °C.
-
->    * Aquifex VF5 was isolated at a beach in Vulcano, Italy. This marine organism is a gram-negative, rod-shaped, strictly chemolithoautotrophic, knall gas bacterium. It grows optimally at 85°C (T~ma-~ = 95°C) at pH 6.8.
-
->    * Teredinibacter (pure) is an endosymbiont of the shipworm Bankia gouldi. The organism has straight to slightly bent 5-10 μm rods, and forms spiral cells as stationary phase is met. The organism was described in Science (1983) 22: 1401-1403. It grows optimally at 30° C at pH 8.0.
-
->    * Archaeoglobus fulgidus VClβ was isolated in Vulcano, Italy. The organism grows optimally at 85 °C (T~ma~, = 92 °C) at pH 7.0.
-
->    * Sulfolobus solfataricus PI grows optimally at 85°C (T~ma-~ = 87°C) at pH 2.0. ccor ng y, t e po ynuc eot es an enzymes enco e t ereby are dent ied by the organism from which they were isolated, and are sometimes hereinafter referred to as F1/12LC (Figure 1 and SEQ ID NOS:23 and 33), TAG11/17LC (Figure 2 and SEQ ID NOS:24 and 34), SNP6/24LC (Figure 3 and SEQ ID NOS:25 and 35), AqP/28LC (Figure 4 and SEQ ID NOS:26 and 36), M11TL/29L (Figure 5 and SEQ ID NOS:27 and 37), CL-2/30LC (Figure 6 and SEQ ID NOS:28 and 38), VF5/34LC (Figure 7 and SEQ ID NOS: 29 and 39), Trb/42L (Figure 8 and SEQ ID NOS: 30 and 40). VC16/16MC (Figure 9 and SEQ ID NOS: 31 and 41) and P1/8LC (Figure 10 and SEQ ID NOS: 32 and 42).” ([*WO1997030160A1*](https://www.lens.org/lens/patent/194-284-808-956-754/fulltext?l=en))
-    
 [^patent_activity_for_marine_genetic_resources-20]: INPADOC Family ID 1336469, PATSTAT Spring 2024 edition.
+
+> -   The polynucleotides of this invention were originally recovered from genomic gene libraries derived from the following organisms:
+
+> -   Staphylothermus marinus F 1 is a thermophilic sulfur archaea which was isolated in Vulcano, Italy. It grows optimally at 85°C (T~ma-~ = 98°C) at pH 6.5.
+
+> -   Pyrodictium TAG1 1 is a thermophilic sulfur archaea which was isolated in the Middle Atlantic Ridge. It grows optimally at 103°C (T~max~ = 110°C) at pH 6.5. Archaeoglobus venificus SNP6 was isolated in the Middle Atlantic Ridge and grows optimally at 75 °C (T~max~ = 92 °C) at pH 6.9.
+
+> -   Aquifex pyrophilus KOI 5a was isolated at Kolbeinsey Ridge, North of Iceland. This marine organism is a gram-negative, rod-shaped, strictly chemolithoautrophic, knall gas bacterium. It grows optimally at 85°C (T~max~ = 95°C) at pH 6.8.
+
+> -   Ml ITL is a new species of Desulfurococcus which was isolated from Diamond Pool (formerly Jim’s Black Pool) in Yellowstone. The organism grows heterotrophically by fermentation of different organic materials (sulfur is not necessary) in grape-like aggregates optimally at 85 - 88°C in a low salt medium at pH 7.0.
+
+> -   Thermococcus CL-2 was isolated in the North Cleft Segment of the Juan de Fuca Ridge from a severed alvinellid worm residing on a “black smoker” sulfϊde structure. This marine archaea forms pleomorphic cocci, and grows optimally at 88 °C.
+
+> -   Aquifex VF5 was isolated at a beach in Vulcano, Italy. This marine organism is a gram-negative, rod-shaped, strictly chemolithoautotrophic, knall gas bacterium. It grows optimally at 85°C (T~ma-~ = 95°C) at pH 6.8.
+
+> -   Teredinibacter (pure) is an endosymbiont of the shipworm Bankia gouldi. The organism has straight to slightly bent 5-10 μm rods, and forms spiral cells as stationary phase is met. The organism was described in Science (1983) 22: 1401-1403. It grows optimally at 30° C at pH 8.0.
+
+> -   Archaeoglobus fulgidus VClβ was isolated in Vulcano, Italy. The organism grows optimally at 85 °C (T~ma~, = 92 °C) at pH 7.0.
+
+> -   Sulfolobus solfataricus PI grows optimally at 85°C (T~ma-~ = 87°C) at pH 2.0. ccor ng y, t e po ynuc eot es an enzymes enco e t ereby are dent ied by the organism from which they were isolated, and are sometimes hereinafter referred to as F1/12LC (Figure 1 and SEQ ID NOS:23 and 33), TAG11/17LC (Figure 2 and SEQ ID NOS:24 and 34), SNP6/24LC (Figure 3 and SEQ ID NOS:25 and 35), AqP/28LC (Figure 4 and SEQ ID NOS:26 and 36), M11TL/29L (Figure 5 and SEQ ID NOS:27 and 37), CL-2/30LC (Figure 6 and SEQ ID NOS:28 and 38), VF5/34LC (Figure 7 and SEQ ID NOS: 29 and 39), Trb/42L (Figure 8 and SEQ ID NOS: 30 and 40). VC16/16MC (Figure 9 and SEQ ID NOS: 31 and 41) and P1/8LC (Figure 10 and SEQ ID NOS: 32 and 42).” ([*WO1997030160A1*](https://www.lens.org/lens/patent/194-284-808-956-754/fulltext?l=en))
 
 We observe here that there are two ABNJ sources (Pyrodictium TAG1 and Thermococcus CL-2) as well as EEZ and terrestrial aquatic sources (Vulcano and Yellowstone national park which are also the source of famous enzymes from *Sulfolobus solfataricus* and *Thermus aquaticus* respectively). The patent application claims:
 
@@ -763,7 +739,7 @@ While the focus of the invention is clearly on a modified *Pyrococcus abyssi* th
 
 The application claims:
 
->“A polymerase comprising an amino acid sequence that is at least 80% identical to a continuous 500 amino acid sequence within SEQ ID NO: 1; comprising the following amino acids:
+> “A polymerase comprising an amino acid sequence that is at least 80% identical to a continuous 500 amino acid sequence within SEQ ID NO: 1; comprising the following amino acids:
 
 > -   an alanine, serine, or histidine, at amino acid position 409 or any amino acid that is functionally equivalent to the amino acid position 409;
 
@@ -845,9 +821,9 @@ The application refers to many bacteria which may be included in the invention, 
 
 *Tepidibacter formici* is listed as a sulfur oxidizing bacteria which may be used in the invention:
 
-> *   "*Tepidibacter formici* genes, GenBank accession number JQ670743
+> -   "*Tepidibacter formici* genes, GenBank accession number JQ670743
 
-> *   They are sporforming Chemoheterotrophic germs. They may grow in the range of 2 to 6% salt concentration, but the optimal concentration is 3%. The pH range for growth is 5 to 8, and the organic matters (sugar, organic acids) are used as nutrition for growth (related thesis: Urios L, Cueff V, Pignet P, and Barbier G. “*Tepidibacter formici* genes sp. *nov.,* a novel spore-forming bacterium isolated from a Mid-Atlantic Ridge hydrothermal vent”, International Journal of Systematic and Evolutionary Microbiology, 2004, 54, pages 439-443)"
+> -   They are sporforming Chemoheterotrophic germs. They may grow in the range of 2 to 6% salt concentration, but the optimal concentration is 3%. The pH range for growth is 5 to 8, and the organic matters (sugar, organic acids) are used as nutrition for growth (related thesis: Urios L, Cueff V, Pignet P, and Barbier G. “*Tepidibacter formici* genes sp. *nov.,* a novel spore-forming bacterium isolated from a Mid-Atlantic Ridge hydrothermal vent”, International Journal of Systematic and Evolutionary Microbiology, 2004, 54, pages 439-443)"
 
 Caminibacillus sp. is also listed as a potential sulfating bacteria which may be used in the invention:
 

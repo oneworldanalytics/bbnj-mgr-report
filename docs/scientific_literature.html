@@ -278,22 +278,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="research-on-marine-biodiversity">Research on Marine Biodiversity</h2>
 <p>For the purposes of this research, we assume that published research on marine biodiversity typically references organisms using either taxonomic names or common (vernacular) names. The Biodiversity Graph is a citation graph of the scientific literature. Thus, it is well-suited to offer an overview of research on marine biodiversity. It is built upon publications that reference taxonomic names and the ensuing citation networks derived from those publications.</p>
 <p>A key issue highlighted in the 2014 report ‘<em>Valuing the Deep</em>’and subsequent research is the challenge of identifying which organisms occur solely in marine environments, which are found in both marine and other environments, and which organisms are not marine at all. Recent innovations at OBIS<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, based on contributions from the WoRMS database<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, introduce fields identifying whether an organism among the 116 million records is found in marine, brackish, freshwater, or terrestrial environments. <em>Table 1</em> provides a summary of this data. Using these indicators, we can estimate the number of organisms by rank that, according to OBIS data, are exclusively observed in the marine environment or are ‘marine only’ as they will be described below. As we will see, while this categorisation is far from perfect, it is useful for the purposes of the present study.</p>
+<p><span style="font-size: 0.9em; color: grey;">Table 1: Marine Organisms in OBIS by Taxonomic Rank and Habitat</span></p>
 <div class="cell">
-<div id="tbl-marine-obis" class="cell quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-marine-obis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2.1: Marine Organisms in OBIS by Taxonomic Rank and Habitat
-</figcaption>
-<div aria-describedby="tbl-marine-obis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
 <p><img src="images/images2024/images-tables/table-1-1.png" class="img-fluid figure-img" width="958"></p>
 </figure>
 </div>
-</div>
-</div>
-</figure>
 </div>
 </div>
 <p>It is important to emphasise that classifying an organism as “marine only” based on the available data in OBIS does not necessarily mean that the organism is exclusively found in marine environments. Instead, this calculated measure aids in excluding a significant number of organisms known to inhabit non-marine environments, thus refining the scope of the analysis. Furthermore, higher-order taxonomic ranks—such as phyla, families, and genera—are more likely to encompass organisms found in multiple environments. As a result, we cite these for illustration but centre our analysis on the species level. For our purposes, the species level refers solely to a binomial taxonomic name. It does not incorporate details like the taxonomic authority. This is largely because many works outside the taxonomic community use binomials and often omit details such as the taxonomic authority (the name of the individual or individuals who first validly published the name). Those familiar with the NCBI taxonomy may encounter some variation from their expectations as while it is widely used, it lacks taxonomic authority.</p>
@@ -372,103 +364,103 @@ Table&nbsp;2.1: Marine Organisms in OBIS by Taxonomic Rank and Habitat
 <p><a href="#fig-marine-affiliations"><u><strong>Figure <em>8</em></strong></u></a> demonstrates that the publication of research on marine biodiversity is now widely distributed around the world with discernible hot-spots of activity in all major world regions, with hubs of activity present in the United States, Western Europe and East Asia.</p>
 <p>Marine scientific research frequently involves networks of collaboration between researchers based in different organisations and different countries. The promotion of international partnerships and collaboration is a common priority for research organisations. Mapping these collaborations allows us to visualise networks of dominant actors within marine research, as shown in <a href="#fig-network_1"><u><strong>Figure <em>9</em></strong></u></a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="160" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 159;"><span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a>new_inst <span class="op">=</span> <span class="cf">await</span> <span class="fu">FileAttachment</span>(<span class="st">"data/inst_network_june.json"</span>)<span class="op">.</span><span class="fu">json</span>()<span class="op">;</span></span>
-<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a>inst_code <span class="op">=</span> <span class="kw">function</span>() {</span>
-<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> [option<span class="op">,</span>myChart]<span class="op">=</span><span class="kw">this</span><span class="op">.</span><span class="fu">getVars</span>()</span>
-<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> option<span class="op">;</span></span>
-<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a>    myChart<span class="op">.</span><span class="fu">showLoading</span>()<span class="op">;</span></span>
-<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> graph <span class="op">=</span> new_inst<span class="op">;</span></span>
-<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a>     <span class="cf">if</span> (<span class="op">!</span>graph <span class="op">||</span> <span class="op">!</span>graph<span class="op">.</span><span class="at">nodes</span> <span class="op">||</span> <span class="op">!</span>graph<span class="op">.</span><span class="at">links</span> <span class="op">||</span> <span class="op">!</span>graph<span class="op">.</span><span class="at">categories</span>) {</span>
-<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">"Graph data is missing or malformed"</span>)<span class="op">;</span></span>
-<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span><span class="op">;</span></span>
-<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a>    myChart<span class="op">.</span><span class="fu">hideLoading</span>()<span class="op">;</span></span>
-<span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a>    graph<span class="op">.</span><span class="at">nodes</span><span class="op">.</span><span class="fu">forEach</span>(<span class="kw">function</span>(node) {</span>
-<span id="cb2-178"><a href="#cb2-178" aria-hidden="true" tabindex="-1"></a>        node<span class="op">.</span><span class="at">label</span> <span class="op">=</span> {</span>
-<span id="cb2-179"><a href="#cb2-179" aria-hidden="true" tabindex="-1"></a>            <span class="dt">show</span><span class="op">:</span> node<span class="op">.</span><span class="at">symbolSize</span> <span class="op">&gt;</span> <span class="dv">16</span></span>
-<span id="cb2-180"><a href="#cb2-180" aria-hidden="true" tabindex="-1"></a>        }<span class="op">;</span></span>
-<span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
-<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a>    option <span class="op">=</span> {</span>
-<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a>        <span class="dt">tooltip</span><span class="op">:</span> {}<span class="op">,</span></span>
-<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a>        <span class="dt">legend</span><span class="op">:</span> {</span>
-<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a>    <span class="dt">selectedMode</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span><span class="co">//'multiple',</span></span>
-<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a>    <span class="co">// hoverLink: false,</span></span>
-<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a>    <span class="dt">data</span><span class="op">:</span> graph<span class="op">.</span><span class="at">categories</span><span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(a) {</span>
-<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> [<span class="st">"AU"</span><span class="op">,</span> <span class="st">"CN"</span><span class="op">,</span> <span class="st">"FR"</span><span class="op">,</span> <span class="st">"Japan"</span><span class="op">,</span> <span class="st">"GB"</span><span class="op">,</span> <span class="st">"US"</span>  ]<span class="op">.</span><span class="fu">includes</span>(a<span class="op">.</span><span class="at">name</span>)<span class="op">;</span></span>
-<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a>    })<span class="op">.</span><span class="fu">map</span>(<span class="kw">function</span>(a) {</span>
-<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> a<span class="op">.</span><span class="at">name</span><span class="op">;</span></span>
-<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
-<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a>    <span class="dt">left</span><span class="op">:</span> <span class="st">'left'</span></span>
-<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a>}<span class="op">,</span></span>
-<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a>        <span class="dt">animation</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
-<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a>        <span class="dt">series</span><span class="op">:</span> [{</span>
-<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a>            <span class="dt">name</span><span class="op">:</span> <span class="st">'Institution'</span><span class="op">,</span></span>
-<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a>            <span class="dt">type</span><span class="op">:</span> <span class="st">'graph'</span><span class="op">,</span></span>
-<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a>            <span class="dt">layout</span><span class="op">:</span> <span class="st">'force'</span><span class="op">,</span></span>
-<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a>            <span class="dt">data</span><span class="op">:</span> graph<span class="op">.</span><span class="at">nodes</span><span class="op">,</span></span>
-<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a>            <span class="dt">links</span><span class="op">:</span> graph<span class="op">.</span><span class="at">links</span><span class="op">,</span></span>
-<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a>            <span class="dt">categories</span><span class="op">:</span> graph<span class="op">.</span><span class="at">categories</span><span class="op">,</span></span>
-<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a>            <span class="dt">roam</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a>            <span class="dt">scaleLimit</span><span class="op">:</span> {</span>
-<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a>            <span class="dt">min</span><span class="op">:</span> <span class="fl">0.8</span><span class="op">,</span> <span class="co">// minimum zoom level (0.5 means the chart can be zoomed out to half its original size)</span></span>
-<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a>            <span class="dt">max</span><span class="op">:</span> <span class="dv">3</span>   <span class="co">// maximum zoom level (2 means the chart can be zoomed in to twice its original size)</span></span>
-<span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
-<span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a>            <span class="dt">zoom</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
-<span id="cb2-209"><a href="#cb2-209" aria-hidden="true" tabindex="-1"></a>            <span class="dt">label</span><span class="op">:</span> {</span>
-<span id="cb2-210"><a href="#cb2-210" aria-hidden="true" tabindex="-1"></a>                <span class="dt">position</span><span class="op">:</span> <span class="st">'right'</span><span class="op">,</span></span>
-<span id="cb2-211"><a href="#cb2-211" aria-hidden="true" tabindex="-1"></a>                <span class="dt">formatter</span><span class="op">:</span> <span class="st">'{b}'</span><span class="op">,</span></span>
-<span id="cb2-212"><a href="#cb2-212" aria-hidden="true" tabindex="-1"></a>                <span class="dt">opacity</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
-<span id="cb2-213"><a href="#cb2-213" aria-hidden="true" tabindex="-1"></a>                <span class="dt">backgroundColor</span><span class="op">:</span> <span class="st">'#fff'</span><span class="op">,</span> </span>
-<span id="cb2-214"><a href="#cb2-214" aria-hidden="true" tabindex="-1"></a>                <span class="dt">borderColor</span><span class="op">:</span> <span class="st">'#fff'</span><span class="op">,</span>  <span class="co">// Add border to labels</span></span>
-<span id="cb2-215"><a href="#cb2-215" aria-hidden="true" tabindex="-1"></a>                <span class="dt">borderWidth</span><span class="op">:</span> <span class="dv">3</span>  <span class="co">// Set border width</span></span>
-<span id="cb2-216"><a href="#cb2-216" aria-hidden="true" tabindex="-1"></a>                    <span class="co">//          rich: {</span></span>
-<span id="cb2-217"><a href="#cb2-217" aria-hidden="true" tabindex="-1"></a>                <span class="co">//    a: {</span></span>
-<span id="cb2-218"><a href="#cb2-218" aria-hidden="true" tabindex="-1"></a>                 <span class="co">//       backgroundColor: '#fff',</span></span>
-<span id="cb2-219"><a href="#cb2-219" aria-hidden="true" tabindex="-1"></a>                <span class="co">////        borderColor: '#fff',</span></span>
-<span id="cb2-220"><a href="#cb2-220" aria-hidden="true" tabindex="-1"></a>                 <span class="co">//       borderWidth: 0.9,</span></span>
-<span id="cb2-221"><a href="#cb2-221" aria-hidden="true" tabindex="-1"></a>                   <span class="co">//     borderRadius: 5,  // Set border radius for rounded corners</span></span>
-<span id="cb2-222"><a href="#cb2-222" aria-hidden="true" tabindex="-1"></a>                     <span class="co">//   padding: [2, 4]  // Add padding to labels</span></span>
-<span id="cb2-223"><a href="#cb2-223" aria-hidden="true" tabindex="-1"></a>                <span class="co">//    }</span></span>
-<span id="cb2-224"><a href="#cb2-224" aria-hidden="true" tabindex="-1"></a>                <span class="co">//}</span></span>
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="157" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 156;"><span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a>new_inst <span class="op">=</span> <span class="cf">await</span> <span class="fu">FileAttachment</span>(<span class="st">"data/inst_network_june.json"</span>)<span class="op">.</span><span class="fu">json</span>()<span class="op">;</span></span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a>inst_code <span class="op">=</span> <span class="kw">function</span>() {</span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> [option<span class="op">,</span>myChart]<span class="op">=</span><span class="kw">this</span><span class="op">.</span><span class="fu">getVars</span>()</span>
+<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> option<span class="op">;</span></span>
+<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a>    myChart<span class="op">.</span><span class="fu">showLoading</span>()<span class="op">;</span></span>
+<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> graph <span class="op">=</span> new_inst<span class="op">;</span></span>
+<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a>     <span class="cf">if</span> (<span class="op">!</span>graph <span class="op">||</span> <span class="op">!</span>graph<span class="op">.</span><span class="at">nodes</span> <span class="op">||</span> <span class="op">!</span>graph<span class="op">.</span><span class="at">links</span> <span class="op">||</span> <span class="op">!</span>graph<span class="op">.</span><span class="at">categories</span>) {</span>
+<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">"Graph data is missing or malformed"</span>)<span class="op">;</span></span>
+<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a>    myChart<span class="op">.</span><span class="fu">hideLoading</span>()<span class="op">;</span></span>
+<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a>    graph<span class="op">.</span><span class="at">nodes</span><span class="op">.</span><span class="fu">forEach</span>(<span class="kw">function</span>(node) {</span>
+<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a>        node<span class="op">.</span><span class="at">label</span> <span class="op">=</span> {</span>
+<span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a>            <span class="dt">show</span><span class="op">:</span> node<span class="op">.</span><span class="at">symbolSize</span> <span class="op">&gt;</span> <span class="dv">16</span></span>
+<span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a>        }<span class="op">;</span></span>
+<span id="cb2-178"><a href="#cb2-178" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb2-179"><a href="#cb2-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-180"><a href="#cb2-180" aria-hidden="true" tabindex="-1"></a>    option <span class="op">=</span> {</span>
+<span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a>        <span class="dt">tooltip</span><span class="op">:</span> {}<span class="op">,</span></span>
+<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a>        <span class="dt">legend</span><span class="op">:</span> {</span>
+<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a>    <span class="dt">selectedMode</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span><span class="co">//'multiple',</span></span>
+<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a>    <span class="co">// hoverLink: false,</span></span>
+<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a>    <span class="dt">data</span><span class="op">:</span> graph<span class="op">.</span><span class="at">categories</span><span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(a) {</span>
+<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> [<span class="st">"AU"</span><span class="op">,</span> <span class="st">"CN"</span><span class="op">,</span> <span class="st">"FR"</span><span class="op">,</span> <span class="st">"Japan"</span><span class="op">,</span> <span class="st">"GB"</span><span class="op">,</span> <span class="st">"US"</span>  ]<span class="op">.</span><span class="fu">includes</span>(a<span class="op">.</span><span class="at">name</span>)<span class="op">;</span></span>
+<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a>    })<span class="op">.</span><span class="fu">map</span>(<span class="kw">function</span>(a) {</span>
+<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> a<span class="op">.</span><span class="at">name</span><span class="op">;</span></span>
+<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
+<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a>    <span class="dt">left</span><span class="op">:</span> <span class="st">'left'</span></span>
+<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a>}<span class="op">,</span></span>
+<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a>        <span class="dt">animation</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a>        <span class="dt">series</span><span class="op">:</span> [{</span>
+<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a>            <span class="dt">name</span><span class="op">:</span> <span class="st">'Institution'</span><span class="op">,</span></span>
+<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a>            <span class="dt">type</span><span class="op">:</span> <span class="st">'graph'</span><span class="op">,</span></span>
+<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a>            <span class="dt">layout</span><span class="op">:</span> <span class="st">'force'</span><span class="op">,</span></span>
+<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a>            <span class="dt">data</span><span class="op">:</span> graph<span class="op">.</span><span class="at">nodes</span><span class="op">,</span></span>
+<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a>            <span class="dt">links</span><span class="op">:</span> graph<span class="op">.</span><span class="at">links</span><span class="op">,</span></span>
+<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a>            <span class="dt">categories</span><span class="op">:</span> graph<span class="op">.</span><span class="at">categories</span><span class="op">,</span></span>
+<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a>            <span class="dt">roam</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a>            <span class="dt">scaleLimit</span><span class="op">:</span> {</span>
+<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a>            <span class="dt">min</span><span class="op">:</span> <span class="fl">0.8</span><span class="op">,</span> <span class="co">// minimum zoom level (0.5 means the chart can be zoomed out to half its original size)</span></span>
+<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a>            <span class="dt">max</span><span class="op">:</span> <span class="dv">3</span>   <span class="co">// maximum zoom level (2 means the chart can be zoomed in to twice its original size)</span></span>
+<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a>            <span class="dt">zoom</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a>            <span class="dt">label</span><span class="op">:</span> {</span>
+<span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a>                <span class="dt">position</span><span class="op">:</span> <span class="st">'right'</span><span class="op">,</span></span>
+<span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a>                <span class="dt">formatter</span><span class="op">:</span> <span class="st">'{b}'</span><span class="op">,</span></span>
+<span id="cb2-209"><a href="#cb2-209" aria-hidden="true" tabindex="-1"></a>                <span class="dt">opacity</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb2-210"><a href="#cb2-210" aria-hidden="true" tabindex="-1"></a>                <span class="dt">backgroundColor</span><span class="op">:</span> <span class="st">'#fff'</span><span class="op">,</span> </span>
+<span id="cb2-211"><a href="#cb2-211" aria-hidden="true" tabindex="-1"></a>                <span class="dt">borderColor</span><span class="op">:</span> <span class="st">'#fff'</span><span class="op">,</span>  <span class="co">// Add border to labels</span></span>
+<span id="cb2-212"><a href="#cb2-212" aria-hidden="true" tabindex="-1"></a>                <span class="dt">borderWidth</span><span class="op">:</span> <span class="dv">3</span>  <span class="co">// Set border width</span></span>
+<span id="cb2-213"><a href="#cb2-213" aria-hidden="true" tabindex="-1"></a>                    <span class="co">//          rich: {</span></span>
+<span id="cb2-214"><a href="#cb2-214" aria-hidden="true" tabindex="-1"></a>                <span class="co">//    a: {</span></span>
+<span id="cb2-215"><a href="#cb2-215" aria-hidden="true" tabindex="-1"></a>                 <span class="co">//       backgroundColor: '#fff',</span></span>
+<span id="cb2-216"><a href="#cb2-216" aria-hidden="true" tabindex="-1"></a>                <span class="co">////        borderColor: '#fff',</span></span>
+<span id="cb2-217"><a href="#cb2-217" aria-hidden="true" tabindex="-1"></a>                 <span class="co">//       borderWidth: 0.9,</span></span>
+<span id="cb2-218"><a href="#cb2-218" aria-hidden="true" tabindex="-1"></a>                   <span class="co">//     borderRadius: 5,  // Set border radius for rounded corners</span></span>
+<span id="cb2-219"><a href="#cb2-219" aria-hidden="true" tabindex="-1"></a>                     <span class="co">//   padding: [2, 4]  // Add padding to labels</span></span>
+<span id="cb2-220"><a href="#cb2-220" aria-hidden="true" tabindex="-1"></a>                <span class="co">//    }</span></span>
+<span id="cb2-221"><a href="#cb2-221" aria-hidden="true" tabindex="-1"></a>                <span class="co">//}</span></span>
+<span id="cb2-222"><a href="#cb2-222" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb2-223"><a href="#cb2-223" aria-hidden="true" tabindex="-1"></a>            <span class="dt">labelLayout</span><span class="op">:</span> {</span>
+<span id="cb2-224"><a href="#cb2-224" aria-hidden="true" tabindex="-1"></a>            <span class="dt">hideOverlap</span><span class="op">:</span> <span class="kw">true</span></span>
 <span id="cb2-225"><a href="#cb2-225" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
-<span id="cb2-226"><a href="#cb2-226" aria-hidden="true" tabindex="-1"></a>            <span class="dt">labelLayout</span><span class="op">:</span> {</span>
-<span id="cb2-227"><a href="#cb2-227" aria-hidden="true" tabindex="-1"></a>            <span class="dt">hideOverlap</span><span class="op">:</span> <span class="kw">true</span></span>
-<span id="cb2-228"><a href="#cb2-228" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
-<span id="cb2-229"><a href="#cb2-229" aria-hidden="true" tabindex="-1"></a>            <span class="dt">lineStyle</span><span class="op">:</span> {</span>
-<span id="cb2-230"><a href="#cb2-230" aria-hidden="true" tabindex="-1"></a>                <span class="dt">color</span><span class="op">:</span> <span class="st">'source'</span><span class="op">,</span></span>
-<span id="cb2-231"><a href="#cb2-231" aria-hidden="true" tabindex="-1"></a>                <span class="dt">curveness</span><span class="op">:</span> <span class="fl">0.3</span><span class="op">,</span> </span>
-<span id="cb2-232"><a href="#cb2-232" aria-hidden="true" tabindex="-1"></a>                <span class="dt">opacity</span><span class="op">:</span> <span class="fl">0.1</span></span>
-<span id="cb2-233"><a href="#cb2-233" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
-<span id="cb2-234"><a href="#cb2-234" aria-hidden="true" tabindex="-1"></a>            <span class="dt">force</span><span class="op">:</span> {</span>
-<span id="cb2-235"><a href="#cb2-235" aria-hidden="true" tabindex="-1"></a>              <span class="dt">repulsion</span><span class="op">:</span> [<span class="dv">600</span><span class="op">,</span> <span class="dv">1200</span>]<span class="op">,</span></span>
-<span id="cb2-236"><a href="#cb2-236" aria-hidden="true" tabindex="-1"></a>              <span class="dt">edgeLength</span><span class="op">:</span> [<span class="dv">200</span><span class="op">,</span> <span class="dv">600</span>]</span>
-<span id="cb2-237"><a href="#cb2-237" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
-<span id="cb2-238"><a href="#cb2-238" aria-hidden="true" tabindex="-1"></a>            <span class="dt">emphasis</span><span class="op">:</span> {</span>
-<span id="cb2-239"><a href="#cb2-239" aria-hidden="true" tabindex="-1"></a>                <span class="dt">focus</span><span class="op">:</span> <span class="st">'adjacency'</span><span class="op">,</span></span>
-<span id="cb2-240"><a href="#cb2-240" aria-hidden="true" tabindex="-1"></a>                <span class="dt">lineStyle</span><span class="op">:</span> {</span>
-<span id="cb2-241"><a href="#cb2-241" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">width</span><span class="op">:</span> <span class="dv">10</span></span>
-<span id="cb2-242"><a href="#cb2-242" aria-hidden="true" tabindex="-1"></a>                }<span class="op">,</span></span>
-<span id="cb2-243"><a href="#cb2-243" aria-hidden="true" tabindex="-1"></a>                 <span class="dt">itemStyle</span><span class="op">:</span> {</span>
-<span id="cb2-244"><a href="#cb2-244" aria-hidden="true" tabindex="-1"></a>        <span class="dt">opacity</span><span class="op">:</span> <span class="dv">1</span></span>
-<span id="cb2-245"><a href="#cb2-245" aria-hidden="true" tabindex="-1"></a>                 }<span class="op">,</span></span>
-<span id="cb2-246"><a href="#cb2-246" aria-hidden="true" tabindex="-1"></a>            }</span>
-<span id="cb2-247"><a href="#cb2-247" aria-hidden="true" tabindex="-1"></a>        }]</span>
-<span id="cb2-248"><a href="#cb2-248" aria-hidden="true" tabindex="-1"></a>    }<span class="op">;</span></span>
-<span id="cb2-249"><a href="#cb2-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-250"><a href="#cb2-250" aria-hidden="true" tabindex="-1"></a>    option <span class="op">&amp;&amp;</span> myChart<span class="op">.</span><span class="fu">setOption</span>(option)<span class="op">;</span></span>
-<span id="cb2-251"><a href="#cb2-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-252"><a href="#cb2-252" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-253"><a href="#cb2-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-254"><a href="#cb2-254" aria-hidden="true" tabindex="-1"></a><span class="kw">new</span> <span class="fu">EchartsRunner</span>()</span>
-<span id="cb2-255"><a href="#cb2-255" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">addCodes</span>(inst_code)</span>
-<span id="cb2-256"><a href="#cb2-256" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">show</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-226"><a href="#cb2-226" aria-hidden="true" tabindex="-1"></a>            <span class="dt">lineStyle</span><span class="op">:</span> {</span>
+<span id="cb2-227"><a href="#cb2-227" aria-hidden="true" tabindex="-1"></a>                <span class="dt">color</span><span class="op">:</span> <span class="st">'source'</span><span class="op">,</span></span>
+<span id="cb2-228"><a href="#cb2-228" aria-hidden="true" tabindex="-1"></a>                <span class="dt">curveness</span><span class="op">:</span> <span class="fl">0.3</span><span class="op">,</span> </span>
+<span id="cb2-229"><a href="#cb2-229" aria-hidden="true" tabindex="-1"></a>                <span class="dt">opacity</span><span class="op">:</span> <span class="fl">0.1</span></span>
+<span id="cb2-230"><a href="#cb2-230" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb2-231"><a href="#cb2-231" aria-hidden="true" tabindex="-1"></a>            <span class="dt">force</span><span class="op">:</span> {</span>
+<span id="cb2-232"><a href="#cb2-232" aria-hidden="true" tabindex="-1"></a>              <span class="dt">repulsion</span><span class="op">:</span> [<span class="dv">600</span><span class="op">,</span> <span class="dv">1200</span>]<span class="op">,</span></span>
+<span id="cb2-233"><a href="#cb2-233" aria-hidden="true" tabindex="-1"></a>              <span class="dt">edgeLength</span><span class="op">:</span> [<span class="dv">200</span><span class="op">,</span> <span class="dv">600</span>]</span>
+<span id="cb2-234"><a href="#cb2-234" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb2-235"><a href="#cb2-235" aria-hidden="true" tabindex="-1"></a>            <span class="dt">emphasis</span><span class="op">:</span> {</span>
+<span id="cb2-236"><a href="#cb2-236" aria-hidden="true" tabindex="-1"></a>                <span class="dt">focus</span><span class="op">:</span> <span class="st">'adjacency'</span><span class="op">,</span></span>
+<span id="cb2-237"><a href="#cb2-237" aria-hidden="true" tabindex="-1"></a>                <span class="dt">lineStyle</span><span class="op">:</span> {</span>
+<span id="cb2-238"><a href="#cb2-238" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">width</span><span class="op">:</span> <span class="dv">10</span></span>
+<span id="cb2-239"><a href="#cb2-239" aria-hidden="true" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb2-240"><a href="#cb2-240" aria-hidden="true" tabindex="-1"></a>                 <span class="dt">itemStyle</span><span class="op">:</span> {</span>
+<span id="cb2-241"><a href="#cb2-241" aria-hidden="true" tabindex="-1"></a>        <span class="dt">opacity</span><span class="op">:</span> <span class="dv">1</span></span>
+<span id="cb2-242"><a href="#cb2-242" aria-hidden="true" tabindex="-1"></a>                 }<span class="op">,</span></span>
+<span id="cb2-243"><a href="#cb2-243" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb2-244"><a href="#cb2-244" aria-hidden="true" tabindex="-1"></a>        }]</span>
+<span id="cb2-245"><a href="#cb2-245" aria-hidden="true" tabindex="-1"></a>    }<span class="op">;</span></span>
+<span id="cb2-246"><a href="#cb2-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-247"><a href="#cb2-247" aria-hidden="true" tabindex="-1"></a>    option <span class="op">&amp;&amp;</span> myChart<span class="op">.</span><span class="fu">setOption</span>(option)<span class="op">;</span></span>
+<span id="cb2-248"><a href="#cb2-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-249"><a href="#cb2-249" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-250"><a href="#cb2-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-251"><a href="#cb2-251" aria-hidden="true" tabindex="-1"></a><span class="kw">new</span> <span class="fu">EchartsRunner</span>()</span>
+<span id="cb2-252"><a href="#cb2-252" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">addCodes</span>(inst_code)</span>
+<span id="cb2-253"><a href="#cb2-253" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">show</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="declaration">
@@ -524,13 +516,8 @@ Table&nbsp;2.1: Marine Organisms in OBIS by Taxonomic Rank and Habitat
 </div>
 <p><span style="font-size: 0.9em; color: grey;">Figure 11: The academic collaboration network of the Chinese Academy of Sciences</span></p>
 <p>Table 2 shows the top institutions ranked by number of publications on marine biodiversity, alongside the total collaborations, instances where authors from each institution have collaborated with authors from another institution.</p>
+<p><span style="font-size: 0.9em; color: grey;">Table 2: Table of total publications by institution (top ranked for illustration)</span></p>
 <div class="cell">
-<div id="tbl-totalPublicationsTable" class="cell quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-totalPublicationsTable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2.2: Table of total publications by institution (selected only)
-</figcaption>
-<div aria-describedby="tbl-totalPublicationsTable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -539,10 +526,6 @@ Table&nbsp;2.2: Table of total publications by institution (selected only)
 </div>
 </div>
 </div>
-</figure>
-</div>
-</div>
-<p>Table 2:: Table of total publications by institution (top ranked for illustration)</p>
 </section>
 <section id="countries-and-regions" class="level3">
 <h3 class="anchored" data-anchor-id="countries-and-regions">Countries and Regions</h3>
@@ -563,113 +546,113 @@ Table&nbsp;2.2: Table of total publications by institution (selected only)
 <p><span style="font-size: 0.9em; color: grey;">Figure 12: Country rankings by number of publications for UN major regions and UN sub-regions</span></p>
 <p>Authors often collaborate with authors in different institutions across the globe. It is possible to examine this international collaboration to create a picture of global marine biodiversity research relationships. <a href="#fig-network_2"><u><strong>Figure <em>13</em></strong></u></a> spotlights this international collaboration, depicting the frequency with which authors from institutions in different countries collaborate on marine research publications. Only countries with at least 200 instances of collaboration are shown in the visualisation. Nodes are sized by the total number of collaborations with institutions from other countries. Countries have been colour coded by World Bank Income Classification. These networks may serve as an indicator of countries’ investments in international collaboration and marine research capacity development, alongside their willingness and, crucially, capacity to collaborate internationally.</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="373" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 372;"><span id="cb3-373"><a href="#cb3-373" aria-hidden="true" tabindex="-1"></a>country <span class="op">=</span> <span class="cf">await</span> <span class="fu">FileAttachment</span>(<span class="st">"data/country_network_june.json"</span>)<span class="op">.</span><span class="fu">json</span>()<span class="op">;</span></span>
-<span id="cb3-374"><a href="#cb3-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-375"><a href="#cb3-375" aria-hidden="true" tabindex="-1"></a>country_code <span class="op">=</span> <span class="kw">function</span>() {</span>
-<span id="cb3-376"><a href="#cb3-376" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> [option<span class="op">,</span> myChart] <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="fu">getVars</span>()<span class="op">;</span></span>
-<span id="cb3-377"><a href="#cb3-377" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-378"><a href="#cb3-378" aria-hidden="true" tabindex="-1"></a>    myChart<span class="op">.</span><span class="fu">showLoading</span>()<span class="op">;</span></span>
-<span id="cb3-379"><a href="#cb3-379" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-380"><a href="#cb3-380" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> graph <span class="op">=</span> country<span class="op">;</span></span>
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="365" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 364;"><span id="cb3-365"><a href="#cb3-365" aria-hidden="true" tabindex="-1"></a>country <span class="op">=</span> <span class="cf">await</span> <span class="fu">FileAttachment</span>(<span class="st">"data/country_network_june.json"</span>)<span class="op">.</span><span class="fu">json</span>()<span class="op">;</span></span>
+<span id="cb3-366"><a href="#cb3-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-367"><a href="#cb3-367" aria-hidden="true" tabindex="-1"></a>country_code <span class="op">=</span> <span class="kw">function</span>() {</span>
+<span id="cb3-368"><a href="#cb3-368" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> [option<span class="op">,</span> myChart] <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="fu">getVars</span>()<span class="op">;</span></span>
+<span id="cb3-369"><a href="#cb3-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-370"><a href="#cb3-370" aria-hidden="true" tabindex="-1"></a>    myChart<span class="op">.</span><span class="fu">showLoading</span>()<span class="op">;</span></span>
+<span id="cb3-371"><a href="#cb3-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-372"><a href="#cb3-372" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> graph <span class="op">=</span> country<span class="op">;</span></span>
+<span id="cb3-373"><a href="#cb3-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-374"><a href="#cb3-374" aria-hidden="true" tabindex="-1"></a>    myChart<span class="op">.</span><span class="fu">hideLoading</span>()<span class="op">;</span></span>
+<span id="cb3-375"><a href="#cb3-375" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-376"><a href="#cb3-376" aria-hidden="true" tabindex="-1"></a>    graph<span class="op">.</span><span class="at">nodes</span><span class="op">.</span><span class="fu">forEach</span>(<span class="kw">function</span>(node) {</span>
+<span id="cb3-377"><a href="#cb3-377" aria-hidden="true" tabindex="-1"></a>        node<span class="op">.</span><span class="at">label</span> <span class="op">=</span> {</span>
+<span id="cb3-378"><a href="#cb3-378" aria-hidden="true" tabindex="-1"></a>            <span class="dt">show</span><span class="op">:</span> node<span class="op">.</span><span class="at">symbolSize</span> <span class="op">&gt;</span> <span class="dv">0</span></span>
+<span id="cb3-379"><a href="#cb3-379" aria-hidden="true" tabindex="-1"></a>        }<span class="op">;</span></span>
+<span id="cb3-380"><a href="#cb3-380" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
 <span id="cb3-381"><a href="#cb3-381" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-382"><a href="#cb3-382" aria-hidden="true" tabindex="-1"></a>    myChart<span class="op">.</span><span class="fu">hideLoading</span>()<span class="op">;</span></span>
-<span id="cb3-383"><a href="#cb3-383" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-384"><a href="#cb3-384" aria-hidden="true" tabindex="-1"></a>    graph<span class="op">.</span><span class="at">nodes</span><span class="op">.</span><span class="fu">forEach</span>(<span class="kw">function</span>(node) {</span>
-<span id="cb3-385"><a href="#cb3-385" aria-hidden="true" tabindex="-1"></a>        node<span class="op">.</span><span class="at">label</span> <span class="op">=</span> {</span>
-<span id="cb3-386"><a href="#cb3-386" aria-hidden="true" tabindex="-1"></a>            <span class="dt">show</span><span class="op">:</span> node<span class="op">.</span><span class="at">symbolSize</span> <span class="op">&gt;</span> <span class="dv">0</span></span>
-<span id="cb3-387"><a href="#cb3-387" aria-hidden="true" tabindex="-1"></a>        }<span class="op">;</span></span>
-<span id="cb3-388"><a href="#cb3-388" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
-<span id="cb3-389"><a href="#cb3-389" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-390"><a href="#cb3-390" aria-hidden="true" tabindex="-1"></a>    option <span class="op">=</span> {</span>
-<span id="cb3-391"><a href="#cb3-391" aria-hidden="true" tabindex="-1"></a>        <span class="dt">tooltip</span><span class="op">:</span> {}<span class="op">,</span></span>
-<span id="cb3-392"><a href="#cb3-392" aria-hidden="true" tabindex="-1"></a>        <span class="dt">legend</span><span class="op">:</span> [{</span>
-<span id="cb3-393"><a href="#cb3-393" aria-hidden="true" tabindex="-1"></a>            <span class="dt">selectedMode</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span> <span class="co">//'multiple',</span></span>
-<span id="cb3-394"><a href="#cb3-394" aria-hidden="true" tabindex="-1"></a>            <span class="dt">data</span><span class="op">:</span> graph<span class="op">.</span><span class="at">categories</span><span class="op">.</span><span class="fu">map</span>(<span class="kw">function</span>(a) {</span>
-<span id="cb3-395"><a href="#cb3-395" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> a<span class="op">.</span><span class="at">name</span><span class="op">;</span></span>
-<span id="cb3-396"><a href="#cb3-396" aria-hidden="true" tabindex="-1"></a>            })<span class="co">//,</span></span>
-<span id="cb3-397"><a href="#cb3-397" aria-hidden="true" tabindex="-1"></a>            <span class="co">//hoverLink: false</span></span>
-<span id="cb3-398"><a href="#cb3-398" aria-hidden="true" tabindex="-1"></a>        }]<span class="op">,</span></span>
-<span id="cb3-399"><a href="#cb3-399" aria-hidden="true" tabindex="-1"></a>        <span class="dt">animationDuration</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
-<span id="cb3-400"><a href="#cb3-400" aria-hidden="true" tabindex="-1"></a>        <span class="dt">animationEasingUpdate</span><span class="op">:</span> <span class="st">'quinticInOut'</span><span class="op">,</span></span>
-<span id="cb3-401"><a href="#cb3-401" aria-hidden="true" tabindex="-1"></a>        <span class="dt">series</span><span class="op">:</span> [{</span>
-<span id="cb3-402"><a href="#cb3-402" aria-hidden="true" tabindex="-1"></a>            <span class="dt">name</span><span class="op">:</span> <span class="st">'Countries'</span><span class="op">,</span></span>
-<span id="cb3-403"><a href="#cb3-403" aria-hidden="true" tabindex="-1"></a>            <span class="dt">type</span><span class="op">:</span> <span class="st">'graph'</span><span class="op">,</span></span>
-<span id="cb3-404"><a href="#cb3-404" aria-hidden="true" tabindex="-1"></a>            <span class="dt">layout</span><span class="op">:</span> <span class="st">'circular'</span><span class="op">,</span></span>
-<span id="cb3-405"><a href="#cb3-405" aria-hidden="true" tabindex="-1"></a>            <span class="dt">circular</span><span class="op">:</span> {</span>
-<span id="cb3-406"><a href="#cb3-406" aria-hidden="true" tabindex="-1"></a>                <span class="dt">rotateLabel</span><span class="op">:</span> <span class="kw">true</span></span>
-<span id="cb3-407"><a href="#cb3-407" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
-<span id="cb3-408"><a href="#cb3-408" aria-hidden="true" tabindex="-1"></a>            <span class="dt">data</span><span class="op">:</span> graph<span class="op">.</span><span class="at">nodes</span><span class="op">,</span></span>
-<span id="cb3-409"><a href="#cb3-409" aria-hidden="true" tabindex="-1"></a>            <span class="dt">links</span><span class="op">:</span> graph<span class="op">.</span><span class="at">links</span><span class="op">,</span></span>
-<span id="cb3-410"><a href="#cb3-410" aria-hidden="true" tabindex="-1"></a>            <span class="dt">categories</span><span class="op">:</span> [</span>
-<span id="cb3-411"><a href="#cb3-411" aria-hidden="true" tabindex="-1"></a>                {</span>
-<span id="cb3-412"><a href="#cb3-412" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">name</span><span class="op">:</span> <span class="st">'Low income'</span><span class="op">,</span></span>
-<span id="cb3-413"><a href="#cb3-413" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">itemStyle</span><span class="op">:</span> {</span>
-<span id="cb3-414"><a href="#cb3-414" aria-hidden="true" tabindex="-1"></a>                        <span class="dt">color</span><span class="op">:</span> <span class="st">'#9400D3'</span> <span class="co">//Dark Violet</span></span>
-<span id="cb3-415"><a href="#cb3-415" aria-hidden="true" tabindex="-1"></a>                        <span class="co">//'#21523a',</span></span>
-<span id="cb3-416"><a href="#cb3-416" aria-hidden="true" tabindex="-1"></a>                    }</span>
-<span id="cb3-417"><a href="#cb3-417" aria-hidden="true" tabindex="-1"></a>                }<span class="op">,</span></span>
-<span id="cb3-418"><a href="#cb3-418" aria-hidden="true" tabindex="-1"></a>                {</span>
-<span id="cb3-419"><a href="#cb3-419" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">name</span><span class="op">:</span> <span class="st">'High income'</span><span class="op">,</span></span>
-<span id="cb3-420"><a href="#cb3-420" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">itemStyle</span><span class="op">:</span> {</span>
-<span id="cb3-421"><a href="#cb3-421" aria-hidden="true" tabindex="-1"></a>                        <span class="dt">color</span><span class="op">:</span> <span class="st">'#000080'</span> <span class="co">//Navy blue</span></span>
-<span id="cb3-422"><a href="#cb3-422" aria-hidden="true" tabindex="-1"></a>                    }</span>
-<span id="cb3-423"><a href="#cb3-423" aria-hidden="true" tabindex="-1"></a>                }<span class="op">,</span></span>
-<span id="cb3-424"><a href="#cb3-424" aria-hidden="true" tabindex="-1"></a>                {</span>
-<span id="cb3-425"><a href="#cb3-425" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">name</span><span class="op">:</span> <span class="st">'Lower middle income'</span><span class="op">,</span></span>
-<span id="cb3-426"><a href="#cb3-426" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">itemStyle</span><span class="op">:</span> {</span>
-<span id="cb3-427"><a href="#cb3-427" aria-hidden="true" tabindex="-1"></a>                        <span class="dt">color</span><span class="op">:</span> <span class="st">'#DAA520'</span> <span class="co">//Goldenrod</span></span>
-<span id="cb3-428"><a href="#cb3-428" aria-hidden="true" tabindex="-1"></a>                    }</span>
-<span id="cb3-429"><a href="#cb3-429" aria-hidden="true" tabindex="-1"></a>                }<span class="op">,</span></span>
-<span id="cb3-430"><a href="#cb3-430" aria-hidden="true" tabindex="-1"></a>                {</span>
-<span id="cb3-431"><a href="#cb3-431" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">name</span><span class="op">:</span> <span class="st">'Upper middle income'</span><span class="op">,</span></span>
-<span id="cb3-432"><a href="#cb3-432" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">itemStyle</span><span class="op">:</span> {</span>
-<span id="cb3-433"><a href="#cb3-433" aria-hidden="true" tabindex="-1"></a>                        <span class="dt">color</span><span class="op">:</span> <span class="st">'#DC143C'</span> <span class="co">//Crimson red</span></span>
-<span id="cb3-434"><a href="#cb3-434" aria-hidden="true" tabindex="-1"></a>                    }</span>
-<span id="cb3-435"><a href="#cb3-435" aria-hidden="true" tabindex="-1"></a>                }<span class="op">,</span></span>
-<span id="cb3-436"><a href="#cb3-436" aria-hidden="true" tabindex="-1"></a>                {</span>
-<span id="cb3-437"><a href="#cb3-437" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">name</span><span class="op">:</span> <span class="st">'Unclassified'</span><span class="op">,</span></span>
-<span id="cb3-438"><a href="#cb3-438" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">itemStyle</span><span class="op">:</span> {</span>
-<span id="cb3-439"><a href="#cb3-439" aria-hidden="true" tabindex="-1"></a>                        <span class="dt">color</span><span class="op">:</span> <span class="st">'#228B22'</span> <span class="co">// Forest green</span></span>
-<span id="cb3-440"><a href="#cb3-440" aria-hidden="true" tabindex="-1"></a>                    }</span>
-<span id="cb3-441"><a href="#cb3-441" aria-hidden="true" tabindex="-1"></a>                }</span>
-<span id="cb3-442"><a href="#cb3-442" aria-hidden="true" tabindex="-1"></a>            ]<span class="op">,</span></span>
-<span id="cb3-443"><a href="#cb3-443" aria-hidden="true" tabindex="-1"></a>            <span class="dt">roam</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb3-444"><a href="#cb3-444" aria-hidden="true" tabindex="-1"></a>            <span class="dt">scaleLimit</span><span class="op">:</span> {</span>
-<span id="cb3-445"><a href="#cb3-445" aria-hidden="true" tabindex="-1"></a>                <span class="dt">min</span><span class="op">:</span> <span class="fl">0.8</span><span class="op">,</span> <span class="co">// minimum zoom level (0.5 means the chart can be zoomed out to half its original size)</span></span>
-<span id="cb3-446"><a href="#cb3-446" aria-hidden="true" tabindex="-1"></a>                <span class="dt">max</span><span class="op">:</span> <span class="fl">1.5</span>   <span class="co">// maximum zoom level (2 means the chart can be zoomed in to twice its original size)</span></span>
-<span id="cb3-447"><a href="#cb3-447" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
-<span id="cb3-448"><a href="#cb3-448" aria-hidden="true" tabindex="-1"></a>            <span class="dt">zoom</span><span class="op">:</span> <span class="fl">0.9</span><span class="op">,</span></span>
-<span id="cb3-449"><a href="#cb3-449" aria-hidden="true" tabindex="-1"></a>            <span class="dt">label</span><span class="op">:</span> {</span>
-<span id="cb3-450"><a href="#cb3-450" aria-hidden="true" tabindex="-1"></a>                <span class="dt">position</span><span class="op">:</span> <span class="st">'right'</span><span class="op">,</span></span>
-<span id="cb3-451"><a href="#cb3-451" aria-hidden="true" tabindex="-1"></a>                <span class="dt">formatter</span><span class="op">:</span> <span class="st">'{b}'</span><span class="op">,</span></span>
-<span id="cb3-452"><a href="#cb3-452" aria-hidden="true" tabindex="-1"></a>                <span class="dt">color</span><span class="op">:</span> <span class="st">'inherit'</span><span class="op">,</span></span>
-<span id="cb3-453"><a href="#cb3-453" aria-hidden="true" tabindex="-1"></a>                <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">10</span></span>
-<span id="cb3-454"><a href="#cb3-454" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
-<span id="cb3-455"><a href="#cb3-455" aria-hidden="true" tabindex="-1"></a>            <span class="dt">lineStyle</span><span class="op">:</span> {</span>
-<span id="cb3-456"><a href="#cb3-456" aria-hidden="true" tabindex="-1"></a>                <span class="co">//color: '#7d84e3',</span></span>
-<span id="cb3-457"><a href="#cb3-457" aria-hidden="true" tabindex="-1"></a>                <span class="dt">color</span><span class="op">:</span> <span class="st">'source'</span><span class="op">,</span></span>
-<span id="cb3-458"><a href="#cb3-458" aria-hidden="true" tabindex="-1"></a>                <span class="dt">opacity</span><span class="op">:</span> <span class="fl">0.05</span><span class="op">,</span></span>
-<span id="cb3-459"><a href="#cb3-459" aria-hidden="true" tabindex="-1"></a>                <span class="dt">curveness</span><span class="op">:</span> <span class="fl">0.3</span></span>
-<span id="cb3-460"><a href="#cb3-460" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
-<span id="cb3-461"><a href="#cb3-461" aria-hidden="true" tabindex="-1"></a>            <span class="dt">force</span><span class="op">:</span> {</span>
-<span id="cb3-462"><a href="#cb3-462" aria-hidden="true" tabindex="-1"></a>                <span class="dt">repulsion</span><span class="op">:</span> <span class="dv">80</span><span class="op">,</span></span>
-<span id="cb3-463"><a href="#cb3-463" aria-hidden="true" tabindex="-1"></a>                <span class="dt">edgeLength</span><span class="op">:</span> <span class="dv">100</span></span>
-<span id="cb3-464"><a href="#cb3-464" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
-<span id="cb3-465"><a href="#cb3-465" aria-hidden="true" tabindex="-1"></a>            <span class="dt">emphasis</span><span class="op">:</span> {</span>
-<span id="cb3-466"><a href="#cb3-466" aria-hidden="true" tabindex="-1"></a>                <span class="dt">focus</span><span class="op">:</span> <span class="st">'adjacency'</span><span class="op">,</span><span class="co">//'series', //</span></span>
-<span id="cb3-467"><a href="#cb3-467" aria-hidden="true" tabindex="-1"></a>                <span class="dt">lineStyle</span><span class="op">:</span> {</span>
-<span id="cb3-468"><a href="#cb3-468" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">width</span><span class="op">:</span> <span class="dv">10</span></span>
-<span id="cb3-469"><a href="#cb3-469" aria-hidden="true" tabindex="-1"></a>                }</span>
-<span id="cb3-470"><a href="#cb3-470" aria-hidden="true" tabindex="-1"></a>            }</span>
-<span id="cb3-471"><a href="#cb3-471" aria-hidden="true" tabindex="-1"></a>        }]</span>
-<span id="cb3-472"><a href="#cb3-472" aria-hidden="true" tabindex="-1"></a>    }<span class="op">;</span></span>
-<span id="cb3-473"><a href="#cb3-473" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-474"><a href="#cb3-474" aria-hidden="true" tabindex="-1"></a>    option <span class="op">&amp;&amp;</span> myChart<span class="op">.</span><span class="fu">setOption</span>(option)<span class="op">;</span></span>
-<span id="cb3-475"><a href="#cb3-475" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-476"><a href="#cb3-476" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-477"><a href="#cb3-477" aria-hidden="true" tabindex="-1"></a><span class="kw">new</span> <span class="fu">EchartsRunner</span>()</span>
-<span id="cb3-478"><a href="#cb3-478" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">addCodes</span>(country_code)</span>
-<span id="cb3-479"><a href="#cb3-479" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">show</span>()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-382"><a href="#cb3-382" aria-hidden="true" tabindex="-1"></a>    option <span class="op">=</span> {</span>
+<span id="cb3-383"><a href="#cb3-383" aria-hidden="true" tabindex="-1"></a>        <span class="dt">tooltip</span><span class="op">:</span> {}<span class="op">,</span></span>
+<span id="cb3-384"><a href="#cb3-384" aria-hidden="true" tabindex="-1"></a>        <span class="dt">legend</span><span class="op">:</span> [{</span>
+<span id="cb3-385"><a href="#cb3-385" aria-hidden="true" tabindex="-1"></a>            <span class="dt">selectedMode</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span> <span class="co">//'multiple',</span></span>
+<span id="cb3-386"><a href="#cb3-386" aria-hidden="true" tabindex="-1"></a>            <span class="dt">data</span><span class="op">:</span> graph<span class="op">.</span><span class="at">categories</span><span class="op">.</span><span class="fu">map</span>(<span class="kw">function</span>(a) {</span>
+<span id="cb3-387"><a href="#cb3-387" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> a<span class="op">.</span><span class="at">name</span><span class="op">;</span></span>
+<span id="cb3-388"><a href="#cb3-388" aria-hidden="true" tabindex="-1"></a>            })<span class="co">//,</span></span>
+<span id="cb3-389"><a href="#cb3-389" aria-hidden="true" tabindex="-1"></a>            <span class="co">//hoverLink: false</span></span>
+<span id="cb3-390"><a href="#cb3-390" aria-hidden="true" tabindex="-1"></a>        }]<span class="op">,</span></span>
+<span id="cb3-391"><a href="#cb3-391" aria-hidden="true" tabindex="-1"></a>        <span class="dt">animationDuration</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb3-392"><a href="#cb3-392" aria-hidden="true" tabindex="-1"></a>        <span class="dt">animationEasingUpdate</span><span class="op">:</span> <span class="st">'quinticInOut'</span><span class="op">,</span></span>
+<span id="cb3-393"><a href="#cb3-393" aria-hidden="true" tabindex="-1"></a>        <span class="dt">series</span><span class="op">:</span> [{</span>
+<span id="cb3-394"><a href="#cb3-394" aria-hidden="true" tabindex="-1"></a>            <span class="dt">name</span><span class="op">:</span> <span class="st">'Countries'</span><span class="op">,</span></span>
+<span id="cb3-395"><a href="#cb3-395" aria-hidden="true" tabindex="-1"></a>            <span class="dt">type</span><span class="op">:</span> <span class="st">'graph'</span><span class="op">,</span></span>
+<span id="cb3-396"><a href="#cb3-396" aria-hidden="true" tabindex="-1"></a>            <span class="dt">layout</span><span class="op">:</span> <span class="st">'circular'</span><span class="op">,</span></span>
+<span id="cb3-397"><a href="#cb3-397" aria-hidden="true" tabindex="-1"></a>            <span class="dt">circular</span><span class="op">:</span> {</span>
+<span id="cb3-398"><a href="#cb3-398" aria-hidden="true" tabindex="-1"></a>                <span class="dt">rotateLabel</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb3-399"><a href="#cb3-399" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb3-400"><a href="#cb3-400" aria-hidden="true" tabindex="-1"></a>            <span class="dt">data</span><span class="op">:</span> graph<span class="op">.</span><span class="at">nodes</span><span class="op">,</span></span>
+<span id="cb3-401"><a href="#cb3-401" aria-hidden="true" tabindex="-1"></a>            <span class="dt">links</span><span class="op">:</span> graph<span class="op">.</span><span class="at">links</span><span class="op">,</span></span>
+<span id="cb3-402"><a href="#cb3-402" aria-hidden="true" tabindex="-1"></a>            <span class="dt">categories</span><span class="op">:</span> [</span>
+<span id="cb3-403"><a href="#cb3-403" aria-hidden="true" tabindex="-1"></a>                {</span>
+<span id="cb3-404"><a href="#cb3-404" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">name</span><span class="op">:</span> <span class="st">'Low income'</span><span class="op">,</span></span>
+<span id="cb3-405"><a href="#cb3-405" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">itemStyle</span><span class="op">:</span> {</span>
+<span id="cb3-406"><a href="#cb3-406" aria-hidden="true" tabindex="-1"></a>                        <span class="dt">color</span><span class="op">:</span> <span class="st">'#9400D3'</span> <span class="co">//Dark Violet</span></span>
+<span id="cb3-407"><a href="#cb3-407" aria-hidden="true" tabindex="-1"></a>                        <span class="co">//'#21523a',</span></span>
+<span id="cb3-408"><a href="#cb3-408" aria-hidden="true" tabindex="-1"></a>                    }</span>
+<span id="cb3-409"><a href="#cb3-409" aria-hidden="true" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb3-410"><a href="#cb3-410" aria-hidden="true" tabindex="-1"></a>                {</span>
+<span id="cb3-411"><a href="#cb3-411" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">name</span><span class="op">:</span> <span class="st">'High income'</span><span class="op">,</span></span>
+<span id="cb3-412"><a href="#cb3-412" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">itemStyle</span><span class="op">:</span> {</span>
+<span id="cb3-413"><a href="#cb3-413" aria-hidden="true" tabindex="-1"></a>                        <span class="dt">color</span><span class="op">:</span> <span class="st">'#000080'</span> <span class="co">//Navy blue</span></span>
+<span id="cb3-414"><a href="#cb3-414" aria-hidden="true" tabindex="-1"></a>                    }</span>
+<span id="cb3-415"><a href="#cb3-415" aria-hidden="true" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb3-416"><a href="#cb3-416" aria-hidden="true" tabindex="-1"></a>                {</span>
+<span id="cb3-417"><a href="#cb3-417" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">name</span><span class="op">:</span> <span class="st">'Lower middle income'</span><span class="op">,</span></span>
+<span id="cb3-418"><a href="#cb3-418" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">itemStyle</span><span class="op">:</span> {</span>
+<span id="cb3-419"><a href="#cb3-419" aria-hidden="true" tabindex="-1"></a>                        <span class="dt">color</span><span class="op">:</span> <span class="st">'#DAA520'</span> <span class="co">//Goldenrod</span></span>
+<span id="cb3-420"><a href="#cb3-420" aria-hidden="true" tabindex="-1"></a>                    }</span>
+<span id="cb3-421"><a href="#cb3-421" aria-hidden="true" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb3-422"><a href="#cb3-422" aria-hidden="true" tabindex="-1"></a>                {</span>
+<span id="cb3-423"><a href="#cb3-423" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">name</span><span class="op">:</span> <span class="st">'Upper middle income'</span><span class="op">,</span></span>
+<span id="cb3-424"><a href="#cb3-424" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">itemStyle</span><span class="op">:</span> {</span>
+<span id="cb3-425"><a href="#cb3-425" aria-hidden="true" tabindex="-1"></a>                        <span class="dt">color</span><span class="op">:</span> <span class="st">'#DC143C'</span> <span class="co">//Crimson red</span></span>
+<span id="cb3-426"><a href="#cb3-426" aria-hidden="true" tabindex="-1"></a>                    }</span>
+<span id="cb3-427"><a href="#cb3-427" aria-hidden="true" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb3-428"><a href="#cb3-428" aria-hidden="true" tabindex="-1"></a>                {</span>
+<span id="cb3-429"><a href="#cb3-429" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">name</span><span class="op">:</span> <span class="st">'Unclassified'</span><span class="op">,</span></span>
+<span id="cb3-430"><a href="#cb3-430" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">itemStyle</span><span class="op">:</span> {</span>
+<span id="cb3-431"><a href="#cb3-431" aria-hidden="true" tabindex="-1"></a>                        <span class="dt">color</span><span class="op">:</span> <span class="st">'#228B22'</span> <span class="co">// Forest green</span></span>
+<span id="cb3-432"><a href="#cb3-432" aria-hidden="true" tabindex="-1"></a>                    }</span>
+<span id="cb3-433"><a href="#cb3-433" aria-hidden="true" tabindex="-1"></a>                }</span>
+<span id="cb3-434"><a href="#cb3-434" aria-hidden="true" tabindex="-1"></a>            ]<span class="op">,</span></span>
+<span id="cb3-435"><a href="#cb3-435" aria-hidden="true" tabindex="-1"></a>            <span class="dt">roam</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb3-436"><a href="#cb3-436" aria-hidden="true" tabindex="-1"></a>            <span class="dt">scaleLimit</span><span class="op">:</span> {</span>
+<span id="cb3-437"><a href="#cb3-437" aria-hidden="true" tabindex="-1"></a>                <span class="dt">min</span><span class="op">:</span> <span class="fl">0.8</span><span class="op">,</span> <span class="co">// minimum zoom level (0.5 means the chart can be zoomed out to half its original size)</span></span>
+<span id="cb3-438"><a href="#cb3-438" aria-hidden="true" tabindex="-1"></a>                <span class="dt">max</span><span class="op">:</span> <span class="fl">1.5</span>   <span class="co">// maximum zoom level (2 means the chart can be zoomed in to twice its original size)</span></span>
+<span id="cb3-439"><a href="#cb3-439" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb3-440"><a href="#cb3-440" aria-hidden="true" tabindex="-1"></a>            <span class="dt">zoom</span><span class="op">:</span> <span class="fl">0.9</span><span class="op">,</span></span>
+<span id="cb3-441"><a href="#cb3-441" aria-hidden="true" tabindex="-1"></a>            <span class="dt">label</span><span class="op">:</span> {</span>
+<span id="cb3-442"><a href="#cb3-442" aria-hidden="true" tabindex="-1"></a>                <span class="dt">position</span><span class="op">:</span> <span class="st">'right'</span><span class="op">,</span></span>
+<span id="cb3-443"><a href="#cb3-443" aria-hidden="true" tabindex="-1"></a>                <span class="dt">formatter</span><span class="op">:</span> <span class="st">'{b}'</span><span class="op">,</span></span>
+<span id="cb3-444"><a href="#cb3-444" aria-hidden="true" tabindex="-1"></a>                <span class="dt">color</span><span class="op">:</span> <span class="st">'inherit'</span><span class="op">,</span></span>
+<span id="cb3-445"><a href="#cb3-445" aria-hidden="true" tabindex="-1"></a>                <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">10</span></span>
+<span id="cb3-446"><a href="#cb3-446" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb3-447"><a href="#cb3-447" aria-hidden="true" tabindex="-1"></a>            <span class="dt">lineStyle</span><span class="op">:</span> {</span>
+<span id="cb3-448"><a href="#cb3-448" aria-hidden="true" tabindex="-1"></a>                <span class="co">//color: '#7d84e3',</span></span>
+<span id="cb3-449"><a href="#cb3-449" aria-hidden="true" tabindex="-1"></a>                <span class="dt">color</span><span class="op">:</span> <span class="st">'source'</span><span class="op">,</span></span>
+<span id="cb3-450"><a href="#cb3-450" aria-hidden="true" tabindex="-1"></a>                <span class="dt">opacity</span><span class="op">:</span> <span class="fl">0.05</span><span class="op">,</span></span>
+<span id="cb3-451"><a href="#cb3-451" aria-hidden="true" tabindex="-1"></a>                <span class="dt">curveness</span><span class="op">:</span> <span class="fl">0.3</span></span>
+<span id="cb3-452"><a href="#cb3-452" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb3-453"><a href="#cb3-453" aria-hidden="true" tabindex="-1"></a>            <span class="dt">force</span><span class="op">:</span> {</span>
+<span id="cb3-454"><a href="#cb3-454" aria-hidden="true" tabindex="-1"></a>                <span class="dt">repulsion</span><span class="op">:</span> <span class="dv">80</span><span class="op">,</span></span>
+<span id="cb3-455"><a href="#cb3-455" aria-hidden="true" tabindex="-1"></a>                <span class="dt">edgeLength</span><span class="op">:</span> <span class="dv">100</span></span>
+<span id="cb3-456"><a href="#cb3-456" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb3-457"><a href="#cb3-457" aria-hidden="true" tabindex="-1"></a>            <span class="dt">emphasis</span><span class="op">:</span> {</span>
+<span id="cb3-458"><a href="#cb3-458" aria-hidden="true" tabindex="-1"></a>                <span class="dt">focus</span><span class="op">:</span> <span class="st">'adjacency'</span><span class="op">,</span><span class="co">//'series', //</span></span>
+<span id="cb3-459"><a href="#cb3-459" aria-hidden="true" tabindex="-1"></a>                <span class="dt">lineStyle</span><span class="op">:</span> {</span>
+<span id="cb3-460"><a href="#cb3-460" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">width</span><span class="op">:</span> <span class="dv">10</span></span>
+<span id="cb3-461"><a href="#cb3-461" aria-hidden="true" tabindex="-1"></a>                }</span>
+<span id="cb3-462"><a href="#cb3-462" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb3-463"><a href="#cb3-463" aria-hidden="true" tabindex="-1"></a>        }]</span>
+<span id="cb3-464"><a href="#cb3-464" aria-hidden="true" tabindex="-1"></a>    }<span class="op">;</span></span>
+<span id="cb3-465"><a href="#cb3-465" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-466"><a href="#cb3-466" aria-hidden="true" tabindex="-1"></a>    option <span class="op">&amp;&amp;</span> myChart<span class="op">.</span><span class="fu">setOption</span>(option)<span class="op">;</span></span>
+<span id="cb3-467"><a href="#cb3-467" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-468"><a href="#cb3-468" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-469"><a href="#cb3-469" aria-hidden="true" tabindex="-1"></a><span class="kw">new</span> <span class="fu">EchartsRunner</span>()</span>
+<span id="cb3-470"><a href="#cb3-470" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">addCodes</span>(country_code)</span>
+<span id="cb3-471"><a href="#cb3-471" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">show</span>()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-3-1" data-nodetype="declaration">
@@ -760,95 +743,95 @@ Table&nbsp;2.2: Table of total publications by institution (selected only)
 <p>Note that the funding programmes of the European Union such as the Framework and more recent Horizon programmes are listed separately in the OpenAlex funding table, diminishing the visibility of the EU as a major funder of research in <a href="#fig-marine-funding"><u><strong>Figure <em>17</em></strong></u></a>.</p>
 <p>It is possible to create collaboration networks for funding institutions showing which funding institutions have funded the same research publications. <a href="#fig-funding-network"><u><strong>Figure <em>18</em></strong></u></a> illustrates the primary collaboration links between funding agencies supporting more than 50 publications of marine biodiversity-related research.</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="554" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 553;"><span id="cb4-554"><a href="#cb4-554" aria-hidden="true" tabindex="-1"></a>new_funder <span class="op">=</span> <span class="cf">await</span> <span class="fu">FileAttachment</span>(<span class="st">"data/funders_june_countries2.json"</span>)<span class="op">.</span><span class="fu">json</span>()<span class="op">;</span></span>
-<span id="cb4-555"><a href="#cb4-555" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-556"><a href="#cb4-556" aria-hidden="true" tabindex="-1"></a>funder_code <span class="op">=</span> <span class="kw">function</span>() {</span>
-<span id="cb4-557"><a href="#cb4-557" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> [option<span class="op">,</span> myChart] <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="fu">getVars</span>()<span class="op">;</span></span>
-<span id="cb4-558"><a href="#cb4-558" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-559"><a href="#cb4-559" aria-hidden="true" tabindex="-1"></a>    myChart<span class="op">.</span><span class="fu">showLoading</span>()<span class="op">;</span></span>
-<span id="cb4-560"><a href="#cb4-560" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-561"><a href="#cb4-561" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> graph <span class="op">=</span> new_funder<span class="op">;</span></span>
-<span id="cb4-562"><a href="#cb4-562" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-563"><a href="#cb4-563" aria-hidden="true" tabindex="-1"></a>    myChart<span class="op">.</span><span class="fu">hideLoading</span>()<span class="op">;</span></span>
-<span id="cb4-564"><a href="#cb4-564" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-565"><a href="#cb4-565" aria-hidden="true" tabindex="-1"></a>    graph<span class="op">.</span><span class="at">nodes</span><span class="op">.</span><span class="fu">forEach</span>(<span class="kw">function</span>(node) {</span>
-<span id="cb4-566"><a href="#cb4-566" aria-hidden="true" tabindex="-1"></a>        node<span class="op">.</span><span class="at">label</span> <span class="op">=</span> {</span>
-<span id="cb4-567"><a href="#cb4-567" aria-hidden="true" tabindex="-1"></a>            <span class="dt">show</span><span class="op">:</span> node<span class="op">.</span><span class="at">symbolSize</span> <span class="op">&gt;</span> <span class="dv">8</span></span>
-<span id="cb4-568"><a href="#cb4-568" aria-hidden="true" tabindex="-1"></a>        }<span class="op">;</span></span>
-<span id="cb4-569"><a href="#cb4-569" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
-<span id="cb4-570"><a href="#cb4-570" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-571"><a href="#cb4-571" aria-hidden="true" tabindex="-1"></a>    option <span class="op">=</span> {</span>
-<span id="cb4-572"><a href="#cb4-572" aria-hidden="true" tabindex="-1"></a>        <span class="co">// title: {</span></span>
-<span id="cb4-573"><a href="#cb4-573" aria-hidden="true" tabindex="-1"></a>        <span class="co">//     text: 'Funder',</span></span>
-<span id="cb4-574"><a href="#cb4-574" aria-hidden="true" tabindex="-1"></a>        <span class="co">//     subtext: 'Default layout',</span></span>
-<span id="cb4-575"><a href="#cb4-575" aria-hidden="true" tabindex="-1"></a>        <span class="co">//     top: 'bottom',</span></span>
-<span id="cb4-576"><a href="#cb4-576" aria-hidden="true" tabindex="-1"></a>        <span class="co">//     left: 'right'</span></span>
-<span id="cb4-577"><a href="#cb4-577" aria-hidden="true" tabindex="-1"></a>        <span class="co">// },</span></span>
-<span id="cb4-578"><a href="#cb4-578" aria-hidden="true" tabindex="-1"></a>        <span class="dt">tooltip</span><span class="op">:</span> {}<span class="op">,</span></span>
-<span id="cb4-579"><a href="#cb4-579" aria-hidden="true" tabindex="-1"></a>         <span class="dt">legend</span><span class="op">:</span> {</span>
-<span id="cb4-580"><a href="#cb4-580" aria-hidden="true" tabindex="-1"></a>             <span class="dt">selectedMode</span><span class="op">:</span> <span class="st">'multiple'</span><span class="op">,</span></span>
-<span id="cb4-581"><a href="#cb4-581" aria-hidden="true" tabindex="-1"></a>             <span class="dt">data</span><span class="op">:</span> graph<span class="op">.</span><span class="at">categories</span><span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(a) {</span>
-<span id="cb4-582"><a href="#cb4-582" aria-hidden="true" tabindex="-1"></a>                 <span class="cf">return</span> [<span class="st">"European Union"</span><span class="op">,</span> <span class="st">"China"</span><span class="op">,</span> <span class="st">"Japan"</span><span class="op">,</span> <span class="st">"Russia"</span><span class="op">,</span> <span class="st">"Korea, Rep."</span><span class="op">,</span> <span class="st">"United States"</span>]<span class="op">.</span><span class="fu">includes</span>(a<span class="op">.</span><span class="at">name</span>)<span class="op">;</span></span>
-<span id="cb4-583"><a href="#cb4-583" aria-hidden="true" tabindex="-1"></a>             })<span class="op">.</span><span class="fu">map</span>(<span class="kw">function</span>(a) {</span>
-<span id="cb4-584"><a href="#cb4-584" aria-hidden="true" tabindex="-1"></a>                 <span class="cf">return</span> a<span class="op">.</span><span class="at">name</span><span class="op">;</span></span>
-<span id="cb4-585"><a href="#cb4-585" aria-hidden="true" tabindex="-1"></a>             })<span class="op">,</span></span>
-<span id="cb4-586"><a href="#cb4-586" aria-hidden="true" tabindex="-1"></a>             <span class="dt">left</span><span class="op">:</span> <span class="st">'left'</span></span>
-<span id="cb4-587"><a href="#cb4-587" aria-hidden="true" tabindex="-1"></a>         }<span class="op">,</span></span>
-<span id="cb4-588"><a href="#cb4-588" aria-hidden="true" tabindex="-1"></a>        <span class="dt">animation</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
-<span id="cb4-589"><a href="#cb4-589" aria-hidden="true" tabindex="-1"></a>        <span class="co">//animationDuration: 400,</span></span>
-<span id="cb4-590"><a href="#cb4-590" aria-hidden="true" tabindex="-1"></a>        <span class="co">//animationEasingUpdate: 'quinticInOut',</span></span>
-<span id="cb4-591"><a href="#cb4-591" aria-hidden="true" tabindex="-1"></a>        <span class="dt">series</span><span class="op">:</span> [{</span>
-<span id="cb4-592"><a href="#cb4-592" aria-hidden="true" tabindex="-1"></a>            <span class="dt">name</span><span class="op">:</span> <span class="st">'Funders'</span><span class="op">,</span></span>
-<span id="cb4-593"><a href="#cb4-593" aria-hidden="true" tabindex="-1"></a>            <span class="dt">type</span><span class="op">:</span> <span class="st">'graph'</span><span class="op">,</span></span>
-<span id="cb4-594"><a href="#cb4-594" aria-hidden="true" tabindex="-1"></a>            <span class="dt">layout</span><span class="op">:</span> <span class="st">'force'</span><span class="op">,</span></span>
-<span id="cb4-595"><a href="#cb4-595" aria-hidden="true" tabindex="-1"></a>            <span class="dt">data</span><span class="op">:</span> graph<span class="op">.</span><span class="at">nodes</span><span class="op">,</span></span>
-<span id="cb4-596"><a href="#cb4-596" aria-hidden="true" tabindex="-1"></a>            <span class="dt">links</span><span class="op">:</span> graph<span class="op">.</span><span class="at">links</span><span class="op">,</span></span>
-<span id="cb4-597"><a href="#cb4-597" aria-hidden="true" tabindex="-1"></a>            <span class="dt">categories</span><span class="op">:</span> graph<span class="op">.</span><span class="at">categories</span><span class="op">,</span></span>
-<span id="cb4-598"><a href="#cb4-598" aria-hidden="true" tabindex="-1"></a>            <span class="dt">roam</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb4-599"><a href="#cb4-599" aria-hidden="true" tabindex="-1"></a>            <span class="dt">scaleLimit</span><span class="op">:</span> {</span>
-<span id="cb4-600"><a href="#cb4-600" aria-hidden="true" tabindex="-1"></a>                <span class="dt">min</span><span class="op">:</span> <span class="fl">0.7</span><span class="op">,</span> <span class="co">// minimum zoom level (0.5 means the chart can be zoomed out to half its original size)</span></span>
-<span id="cb4-601"><a href="#cb4-601" aria-hidden="true" tabindex="-1"></a>                <span class="dt">max</span><span class="op">:</span> <span class="fl">1.5</span>   <span class="co">// maximum zoom level (2 means the chart can be zoomed in to twice its original size)</span></span>
-<span id="cb4-602"><a href="#cb4-602" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
-<span id="cb4-603"><a href="#cb4-603" aria-hidden="true" tabindex="-1"></a>            <span class="dt">zoom</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
-<span id="cb4-604"><a href="#cb4-604" aria-hidden="true" tabindex="-1"></a>            <span class="dt">label</span><span class="op">:</span> {</span>
-<span id="cb4-605"><a href="#cb4-605" aria-hidden="true" tabindex="-1"></a>                <span class="dt">position</span><span class="op">:</span> <span class="st">'right'</span><span class="op">,</span></span>
-<span id="cb4-606"><a href="#cb4-606" aria-hidden="true" tabindex="-1"></a>                <span class="dt">formatter</span><span class="op">:</span> <span class="st">'{b}'</span><span class="op">,</span></span>
-<span id="cb4-607"><a href="#cb4-607" aria-hidden="true" tabindex="-1"></a>                <span class="dt">backgroundColor</span><span class="op">:</span> <span class="st">'#fff'</span><span class="op">,</span> </span>
-<span id="cb4-608"><a href="#cb4-608" aria-hidden="true" tabindex="-1"></a>                <span class="dt">borderColor</span><span class="op">:</span> <span class="st">'#fff'</span><span class="op">,</span>  <span class="co">// Add border to labels</span></span>
-<span id="cb4-609"><a href="#cb4-609" aria-hidden="true" tabindex="-1"></a>                <span class="dt">borderWidth</span><span class="op">:</span> <span class="dv">3</span></span>
-<span id="cb4-610"><a href="#cb4-610" aria-hidden="true" tabindex="-1"></a>                <span class="co">//padding: [10, 10, 10, 10] Doesn't seem to be doing anything</span></span>
-<span id="cb4-611"><a href="#cb4-611" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
-<span id="cb4-612"><a href="#cb4-612" aria-hidden="true" tabindex="-1"></a>            <span class="dt">labelLayout</span><span class="op">:</span> {</span>
-<span id="cb4-613"><a href="#cb4-613" aria-hidden="true" tabindex="-1"></a>                <span class="dt">hideOverlap</span><span class="op">:</span> <span class="kw">true</span></span>
+<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="541" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 540;"><span id="cb4-541"><a href="#cb4-541" aria-hidden="true" tabindex="-1"></a>new_funder <span class="op">=</span> <span class="cf">await</span> <span class="fu">FileAttachment</span>(<span class="st">"data/funders_june_countries2.json"</span>)<span class="op">.</span><span class="fu">json</span>()<span class="op">;</span></span>
+<span id="cb4-542"><a href="#cb4-542" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-543"><a href="#cb4-543" aria-hidden="true" tabindex="-1"></a>funder_code <span class="op">=</span> <span class="kw">function</span>() {</span>
+<span id="cb4-544"><a href="#cb4-544" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> [option<span class="op">,</span> myChart] <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="fu">getVars</span>()<span class="op">;</span></span>
+<span id="cb4-545"><a href="#cb4-545" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-546"><a href="#cb4-546" aria-hidden="true" tabindex="-1"></a>    myChart<span class="op">.</span><span class="fu">showLoading</span>()<span class="op">;</span></span>
+<span id="cb4-547"><a href="#cb4-547" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-548"><a href="#cb4-548" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> graph <span class="op">=</span> new_funder<span class="op">;</span></span>
+<span id="cb4-549"><a href="#cb4-549" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-550"><a href="#cb4-550" aria-hidden="true" tabindex="-1"></a>    myChart<span class="op">.</span><span class="fu">hideLoading</span>()<span class="op">;</span></span>
+<span id="cb4-551"><a href="#cb4-551" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-552"><a href="#cb4-552" aria-hidden="true" tabindex="-1"></a>    graph<span class="op">.</span><span class="at">nodes</span><span class="op">.</span><span class="fu">forEach</span>(<span class="kw">function</span>(node) {</span>
+<span id="cb4-553"><a href="#cb4-553" aria-hidden="true" tabindex="-1"></a>        node<span class="op">.</span><span class="at">label</span> <span class="op">=</span> {</span>
+<span id="cb4-554"><a href="#cb4-554" aria-hidden="true" tabindex="-1"></a>            <span class="dt">show</span><span class="op">:</span> node<span class="op">.</span><span class="at">symbolSize</span> <span class="op">&gt;</span> <span class="dv">8</span></span>
+<span id="cb4-555"><a href="#cb4-555" aria-hidden="true" tabindex="-1"></a>        }<span class="op">;</span></span>
+<span id="cb4-556"><a href="#cb4-556" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb4-557"><a href="#cb4-557" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-558"><a href="#cb4-558" aria-hidden="true" tabindex="-1"></a>    option <span class="op">=</span> {</span>
+<span id="cb4-559"><a href="#cb4-559" aria-hidden="true" tabindex="-1"></a>        <span class="co">// title: {</span></span>
+<span id="cb4-560"><a href="#cb4-560" aria-hidden="true" tabindex="-1"></a>        <span class="co">//     text: 'Funder',</span></span>
+<span id="cb4-561"><a href="#cb4-561" aria-hidden="true" tabindex="-1"></a>        <span class="co">//     subtext: 'Default layout',</span></span>
+<span id="cb4-562"><a href="#cb4-562" aria-hidden="true" tabindex="-1"></a>        <span class="co">//     top: 'bottom',</span></span>
+<span id="cb4-563"><a href="#cb4-563" aria-hidden="true" tabindex="-1"></a>        <span class="co">//     left: 'right'</span></span>
+<span id="cb4-564"><a href="#cb4-564" aria-hidden="true" tabindex="-1"></a>        <span class="co">// },</span></span>
+<span id="cb4-565"><a href="#cb4-565" aria-hidden="true" tabindex="-1"></a>        <span class="dt">tooltip</span><span class="op">:</span> {}<span class="op">,</span></span>
+<span id="cb4-566"><a href="#cb4-566" aria-hidden="true" tabindex="-1"></a>         <span class="dt">legend</span><span class="op">:</span> {</span>
+<span id="cb4-567"><a href="#cb4-567" aria-hidden="true" tabindex="-1"></a>             <span class="dt">selectedMode</span><span class="op">:</span> <span class="st">'multiple'</span><span class="op">,</span></span>
+<span id="cb4-568"><a href="#cb4-568" aria-hidden="true" tabindex="-1"></a>             <span class="dt">data</span><span class="op">:</span> graph<span class="op">.</span><span class="at">categories</span><span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(a) {</span>
+<span id="cb4-569"><a href="#cb4-569" aria-hidden="true" tabindex="-1"></a>                 <span class="cf">return</span> [<span class="st">"European Union"</span><span class="op">,</span> <span class="st">"China"</span><span class="op">,</span> <span class="st">"Japan"</span><span class="op">,</span> <span class="st">"Russia"</span><span class="op">,</span> <span class="st">"Korea, Rep."</span><span class="op">,</span> <span class="st">"United States"</span>]<span class="op">.</span><span class="fu">includes</span>(a<span class="op">.</span><span class="at">name</span>)<span class="op">;</span></span>
+<span id="cb4-570"><a href="#cb4-570" aria-hidden="true" tabindex="-1"></a>             })<span class="op">.</span><span class="fu">map</span>(<span class="kw">function</span>(a) {</span>
+<span id="cb4-571"><a href="#cb4-571" aria-hidden="true" tabindex="-1"></a>                 <span class="cf">return</span> a<span class="op">.</span><span class="at">name</span><span class="op">;</span></span>
+<span id="cb4-572"><a href="#cb4-572" aria-hidden="true" tabindex="-1"></a>             })<span class="op">,</span></span>
+<span id="cb4-573"><a href="#cb4-573" aria-hidden="true" tabindex="-1"></a>             <span class="dt">left</span><span class="op">:</span> <span class="st">'left'</span></span>
+<span id="cb4-574"><a href="#cb4-574" aria-hidden="true" tabindex="-1"></a>         }<span class="op">,</span></span>
+<span id="cb4-575"><a href="#cb4-575" aria-hidden="true" tabindex="-1"></a>        <span class="dt">animation</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb4-576"><a href="#cb4-576" aria-hidden="true" tabindex="-1"></a>        <span class="co">//animationDuration: 400,</span></span>
+<span id="cb4-577"><a href="#cb4-577" aria-hidden="true" tabindex="-1"></a>        <span class="co">//animationEasingUpdate: 'quinticInOut',</span></span>
+<span id="cb4-578"><a href="#cb4-578" aria-hidden="true" tabindex="-1"></a>        <span class="dt">series</span><span class="op">:</span> [{</span>
+<span id="cb4-579"><a href="#cb4-579" aria-hidden="true" tabindex="-1"></a>            <span class="dt">name</span><span class="op">:</span> <span class="st">'Funders'</span><span class="op">,</span></span>
+<span id="cb4-580"><a href="#cb4-580" aria-hidden="true" tabindex="-1"></a>            <span class="dt">type</span><span class="op">:</span> <span class="st">'graph'</span><span class="op">,</span></span>
+<span id="cb4-581"><a href="#cb4-581" aria-hidden="true" tabindex="-1"></a>            <span class="dt">layout</span><span class="op">:</span> <span class="st">'force'</span><span class="op">,</span></span>
+<span id="cb4-582"><a href="#cb4-582" aria-hidden="true" tabindex="-1"></a>            <span class="dt">data</span><span class="op">:</span> graph<span class="op">.</span><span class="at">nodes</span><span class="op">,</span></span>
+<span id="cb4-583"><a href="#cb4-583" aria-hidden="true" tabindex="-1"></a>            <span class="dt">links</span><span class="op">:</span> graph<span class="op">.</span><span class="at">links</span><span class="op">,</span></span>
+<span id="cb4-584"><a href="#cb4-584" aria-hidden="true" tabindex="-1"></a>            <span class="dt">categories</span><span class="op">:</span> graph<span class="op">.</span><span class="at">categories</span><span class="op">,</span></span>
+<span id="cb4-585"><a href="#cb4-585" aria-hidden="true" tabindex="-1"></a>            <span class="dt">roam</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb4-586"><a href="#cb4-586" aria-hidden="true" tabindex="-1"></a>            <span class="dt">scaleLimit</span><span class="op">:</span> {</span>
+<span id="cb4-587"><a href="#cb4-587" aria-hidden="true" tabindex="-1"></a>                <span class="dt">min</span><span class="op">:</span> <span class="fl">0.7</span><span class="op">,</span> <span class="co">// minimum zoom level (0.5 means the chart can be zoomed out to half its original size)</span></span>
+<span id="cb4-588"><a href="#cb4-588" aria-hidden="true" tabindex="-1"></a>                <span class="dt">max</span><span class="op">:</span> <span class="fl">1.5</span>   <span class="co">// maximum zoom level (2 means the chart can be zoomed in to twice its original size)</span></span>
+<span id="cb4-589"><a href="#cb4-589" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb4-590"><a href="#cb4-590" aria-hidden="true" tabindex="-1"></a>            <span class="dt">zoom</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb4-591"><a href="#cb4-591" aria-hidden="true" tabindex="-1"></a>            <span class="dt">label</span><span class="op">:</span> {</span>
+<span id="cb4-592"><a href="#cb4-592" aria-hidden="true" tabindex="-1"></a>                <span class="dt">position</span><span class="op">:</span> <span class="st">'right'</span><span class="op">,</span></span>
+<span id="cb4-593"><a href="#cb4-593" aria-hidden="true" tabindex="-1"></a>                <span class="dt">formatter</span><span class="op">:</span> <span class="st">'{b}'</span><span class="op">,</span></span>
+<span id="cb4-594"><a href="#cb4-594" aria-hidden="true" tabindex="-1"></a>                <span class="dt">backgroundColor</span><span class="op">:</span> <span class="st">'#fff'</span><span class="op">,</span> </span>
+<span id="cb4-595"><a href="#cb4-595" aria-hidden="true" tabindex="-1"></a>                <span class="dt">borderColor</span><span class="op">:</span> <span class="st">'#fff'</span><span class="op">,</span>  <span class="co">// Add border to labels</span></span>
+<span id="cb4-596"><a href="#cb4-596" aria-hidden="true" tabindex="-1"></a>                <span class="dt">borderWidth</span><span class="op">:</span> <span class="dv">3</span></span>
+<span id="cb4-597"><a href="#cb4-597" aria-hidden="true" tabindex="-1"></a>                <span class="co">//padding: [10, 10, 10, 10] Doesn't seem to be doing anything</span></span>
+<span id="cb4-598"><a href="#cb4-598" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb4-599"><a href="#cb4-599" aria-hidden="true" tabindex="-1"></a>            <span class="dt">labelLayout</span><span class="op">:</span> {</span>
+<span id="cb4-600"><a href="#cb4-600" aria-hidden="true" tabindex="-1"></a>                <span class="dt">hideOverlap</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb4-601"><a href="#cb4-601" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb4-602"><a href="#cb4-602" aria-hidden="true" tabindex="-1"></a>            <span class="dt">lineStyle</span><span class="op">:</span> {</span>
+<span id="cb4-603"><a href="#cb4-603" aria-hidden="true" tabindex="-1"></a>                <span class="dt">color</span><span class="op">:</span> <span class="st">'source'</span><span class="op">,</span></span>
+<span id="cb4-604"><a href="#cb4-604" aria-hidden="true" tabindex="-1"></a>                <span class="dt">opacity</span><span class="op">:</span> <span class="fl">0.2</span><span class="op">,</span></span>
+<span id="cb4-605"><a href="#cb4-605" aria-hidden="true" tabindex="-1"></a>                <span class="dt">curveness</span><span class="op">:</span> <span class="fl">0.3</span></span>
+<span id="cb4-606"><a href="#cb4-606" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb4-607"><a href="#cb4-607" aria-hidden="true" tabindex="-1"></a>            <span class="co">// force: {</span></span>
+<span id="cb4-608"><a href="#cb4-608" aria-hidden="true" tabindex="-1"></a>            <span class="co">//   repulsion: 25,</span></span>
+<span id="cb4-609"><a href="#cb4-609" aria-hidden="true" tabindex="-1"></a>            <span class="co">//   edgeLength: 40</span></span>
+<span id="cb4-610"><a href="#cb4-610" aria-hidden="true" tabindex="-1"></a>            <span class="co">//},</span></span>
+<span id="cb4-611"><a href="#cb4-611" aria-hidden="true" tabindex="-1"></a>            <span class="dt">force</span><span class="op">:</span> {</span>
+<span id="cb4-612"><a href="#cb4-612" aria-hidden="true" tabindex="-1"></a>                <span class="dt">repulsion</span><span class="op">:</span> [<span class="dv">400</span><span class="op">,</span> <span class="dv">800</span>]<span class="op">,</span></span>
+<span id="cb4-613"><a href="#cb4-613" aria-hidden="true" tabindex="-1"></a>                <span class="dt">edgeLength</span><span class="op">:</span> [<span class="dv">100</span><span class="op">,</span> <span class="dv">300</span>]</span>
 <span id="cb4-614"><a href="#cb4-614" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
-<span id="cb4-615"><a href="#cb4-615" aria-hidden="true" tabindex="-1"></a>            <span class="dt">lineStyle</span><span class="op">:</span> {</span>
-<span id="cb4-616"><a href="#cb4-616" aria-hidden="true" tabindex="-1"></a>                <span class="dt">color</span><span class="op">:</span> <span class="st">'source'</span><span class="op">,</span></span>
-<span id="cb4-617"><a href="#cb4-617" aria-hidden="true" tabindex="-1"></a>                <span class="dt">opacity</span><span class="op">:</span> <span class="fl">0.2</span><span class="op">,</span></span>
-<span id="cb4-618"><a href="#cb4-618" aria-hidden="true" tabindex="-1"></a>                <span class="dt">curveness</span><span class="op">:</span> <span class="fl">0.3</span></span>
-<span id="cb4-619"><a href="#cb4-619" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
-<span id="cb4-620"><a href="#cb4-620" aria-hidden="true" tabindex="-1"></a>            <span class="co">// force: {</span></span>
-<span id="cb4-621"><a href="#cb4-621" aria-hidden="true" tabindex="-1"></a>            <span class="co">//   repulsion: 25,</span></span>
-<span id="cb4-622"><a href="#cb4-622" aria-hidden="true" tabindex="-1"></a>            <span class="co">//   edgeLength: 40</span></span>
-<span id="cb4-623"><a href="#cb4-623" aria-hidden="true" tabindex="-1"></a>            <span class="co">//},</span></span>
-<span id="cb4-624"><a href="#cb4-624" aria-hidden="true" tabindex="-1"></a>            <span class="dt">force</span><span class="op">:</span> {</span>
-<span id="cb4-625"><a href="#cb4-625" aria-hidden="true" tabindex="-1"></a>                <span class="dt">repulsion</span><span class="op">:</span> [<span class="dv">400</span><span class="op">,</span> <span class="dv">800</span>]<span class="op">,</span></span>
-<span id="cb4-626"><a href="#cb4-626" aria-hidden="true" tabindex="-1"></a>                <span class="dt">edgeLength</span><span class="op">:</span> [<span class="dv">100</span><span class="op">,</span> <span class="dv">300</span>]</span>
-<span id="cb4-627"><a href="#cb4-627" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
-<span id="cb4-628"><a href="#cb4-628" aria-hidden="true" tabindex="-1"></a>            <span class="dt">emphasis</span><span class="op">:</span> {</span>
-<span id="cb4-629"><a href="#cb4-629" aria-hidden="true" tabindex="-1"></a>                <span class="dt">focus</span><span class="op">:</span> <span class="st">'adjacency'</span><span class="op">,</span></span>
-<span id="cb4-630"><a href="#cb4-630" aria-hidden="true" tabindex="-1"></a>                <span class="dt">lineStyle</span><span class="op">:</span> {</span>
-<span id="cb4-631"><a href="#cb4-631" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">width</span><span class="op">:</span> <span class="dv">10</span></span>
-<span id="cb4-632"><a href="#cb4-632" aria-hidden="true" tabindex="-1"></a>                }</span>
-<span id="cb4-633"><a href="#cb4-633" aria-hidden="true" tabindex="-1"></a>            }</span>
-<span id="cb4-634"><a href="#cb4-634" aria-hidden="true" tabindex="-1"></a>        }]</span>
-<span id="cb4-635"><a href="#cb4-635" aria-hidden="true" tabindex="-1"></a>    }<span class="op">;</span></span>
-<span id="cb4-636"><a href="#cb4-636" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-637"><a href="#cb4-637" aria-hidden="true" tabindex="-1"></a>    option <span class="op">&amp;&amp;</span> myChart<span class="op">.</span><span class="fu">setOption</span>(option)<span class="op">;</span></span>
-<span id="cb4-638"><a href="#cb4-638" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-639"><a href="#cb4-639" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-640"><a href="#cb4-640" aria-hidden="true" tabindex="-1"></a><span class="kw">new</span> <span class="fu">EchartsRunner</span>()</span>
-<span id="cb4-641"><a href="#cb4-641" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">addCodes</span>(funder_code)</span>
-<span id="cb4-642"><a href="#cb4-642" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">show</span>()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-615"><a href="#cb4-615" aria-hidden="true" tabindex="-1"></a>            <span class="dt">emphasis</span><span class="op">:</span> {</span>
+<span id="cb4-616"><a href="#cb4-616" aria-hidden="true" tabindex="-1"></a>                <span class="dt">focus</span><span class="op">:</span> <span class="st">'adjacency'</span><span class="op">,</span></span>
+<span id="cb4-617"><a href="#cb4-617" aria-hidden="true" tabindex="-1"></a>                <span class="dt">lineStyle</span><span class="op">:</span> {</span>
+<span id="cb4-618"><a href="#cb4-618" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">width</span><span class="op">:</span> <span class="dv">10</span></span>
+<span id="cb4-619"><a href="#cb4-619" aria-hidden="true" tabindex="-1"></a>                }</span>
+<span id="cb4-620"><a href="#cb4-620" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb4-621"><a href="#cb4-621" aria-hidden="true" tabindex="-1"></a>        }]</span>
+<span id="cb4-622"><a href="#cb4-622" aria-hidden="true" tabindex="-1"></a>    }<span class="op">;</span></span>
+<span id="cb4-623"><a href="#cb4-623" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-624"><a href="#cb4-624" aria-hidden="true" tabindex="-1"></a>    option <span class="op">&amp;&amp;</span> myChart<span class="op">.</span><span class="fu">setOption</span>(option)<span class="op">;</span></span>
+<span id="cb4-625"><a href="#cb4-625" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-626"><a href="#cb4-626" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-627"><a href="#cb4-627" aria-hidden="true" tabindex="-1"></a><span class="kw">new</span> <span class="fu">EchartsRunner</span>()</span>
+<span id="cb4-628"><a href="#cb4-628" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">addCodes</span>(funder_code)</span>
+<span id="cb4-629"><a href="#cb4-629" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">show</span>()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-4-1" data-nodetype="declaration">
@@ -1126,11 +1109,12 @@ Table&nbsp;2.2: Table of total publications by institution (selected only)
 </div>
 <p><span style="font-size: 0.9em; color: grey;">Figure 31: OBIS Occurrence Records in ABNJ</span></p>
 <p>The application of these filters reduced the number of taxonomic names to 7,982 in 1,477,285 occurrence records as shown in <a href="#tbl-abnj-occurrence"><u>Table 3</u></a>. We refer to this as the ‘ABNJ only’ group as a working set consisting of 6,203 unique binomial names and 1,779 higher order or uninomial taxonomic names. The latter are likely to encompass organisms found in multiple environments.</p>
+<p><span style="font-size: 0.9em; color: grey;">Table 3: Occurrence Rankings for Marine Organisms in ABNJ by number of occurrence records</span></p>
 <div class="cell">
 <div id="tbl-abnj-occurrence" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-abnj-occurrence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2.3: Occurrence Rankings for Marine Organisms in ABNJ by number of occurrence records
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-abnj-occurrence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.1
 </figcaption>
 <div aria-describedby="tbl-abnj-occurrence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -1144,7 +1128,6 @@ Table&nbsp;2.3: Occurrence Rankings for Marine Organisms in ABNJ by number of oc
 </figure>
 </div>
 </div>
-<p>Table 3: Occurrence Rankings for Marine Organisms in ABNJ by number of occurrence records</p>
 <p>The top organisms in <a href="#tbl-abnj-occurrence"><u>Table 3</u></a> in terms of the number of occurrences are Antarctic krill, Bigeye tuna, Swordfish, the Copepod <em>Calanus finmarchicus</em> found mainly in the North Atlantic and the Southern Ocean Copepod <em>Calanus simillimus</em> along with other krill species such as <em>Thysanoessa macrura</em> and Copepod <em>Rhincalanus gigas</em>.</p>
 <p>This indicates that organisms that are recorded with high frequency in ABNJ are typically found in shallower waters and, in the case of krill, tuna and swordfish, will be commercially significant for fisheries.</p>
 <p>Taken together, the combination of working definition elements provides a structured way of focusing analysis on research in the High Seas.</p>
@@ -1153,13 +1136,8 @@ Table&nbsp;2.3: Occurrence Rankings for Marine Organisms in ABNJ by number of oc
 <section id="applying-the-working-definition" class="level2">
 <h2 class="anchored" data-anchor-id="applying-the-working-definition">Applying the Working Definition</h2>
 <p>The three categories of data identified above are used to construct a working definition with weighted scores. <a href="#tbl-definition-criteria"><u>Table 4</u></a> sets out the criteria and weighted scores for the working definition.</p>
+<p><span style="font-size: 0.9em; color: grey;">Table 4: Weighted Criteria for the Working Definition with explanatory notes.</span></p>
 <div class="cell">
-<div id="tbl-definition-criteria" class="cell quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-definition-criteria-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2.4: Weighted Criteria for the Working Definition with explanatory notes.
-</figcaption>
-<div aria-describedby="tbl-definition-criteria-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1168,16 +1146,12 @@ Table&nbsp;2.4: Weighted Criteria for the Working Definition with explanatory no
 </div>
 </div>
 </div>
-</figure>
-</div>
-</div>
-<p>Table 4: Weighted Criteria for the Working Definition with explanatory notes.</p>
 <p><a href="#tbl-definition-example"><u>Table 5</u></a> shows examples of matching scientific publications against the weighted criteria mentioned above. The figure shows the OpenAlex publication identifier, the total score of the record against the criteria and a selection of columns.</p>
 <div class="cell">
 <div id="tbl-definition-example" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-definition-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2.5: Weighted criteria applied to individual records (selection for display).
+Table&nbsp;2.2: Weighted criteria applied to individual records (selection for display).
 </figcaption>
 <div aria-describedby="tbl-definition-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -1192,11 +1166,12 @@ Table&nbsp;2.5: Weighted criteria applied to individual records (selection for d
 </div>
 </div>
 <p>The ranked totals for the criteria across the dataset are summarised in <a href="#tbl-definition-ranked"><u>Table 6</u></a>.</p>
+<p><span style="font-size: 0.9em; color: grey;">Table 6: Marine Working Definition Rankings</span></p>
 <div class="cell">
 <div id="tbl-definition-ranked" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-definition-ranked-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2.6: Marine Working Definition Rankings
+Table&nbsp;2.3: Marine Working Definition Rankings
 </figcaption>
 <div aria-describedby="tbl-definition-ranked-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -1210,7 +1185,6 @@ Table&nbsp;2.6: Marine Working Definition Rankings
 </figure>
 </div>
 </div>
-<p>Table 6: Marine Working Definition Rankings</p>
 <p>In interpreting <a href="#tbl-definition-ranked"><u>Table 6</u></a> we can immediately observe that the majority of the overall marine dataset falls within the group 1 range of the working definition. That is, the records, even where they involve a marine organism do not contain a reference to a marine feature, or place name that would move them out of the group 1 range under the weighted criteria. Two large groupings of publications are found in groups 2 and 3 respectively and are dominated by members of Vibrio, Trichoderma and Mytilus as well as White Spot Syndrome Virus (affecting shrimp) as well as a range of plants such as the algae <em>Dunaliella salina</em> and the seagrass <em>Posidonia oceanica.</em></p>
 <p>A distinctive cluster of documents emerges in Group 5. Taken together Group 4 to 10 consist of 26,413 documents and will be our focus.</p>
 <section id="level-4-and-above" class="level3">
