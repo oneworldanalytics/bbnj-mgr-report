@@ -1,0 +1,32 @@
+project:
+  type: book
+  output-dir: _site
+  
+book:
+  title: "Study on Marine Genetic Resources"
+  author: "Paul Oldham, Jasmine Kindness, Emmanuel Davidson, Amelia Westmoreland, Thomas Vanagt and Marcel Jaspars"
+  date: "January 2025"
+  chapters:
+    - index.qmd
+    - scientific_literature.qmd
+    - patent_activity_for_marine_genetic_resources.qmd
+    - marine_genetic_resources_on_the_web.qmd
+    - references.qmd
+
+website:
+  title: "Marine Genetic Resources"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - scientific_literature.qmd
+      - patent_activity_for_marine_genetic_resources.qmd
+      - marine_genetic_resources_on_the_web.qmd
+      - references.qmd
+
+format:
+  html:
+    theme: lux
+    css: styles.css
+    toc: true
+    number-depth: 1

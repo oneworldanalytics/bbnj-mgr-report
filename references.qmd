@@ -1,0 +1,45 @@
+---
+title: "References"
+format: html
+editor: visual
+---
+
+Arnaud-Haond, Sophie, Jesús M. Arrieta, and Carlos M. Duarte. 2011. “Marine Biodiversity and Gene Patents.” *Science (New York, N.Y.)* 331 (6024): 1521–22. [*https://doi.org/10.1126/science.1200783*](https://doi.org/10.1126/science.1200783).
+
+Blasiak, Robert, Jean-Baptiste Jouffray, Colette C. C. Wabnitz, Emma Sundström, and Henrik Österblom. 2018. “Corporate Control and Global Governance of Marine Genetic Resources.” *Science Advances* 4 (6): eaar5237–. [*https://doi.org/10.1126/sciadv.aar5237*](https://doi.org/10.1126/sciadv.aar5237).
+
+Bowman, John P., Sharee A. McCammon, Tom Lewis, J Skerratt, Janelle L. Brown, David Nichols, and Tom A. McMeekin. 1998. “Psychroflexus Torquis Gen. Nov., Sp. Nov. A Psychrophilic Species from Antarctic Sea Ice, and Reclassification of Flavobacterium Gondwanense (Dobson Et Al. 1993) as Psychroflexus Gondwanense Gen. Nov., Comb. Nov.” *Microbiology (Reading, England)* 144 (6): 1601–9. [*https://doi.org/10.1099/00221287-144-6-1601*](https://doi.org/10.1099/00221287-144-6-1601).
+
+Erauso, Gaël, Anna-Louise Reysenbach, Anne Godfroy, Jean-Roch Meunier, Byron C. Crump, Frédéric Partensky, John A. Baross, et al. 1993. “Pyrococcus Abyssi Sp. Nov., a New Hyperthermophilic Archaeon Isolated from a Deep-Sea Hydrothermal Vent.” *Archives of Microbiology* 160 (5): 338–49. [*https://doi.org/10.1007/bf00252219*](https://doi.org/10.1007/bf00252219).
+
+Inouye, Satoshi, Ken Watanabe, Hideshi Nakamura, and Osamu Shimomura. 2000. “Secretional Luciferase of the Luminous Shrimp Oplophorus Gracilirostris: cDNA Cloning of a Novel Imidazopyrazinone Luciferase.” *FEBS Letters* 481 (1): 19–25. [*https://doi.org/10.1016/s0014-5793(00)01963-3*](https://doi.org/10.1016/s0014-5793(00)01963-3).
+
+Jefferson, Osmat Azzam, Deniz Köllhofer, Prabha Ajjikuttira, and Richard A. Jefferson. 2015. “Public Disclosure of Biological Sequences in Global Patent Practice.” *World Patent Information* 43: 12–24. [*https://doi.org/10.1016/j.wpi.2015.08.005*](https://doi.org/10.1016/j.wpi.2015.08.005).
+
+Jefferson, Osmat Azzam, Deniz Köllhofer, Thomas H Ehrich, and Richard A. Jefferson. 2013. “Transparency Tools in Gene Patenting for Informing Policy and Practice.” *Nature Biotechnology* 31 (12): 1086–93. [*https://doi.org/10.1038/nbt.2755*](https://doi.org/10.1038/nbt.2755).
+
+Mohamed, Gamal A., and Sabrin R. M. Ibrahim. 2021. “Untapped Potential of Marine-Associated Cladosporium Species: An Overview on Secondary Metabolites, Biotechnological Relevance, and Biological Activities.” *Marine Drugs* 19 (11): 645–45. [*https://doi.org/10.3390/md19110645*](https://doi.org/10.3390/md19110645).
+
+O’Malley, Maureen A., Adam Bostanci, and Jane Calvert. 2005. “Whole-Genome Patenting.” *Nature Reviews. Genetics* 6 (6): 502–6. [*https://doi.org/10.1038/nrg1613*](https://doi.org/10.1038/nrg1613).
+
+Oldham, Paul, Stephen Hall, and Oscar Forero. 2013. “Biological Diversity in the Patent System.” *PloS One* 8 (11): 1–16. [*https://doi.org/10.1371/journal.pone.0078737*](https://doi.org/10.1371/journal.pone.0078737).
+
+Oldham, Paul, and Jasmine Kindness. 2020. “Biodiversity Research and Innovation in Antarctica and the Southern Ocean.” [*https://doi.org/10.1101/2020.05.03.074849*](https://doi.org/10.1101/2020.05.03.074849).
+
+Oldham, P, N Shale, and J Kindness. 2019. “Patent Landscape Report: Marine Genetic Resources.” [*https://www.wipo.int/edocs/pubdocs/en/wipo_pub_947_6.pdf*](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_947_6.pdf).
+
+Page, Roderic. 2023. “Ten Years and a Million Links: Building a Global Taxonomic Library Connecting Persistent Identifiers for Names, Publications and People.” *Biodiversity Data Journal* 11 (September). [*https://doi.org/10.3897/bdj.11.e107914*](https://doi.org/10.3897/bdj.11.e107914).
+
+Paul Oldham, Colin Barnes, Stephen Hall. 2014. “Valuing the Deep: Marine Genetic Resources in Areas Beyond National Jurisdiction,”. [*https://doi.org/10.13140/2.1.2612.5605*](https://doi.org/10.13140/2.1.2612.5605).
+
+Qin, Qi-Long, Xi-Ying Zhang, Xumin Wang, Guiming Liu, Xiu-Lan Chen, Bin-Bin Xie, Hongyue Dang, Bai-Cheng Zhou, Jun Yu, and Yu-Zhong Zhang. 2010. “The Complete Genome of Zunongwangia Profunda SM-A87 Reveals Its Adaptation to the Deep-Sea Environment and Ecological Role in Sedimentary Organic Nitrogen Degradation.” *BMC Genomics* 11 (1): 247–47. [*https://doi.org/10.1186/1471-2164-11-247*](https://doi.org/10.1186/1471-2164-11-247).
+
+Raffel, Colin, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang, Michael Matena, Yanqi Zhou, Wei Li, and Peter J. Liu. 2019. “Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer.” [*https://doi.org/10.48550/ARXIV.1910.10683*](https://doi.org/10.48550/ARXIV.1910.10683).
+
+Southworth, M W, Huimin Kong, Rebecca Kucera, J Ware, H W Jannasch, and Francine B. Perler. 1996. “Cloning of Thermostable DNA Polymerases from Hyperthermophilic Marine Archaea with Emphasis on Thermococcus Sp. 9 Degrees n-7 and Mutations Affecting 3’-5’ Exonuclease Activity.” *Proceedings of the National Academy of Sciences of the United States of America* 93 (11): 5281–85. [*https://doi.org/10.1073/pnas.93.11.5281*](https://doi.org/10.1073/pnas.93.11.5281).
+
+Tannous, Bakhos A., Dong-Eog Kim, Juliet L. Fernandez, Ralph Weissleder, and Xandra O. Breakefield. 2005. “Codon-Optimized Gaussia Luciferase cDNA for Mammalian Gene Expression in Culture and in Vivo.” *Molecular Therapy : The Journal of the American Society of Gene Therapy* 11 (3): 435–43. [*https://doi.org/10.1016/j.ymthe.2004.10.016*](https://doi.org/10.1016/j.ymthe.2004.10.016).
+
+Zhao, Yan, Chen Chen, Han-jie Gu, Jian Zhang, and Li Sun. 2019. “Characterization of the Genome Feature and Toxic Capacity of a Bacillus Wiedmannii Isolate from the Hydrothermal Field in Okinawa Trough.” *Frontiers in Cellular and Infection Microbiology* 9 (October). [*https://doi.org/10.3389/fcimb.2019.00370*](https://doi.org/10.3389/fcimb.2019.00370).
+
+Zhivkoplias, Erik, Agnes Pranindita, Paul Dunshirn, Jean-Baptiste Jouffray, and Robert Blasiak. 2023. “Novel Database Reveals Growing Prominence of Deep-Sea Life for Marine Bioprospecting.” [*https://doi.org/10.21203/rs.3.rs-3136354/v1*](https://doi.org/10.21203/rs.3.rs-3136354/v1)
