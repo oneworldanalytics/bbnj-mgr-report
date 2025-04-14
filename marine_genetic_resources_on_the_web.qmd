@@ -1,7 +1,7 @@
 ---
 title: "Marine Genetic Resources on the Web"
 format: html
-editor: visual
+editor: source
 ---
 
 ## Introduction
@@ -34,7 +34,7 @@ The Common Crawl expresses these principles in its [*terms of use*](https://comm
 
 Web scale snapshots from the Common Crawl include the whole panoply of information available on the public internet and will include information that will be racist, offensive or discriminatory. The use of such data to train AI models has been a significant focus of ongoing concern. However, in recognition of these issues, companies within the AI space have also sought to improve the data available for training models by identifying and removing such materials.
 
-A second factor in the use of internet web snapshots within the AI community is the problem of scale. As noted above the Common Crawl snapshots involve billions of web pages and are hundreds of terabytes in size. This makes its use at scale impractical for many potential users. In response to these issues, in late 2019 a research team at Google released a cleaned up snapshot in the form of the [*Colossal Crawl C4*](https://www.tensorflow.org/datasets/catalog/c4) dataset. The dataset used a procedure to remove pages containing offensive terms and also sought to remove the vast swathes of duplicate pages and pages consisting purely of code that dominate the Common Crawl snapshots. The Colossal Crawl dataset was used to train the Google T5 series of AI text generation and language translation models (Raffel et al. (2019)). The growing importance of cleaned web scale data to AI as a field has led to increasing efforts to release cleaned up snapshots for wider use[^marine_genetic_resources_on_the_web-2].
+A second factor in the use of internet web snapshots within the AI community is the problem of scale. As noted above the Common Crawl snapshots involve billions of web pages and are hundreds of terabytes in size. This makes its use at scale impractical for many potential users. In response to these issues, in late 2019 a research team at Google released a cleaned up snapshot in the form of the [*Colossal Crawl C4*](https://www.tensorflow.org/datasets/catalog/c4) dataset. The dataset used a procedure to remove pages containing offensive terms and also sought to remove the vast swathes of duplicate pages and pages consisting purely of code that dominate the Common Crawl snapshots. The Colossal Crawl dataset was used to train the Google T5 series of AI text generation and language translation models (Raffel et al. (2019)). The growing importance of cleaned web scale data to AI as a field has led to increasing efforts to release cleaned up snapshots for wider use.[^marine_genetic_resources_on_the_web-2]
 
 [^marine_genetic_resources_on_the_web-2]: A more recent snapshot from the Allen Institute for AI is called MADLAD-400 (Multilingual Audited Dataset: Low-resource And Document-level) and contains precleaned data until mid-2022. However, the dataset does not contain the url for the web-based texts which limits its utility for our purposes. The full dataset is also 7 terabytes in size.
 
@@ -77,7 +77,7 @@ The identification of marine genetic resources in a dataset of this size can be 
 
 ### Tokenizing Web Texts
 
-In the initial step the 364 million web pages are split into individual words (tokens). Common stop words (e.g. ‘and’, ‘or’ etc.) are removed. Processing is performed in Apache Spark which is widely used for memory efficient large scale parallel processing of texts. Apache Spark can be used with common data science programming languages such as Python using pyspark or R using sparklyr. The code below is written in R with the sparklyr package and assumes that a user already has a Spark cluster running.
+In the initial step the 364 million web pages are split into individual words (tokens). Common stop words (e.g. ‘and’, ‘or’ etc.) are removed. Processing is performed in Apache Spark which is widely used for memory efficient large scale parallel processing of texts. Apache Spark can be used with common data science programming languages such as Python using pyspark or R using sparklyr. The code below is written in R with the sparklyr package and assumes that a user already has a Spark cluster running.
 
 ```{r}
 #| eval: false
@@ -114,7 +114,7 @@ When dealing with data at the level of billions of items one important challenge
 
 ## A High Level Overview
 
-We can begin to explore the data in a straightforward way by seeking to count up the number of pages that contain individual words such as ‘marine’. In total we identified 19.6 million occurrences of the selected marine terms in 9,961,171 distinct web pages. The terms in [[Table 9]{.underline}](#tbl-marine-words) are counts of the number of occurrences of terms in the c4 dataset and have been aggregated (e.g. ‘sea’ and its plural ‘seas’ have been aggregated to the singular ‘sea’).
+We can begin to explore the data in a straightforward way by seeking to count up the number of pages that contain individual words such as ‘marine’. In total we identified 19.6 million occurrences of the selected marine terms in 9,961,171 distinct web pages. The terms in [Table 9]{.underline} are counts of the number of occurrences of terms in the c4 dataset and have been aggregated (e.g. ‘sea’ and its plural ‘seas’ have been aggregated to the singular ‘sea’).
 
 [Table 9: Occurrences of Marine Terms in Web Pages in English]{style="font-size: 0.9em; color: grey;"}
 ```{r}
@@ -124,9 +124,9 @@ We can begin to explore the data in a straightforward way by seeking to count up
 knitr::include_graphics("images/web/table-3-1.png")
 ```
 
-As we might expect, the terms ‘sea’ and ‘ocean’ rank top in terms of occurrences with terms like ‘deep sea’ and ‘hydrothermal’ ranking lower. Note here, that some terms can be expressed either as a single term (e.g., ‘deepsea’ or ‘deep-sea’) or as a two-word phrase (‘deep sea’). We focus here purely on single terms. In other cases, such as ‘hydrothermal’, the term will cover the full spectrum of uses of a term (e.g. ‘hydrothermal energy’ and ‘hydrothermal vents’) rather than being confined to a marine use.
+As we might expect, the terms ‘sea’ and ‘ocean’ rank top in terms of occurrences with terms like ‘deep sea’ and ‘hydrothermal’ ranking lower. Note here, that some terms can be expressed either as a single term (e.g., ‘deepsea’ or ‘deep-sea’) or as a two-word phrase (‘deep sea’). We focus here purely on single terms. In other cases, such as ‘hydrothermal’, the term will cover the full spectrum of uses of a term (e.g. ‘hydrothermal energy’ and ‘hydrothermal vents’) rather than being confined to a marine use.
 
-We can gain an insight into the uses of these terms in websites by counting up the main or base domains for the sites as set out in [[Table 10]{.underline}](#tbl-marine-domains).
+We can gain an insight into the uses of these terms in websites by counting up the main or base domains for the sites as set out in [Table 10]{.underline}.
 
 [Table 10: Counts of Web Pages for a Selection of Marine Terms for English Websites (top 10 only)]{style="font-size: 0.9em; color: grey;"}
 ```{r}
@@ -163,7 +163,7 @@ The increasing ability to conduct analysis at this level has important implicati
 
 Having gained an insight into the appearance of marine related terms in the web data the next step is to identify web pages that contain references to products. To do this we use a dictionary of 1,264 product terms derived from text mining the International Patent Classification (IPC). The International Patent Classification is technology focused but also makes extensive reference to a wide range of products (antibiotics, cosmetics, perfumes, nutraceuticals etc.) as part of its organisational logic.
 
-Table 11 presents the top ranking counts of product related terms by the number of occurrences in the 6,397,346 million distinct web pages containing marine words. That is, approximately 64% of the 9.9 marine related web pages in the C4 dataset also involved a product related term. In total there were 47,972,787 occurrences of product terms.
+[Table 11]{.underline} presents the top ranking counts of product related terms by the number of occurrences in the 6,397,346 million distinct web pages containing marine words. That is, approximately 64% of the 9.9 marine related web pages in the C4 dataset also involved a product related term. In total there were 47,972,787 occurrences of product terms.
 
 [Table 11: Counts of Frequency of Product Terms in Marine Pages]{style="font-size: 0.9em; color: grey;"}
 ```{r}
@@ -188,9 +188,10 @@ The results, in broad terms, are what we might expect. The product listings incl
 
 The prominence of the words ‘ship’ and ‘shipping’ due to their common use in American English could have a distorting effect in the remaining analysis because it will tend to rank first. We therefore filter the analysis to exclude ‘ship’, ‘ships’ and ‘shipping’. This reduces our raw page count to 6,116,178 from 6,397,346
 
-Figure [[Table 12]{.underline}](#tbl-marine-products-domains) shows the top domains based on the number of pages containing both marine and product terms.
+[Table 12]{.underline} shows the top domains based on the number of pages containing both marine and product terms.
 
 [Table 12: Counts of Domain Names of Marine Web Pages containing Product Terms]{style="font-size: 0.9em; color: grey;"}
+
 ```{r}
 #| echo: false
 #| output: true
@@ -251,9 +252,10 @@ In an effort to get closer to marine genetic resources we can narrow the focus t
 
 -   supplements
 
-Filtering to specific product areas and removing duplicates reduces the number of pages to 463,205 from 6,116,178. The top domains are set out in [[Table 13]{.underline}](#tbl-marine-products-domains-subset).
+Filtering to specific product areas and removing duplicates reduces the number of pages to 463,205 from 6,116,178. The top domains are set out in [Table 13]{.underline}.
 
 [Table 13: Counts of Marine Page Domain Names containing Filtered Product Terms]{style="font-size: 0.9em; color: grey;"}
+
 ```{r}
 #| echo: false
 #| output: true
@@ -283,9 +285,10 @@ In response to this we turned to text mining and the use of machine learning mod
 
 ### A Marine Fishing Net
 
-The outcome of the filtering process outlined above was a reduced set of 463,205 pages containing the marine terms and the product terms. In the next step, bearing in mind the noisy nature of this data as seen in the domain names above, we take the texts as is and split them into individual sentences. The aim of this process is a detailed analysis of the occurrence of terms in a ‘marine fishing net’ consisting of 176,496 marine taxonomic, common names and underwater place names that can be used to identify marine genetic resources as summarised in [[Table 14]{.underline}](#tbl-mfn).
+The outcome of the filtering process outlined above was a reduced set of 463,205 pages containing the marine terms and the product terms. In the next step, bearing in mind the noisy nature of this data as seen in the domain names above, we take the texts as is and split them into individual sentences. The aim of this process is a detailed analysis of the occurrence of terms in a ‘marine fishing net’ consisting of 176,496 marine taxonomic, common names and underwater place names that can be used to identify marine genetic resources as summarised in [Table 14]{.underline}.
 
 [Table 14: Marine Organisms in OBIS]{style="font-size: 0.9em; color: grey;"}
+
 ```{r}
 #| echo: false
 #| warning: false
@@ -319,9 +322,10 @@ The fishing net was constructed in such a way that it can be used to capture ind
 
 Splitting the data into sentences resulted in a total of 64,634,994 sentences from the 463,205 texts. In the next step we split each sentence into individual words and phrases. For example, for two word phrases there were just over 1 billion phrases (1,057,079,385). We then matched words (unigrams) and two word phrases (bigrams) against the marine fishing net of taxonomic, common names and place name terms.
 
-The objective of this exercise was to identify sentences in the marine products texts that could be linked directly to a marine organism either through a taxonomic name or common name. We decided to focus specifically on the 2,033,247 sentences from 331,525 web pages that contained an ABNJ taxonomic name or a common name listed in OBIS in order to narrow the focus. [[Table 15]{.underline}](#tbl-marine-words-phrases) displays the top ranking terms across common names and taxonomic names in the product related pages based on frequency.
+The objective of this exercise was to identify sentences in the marine products texts that could be linked directly to a marine organism either through a taxonomic name or common name. We decided to focus specifically on the 2,033,247 sentences from 331,525 web pages that contained an ABNJ taxonomic name or a common name listed in OBIS in order to narrow the focus. [Table 15]{.underline} displays the top ranking terms across common names and taxonomic names in the product related pages based on frequency.
 
 [Table 15: Top Terms in Marine Product Pages by Page Count]{style="font-size: 0.9em; color: grey;"}
+
 ```{r}
 #| echo: false
 #| output: true
@@ -354,11 +358,12 @@ The objective of this exercise was to identify sentences in the marine products 
 knitr::include_graphics("images/web/table-3-7.png")
 ```
 
-As we can see clearly in Table 15 counts by terms will commonly be dominated by single words. As we might expect Table 15 reveals that the word fish is dominant by a considerable margin. This is followed by references to salmon, krill, whales, rays, seaweed, sharks and shrimp, cod and corals (note that terms have not been aggregated in this figure to merge their plural and singular forms which will affect the rankings).
+As we can see clearly in [Table 15]{.underline} counts by terms will commonly be dominated by single words. As we might expect Table 15 reveals that the word fish is dominant by a considerable margin. This is followed by references to salmon, krill, whales, rays, seaweed, sharks and shrimp, cod and corals (note that terms have not been aggregated in this figure to merge their plural and singular forms which will affect the rankings).
 
-A more precise view begins to emerge when we focus on the common names of marine organisms involving phrases. [[Table 16]{.underline}](#tbl-marine-words-common) displays the top ranking common name phrases of approximately 2,527 common names in the data.
+A more precise view begins to emerge when we focus on the common names of marine organisms involving phrases. [Table 16]{.underline} displays the top ranking common name phrases of approximately 2,527 common names in the data.
 
 [Table 16: Counts of Marine Organisms in Product Pages by Common Name (Phrases)]{style="font-size: 0.9em; color: grey;"}
+
 ```{r}
 #| echo: false
 #| output: true
@@ -390,9 +395,10 @@ knitr::include_graphics("images/web/table-3-8.png")
 
 This begins to reveal some of the more charismatic marine species, notably marine mammals such as sea turtles, whales, polar bears as well as other organisms including algae, sea urchins, sea cucumbers and further down the list, crabs, whale sharks and other sharks, sponges, fish eggs and soft corals among others.
 
-In terms of taxonomic names, we identified 1,224 taxonomic names in the ‘ABNJ only’ working dataset in the product category areas. The highest frequency was for krill (*Euphausia superba*), the Ocean Sunfish (*Mola mola*), the Norway Lobster (*Nephrops norvegicus*), the copepod (*Calanus finmarchicus*) and Crown of Thorns starfish (*Acanthaster planci*), the marine bryozoan (*Bugula neritina*), the Spiny Mudlark (*Brissopsis lyrifera*), the Boring Sponge (*Cliona celata*), the Brittle Star (*Amphiura filiformis*) and Blow lugworm (*Arenicola marina*), as shown in [[Table 17]{.underline}](#tbl-marine-words-taxonomic).
+In terms of taxonomic names, we identified 1,224 taxonomic names in the ‘ABNJ only’ working dataset in the product category areas. The highest frequency was for krill (*Euphausia superba*), the Ocean Sunfish (*Mola mola*), the Norway Lobster (*Nephrops norvegicus*), the copepod (*Calanus finmarchicus*) and Crown of Thorns starfish (*Acanthaster planci*), the marine bryozoan (*Bugula neritina*), the Spiny Mudlark (*Brissopsis lyrifera*), the Boring Sponge (*Cliona celata*), the Brittle Star (*Amphiura filiformis*) and Blow lugworm (*Arenicola marina*), as shown in [Table 17]{.underline}.
 
 [Table 17: Counts of Marine Organisms in Product Pages by Taxonomic Name]{style="font-size: 0.9em; color: grey;"}
+
 ```{r}
 #| echo: false
 #| output: true
@@ -417,26 +423,26 @@ In terms of taxonomic names, we identified 1,224 taxonomic names in the ‘ABNJ 
 knitr::include_graphics("images/web/table-3-9.png")
 ```
 
-Counts of the frequency of occurrence of species in web pages linked to products give us an idea of the intensity of attention to a particular organism. However, when dealing with commercial web activity we also need to be aware of a practice known as ‘keyword stuffing’ or ‘keyword spamming’ where the metadata of a page is crammed with specific keywords in an attempt to secure a higher page ranking in a search engine[^marine_genetic_resources_on_the_web-3]. For the wider marine dataset, this type of practice could explain the high rankings of sites such as the urban hotlist and the appearance of gambling sites. We therefore focus on page counts.
+Counts of the frequency of occurrence of species in web pages linked to products give us an idea of the intensity of attention to a particular organism. However, when dealing with commercial web activity we also need to be aware of a practice known as ‘keyword stuffing’ or ‘keyword spamming’ where the metadata of a page is crammed with specific keywords in an attempt to secure a higher page ranking in a search engine.[^marine_genetic_resources_on_the_web-3] For the wider marine dataset, this type of practice could explain the high rankings of sites such as the urban hotlist and the appearance of gambling sites. We therefore focus on page counts.
 
 [^marine_genetic_resources_on_the_web-3]: Search Engine Optimization (SEO) is a widespread practice and increasingly uses AI in order to bump up the presence of a page to the top of search results with search engines such as Google or Bing. Search engines now automatically penalise well known practices such as keyword stuffing. However, this does not mean that people will not attempt it or similar practices.
 
 ### ABNJ Organisms and Product Pages
 
-[[**Figure *67***]{.underline}](#fig-abnj-species-products) below displays the top ranking organisms from the working set of ‘ABNJ only’ organisms in the web data ranked on the number of pages. In [[**Figure *67***]{.underline}](#fig-abnj-species-products) we also observe counts of product pages linked to the organisms, the domains where the product related pages are published and finally the address (url) for the web page itself.
+[**Figure 67**](#fig-abnj-species-products) below displays the top ranking organisms from the working set of ‘ABNJ only’ organisms in the web data ranked on the number of pages. In [**Figure 67**](#fig-abnj-species-products) we also observe counts of product pages linked to the organisms, the domains where the product related pages are published and finally the address (url) for the web page itself.
 
 ```{r}
 #| echo: false
-##| label: fig-abnj-species-products
+#| label: fig-abnj-species-products
 # fig-cap: ABNJ Species and Products
 
 knitr::include_graphics("images/web/ABNJ_Species_Products.png")
 ```
 [Figure 67: ABNJ Species and Products in Web Page Texts]{style="font-size: 0.9em; color: grey;"}
 
-[[**Figure *67***]{.underline}](#fig-abnj-species-products) reveals that overall, on taxonomic names, the data is dominated by krill (*Euphausia superba*). As we might expect, references to products are dominated by the common name krill followed by krill oil. In terms of domains where pages are hosted we can observe the dominance of academic and research sites as well as occasional commercial sites such as aquacave.com and bodykind.com which advertise sales of krill oil. The second ranked organism is the copepod *Calanus finmarchicus* which appears in connection with products such as Arctic Ruby Oil and fish feed. As this suggests, we are able to begin to explore the details of references to actual or potential products linked to organisms in ABNJ.
+[**Figure 67**](#fig-abnj-species-products) reveals that overall, on taxonomic names, the data is dominated by krill (*Euphausia superba*). As we might expect, references to products are dominated by the common name krill followed by krill oil. In terms of domains where pages are hosted we can observe the dominance of academic and research sites as well as occasional commercial sites such as aquacave.com and bodykind.com which advertise sales of krill oil. The second ranked organism is the copepod *Calanus finmarchicus* which appears in connection with products such as Arctic Ruby Oil and fish feed. As this suggests, we are able to begin to explore the details of references to actual or potential products linked to organisms in ABNJ.
 
-The Habitats & Features panel in the dashboard presented in static form in [[**Figure *68***]{.underline}](#fig-marine-words-habitats) allows for the exploration of specific habitats and features recorded in web pages such as for hydrothermal vents. These references are almost entirely from research organisations.
+The Habitats & Features panel in the dashboard presented in static form in [**Figure 68**](#fig-marine-words-habitats) allows for the exploration of specific habitats and features recorded in web pages such as for hydrothermal vents. These references are almost entirely from research organisations.
 
 ```{r}
 #| echo: false
@@ -448,7 +454,7 @@ knitr::include_graphics("images/web/Habitats_Products.png")
 ```
 [Figure 68: Counts of Pages Referencing Hydrothermal Vents and Products]{style="font-size: 0.9em; color: grey;"}
 
-The dashboard on named underwater places seeks to capture the named locations in texts containing an ABNJ recorded species and references to products and is provided in static form in [[**Figure *69***]{.underline}](#fig-marine-words-places).
+The dashboard on named underwater places seeks to capture the named locations in texts containing an ABNJ recorded species and references to products and is provided in static form in [**Figure 69**](#fig-marine-words-places).
 
 ```{r}
 #| echo: false
@@ -460,13 +466,13 @@ knitr::include_graphics("images/web/underwater_places_products.png")
 ```
 [Figure 69: Counts of Pages Referencing Hydrothermal Vents and Products]{style="font-size: 0.9em; color: grey;"}
 
-[[**Figure *69***]{.underline}](#fig-marine-words-places) makes clear that the top named location for species in our working ‘ABNJ only’ list is in fact inside national jurisdiction in the form of the Great Barrier Reef followed by the East Pacific Rise. In terms of domains and web pages the data is dominated by research institutions.
+[**Figure 69**](#fig-marine-words-places) makes clear that the top named location for species in our working ‘ABNJ only’ list is in fact inside national jurisdiction in the form of the Great Barrier Reef followed by the East Pacific Rise. In terms of domains and web pages the data is dominated by research institutions.
 
 ## Patent Applicants
 
 In the previous section we identified 3,531 raw names of patent applicants who were engaged in activity involving species within our working set of ‘ABNJ only’ species names based on taxonomic names in OBIS. We sought to establish evidence for research on or sales of commercial products arising from ABNJ associated species in web pages in the C4 web dataset.
 
-Table 18 displays a selection of patent applicants and species names. Note that in many cases the ABNJ associated species name appears in the description section of patent documents and in a smaller number of cases appears in the claims section.
+[Table 18]{.underline} displays a selection of patent applicants and species names. Note that in many cases the ABNJ associated species name appears in the description section of patent documents and in a smaller number of cases appears in the claims section.
 
 [Table 18: Patent Applicants ABNJ recorded species in claims and filings]{style="font-size: 0.9em; color: grey;"}
 ```{r}
@@ -494,7 +500,7 @@ Table 18 displays a selection of patent applicants and species names. Note that 
 knitr::include_graphics("images/web/table-3-10.png")
 ```
 
-Table 19 presents a summary of the top species appearing in the patent documents.
+[Table 19]{.underline} presents a summary of the top species appearing in the patent documents.
 
 [Table 19: ABNJ associated species in patent documents]{style="font-size: 0.9em; color: grey;"}
 ```{r}
@@ -531,7 +537,7 @@ We will now test whether there is evidence of company sales of products arising 
 
 To do that we adopted a multi step procedure:
 
-We used an AI assisted ‘patent company to domain name matcher’ to identify the likely official domain names of the patent applicants. We identified a total of 809 domains from 3,531 patent applicant names[^marine_genetic_resources_on_the_web-4].
+We used an AI assisted ‘patent company to domain name matcher’ to identify the likely official domain names of the patent applicants. We identified a total of 809 domains from 3,531 patent applicant names.[^marine_genetic_resources_on_the_web-4]
 
 [^marine_genetic_resources_on_the_web-4]: Patent applicants are simultaneously noisy, in that they may be expressed in a variety of forms, and dynamic. The use of an AI assisted ‘company to domain name matcher’ revealed that a significant number of companies do not have an obvious public site on the web, have been acquired by other companies or have gone out of business. Traces of these companies were typically found in business news websites and listings. We did not pursue those names further.
 
@@ -539,7 +545,7 @@ We used an AI assisted ‘patent company to domain name matcher’ to identify t
 
 2.  We then identified those pages of the websites that contained an ABNJ associated species name that appeared in the patent document.
 
-This procedure produced a list of 75 web pages for further analysis. Table 20 shows the 25 domains that matched to the ABNJ associated species that appeared in the patent documents. Note that only those domains in which we were able to identify a web page where a species is present are included in this table.
+This procedure produced a list of 75 web pages for further analysis. [Table 20]{.underline} shows the 25 domains that matched to the ABNJ associated species that appeared in the patent documents. Note that only those domains in which we were able to identify a web page where a species is present are included in this table.
 
 [Table 20: Patent Applicants Pages Containing ABNJ related species (top 20)]{style="font-size: 0.9em; color: grey;"}
 ```{r}
@@ -559,7 +565,7 @@ This procedure produced a list of 75 web pages for further analysis. Table 20 sh
 knitr::include_graphics("images/web/table-3-12.png")
 ```
 
-As we can see from the results in Table 20  which is ranked on the number of pages, the University of Tromso (UiT or the University of the Arctic) appears top followed by the Norwegian Institute for Marine Research, and the MOTE Marine Aquarium and Laboratory.
+As we can see from the results in [Table 20]{.underline} which is ranked on the number of pages, the University of Tromso (UiT or the University of the Arctic) appears top followed by the Norwegian Institute for Marine Research, and the MOTE Marine Aquarium and Laboratory.
 
 ## AI Assisted Web Research
 
@@ -593,7 +599,7 @@ Finally, at the time of writing, the creation of a research agent requires progr
 
 #### Identifying Commercial Products
 
-We used a research agent as part of an exercise in identifying commercial products linked to species recorded in ABNJ. We chose to use the working set of 7,982 ‘ABNJ only’ taxonomic names for the test and ranked them on the number of occurrences. The working assumption behind this approach was that species recorded in ABNJ at higher frequency are more likely to have been a focus of commercial research and development than low frequency species. [[Table 21]{.underline}](#tbl-occ-rank) shows the top ranked organisms.
+We used a research agent as part of an exercise in identifying commercial products linked to species recorded in ABNJ. We chose to use the working set of 7,982 ‘ABNJ only’ taxonomic names for the test and ranked them on the number of occurrences. The working assumption behind this approach was that species recorded in ABNJ at higher frequency are more likely to have been a focus of commercial research and development than low frequency species. [Table 21]{.underline} shows the top ranked organisms.
 
 [Table 21: Working Set of ABNJ Only Organisms ranked by occurrence records]{style="font-size: 0.9em; color: grey;"}
 ```{r}
@@ -618,7 +624,7 @@ We used a research agent as part of an exercise in identifying commercial produc
 knitr::include_graphics("images/web/table-3-13.png")
 ```
 
-We then set the AI research agent the task of iterating over the first 1000 \[currently 983\] ranked organism names (including genus and above where relevant) to search for and identify whether a commercial product linked to the organism could be identified.
+We then set the AI research agent the task of iterating over the first 1000 ranked organism names (including genus and above where relevant) to search for and identify whether a commercial product linked to the organism could be identified.
 
 It transpires that defining what is, or is not, a commercial product is not as straightforward as it at first appears. At first sight, we can assume that a commercial product is a product that is sold on the market that is based on or contains elements of the organism of interest. However, how is an AI model to know what those elements are? In response to this we included the following draft definition in its instructions.
 
@@ -634,7 +640,7 @@ In an attempt to reinforce the importance of potential products we also included
 
 An additional objective was to obtain information on the prices of products on the market. Once again, while this could be considered to be straightforward it is in reality ambiguous when seen from the perspective of a Large Language Model. Given the possibility of multiple markets and multiple products, the behaviour of the model was to give an ambiguous answer.
 
-The results are summarised in Table 22 focusing on organisms where the web search and summary suggested the existence of some form of actual or potential commercial product.
+The results are summarised in [Table 22]{.underline} focusing on organisms where the web search and summary suggested the existence of some form of actual or potential commercial product.
 
 [Table 22: ABNJ Only Organisms AI Agent Associates with Commercial Products]{style="font-size: 0.9em; color: grey;"}
 ```{r}
@@ -658,9 +664,9 @@ The model was asked to write a general summary for all of the species and also t
 
 Of a total of 970 of the top occurring species names in our working dataset, a total of 839 (86%) were not associated with actual or potential commercial products and 129 (13%) of the total were associated with some form of commercial product.
 
-Table 23 shows an example of a research summary for the Patagonian toothfish.
+[Table 23]{.underline} shows an example of a research summary for the Patagonian toothfish.
 
-[Table 23: Example of and ABNJ Only Species Associated with Commercial Products]{style="font-size: 0.9em; color: grey;"}
+[Table 23: Example of an ABNJ Only Species Associated with Commercial Products]{style="font-size: 0.9em; color: grey;"}
 ```{r}
 #| echo: false
 #| output: true
@@ -669,7 +675,7 @@ Table 23 shows an example of a research summary for the Patagonian toothfish.
 knitr::include_graphics("images/web/example_summary.png")
 ```
 
-In addition to the generation of summaries, the model is also capable of providing details on commercial products. [[Table 24]{.underline}](#tbl-products-commercial) shows an example of the details of commercial products for the Patagonian toothfish.
+In addition to the generation of summaries, the model is also capable of providing details on commercial products. [Table 24]{.underline} shows an example of the details of commercial products for the Patagonian toothfish.
 
 [Table 24: Example of Species Associated with Commercial Products]{style="font-size: 0.9em; color: grey;"}
 ```{r}
@@ -702,7 +708,7 @@ It is here however, that the nature of commercial products become relevant. At f
 
 Patent documents give us an insight into the potential commercial uses of a biological organism, along with an indication of intent to commercialise such uses. The scale of patent activity can also be a useful indicator of the scale of commercial interest. However, while patent activity provides a perspective on commercial intent, patent activity only provides a limited insight into the commercial availability of products containing compounds from biological organisms. That is, patent activity cannot tell us definitively what actually makes it to market.
 
-In order to bridge this gap, we sought to assess the extent to which we can determine the commercial availability of products containing compounds from marine organisms on the internet. We conducted an experiment using publicly available data from amazon.com, accessed via Rainforest API (https://app.rainforestapi.com/). An API, or Application Programming Interface, is a set of rules and protocols that allows different software applications to communicate with each other. APIs specify how software components should interact, enabling the sharing of data and functionalities across various applications. In the context of our work, the use of Rainforest API allowed us to collect results from Amazon web searches at scale, where otherwise searches might have to be completed manually one at a time.
+In order to bridge this gap, we sought to assess the extent to which we can determine the commercial availability of products containing compounds from marine organisms on the internet. We conducted an experiment using publicly available data from amazon.com, accessed via [Rainforest API](https://app.rainforestapi.com/). An API, or Application Programming Interface, is a set of rules and protocols that allows different software applications to communicate with each other. APIs specify how software components should interact, enabling the sharing of data and functionalities across various applications. In the context of our work, the use of Rainforest API allowed us to collect results from Amazon web searches at scale, where otherwise searches might have to be completed manually one at a time.
 
 The use of the amazon.com domain restricted results only to those which appear to consumers based in the United States and US territories like Puerto Rico. Along with amazon.com, it is possible to access 21 other domains using Rainforest API, from countries including Germany, India and Saudi Arabia. Limiting our experiment to the amazon.com domain was done in the interest of reducing time and cost. The products shown on amazon.com may be available to consumers from other regions, however, this often depends on the shipping choices of individual sellers. As such, the data presented must be seen as a scoping exercise, rather than a comprehensive overview of global market availability.
 
@@ -712,7 +718,7 @@ A further issue encountered was the apparent use of AI to generate product listi
 
 Within the current scope of our work, it would not be possible to search for any components or ingredients frequently known to originate from marine species. It is also commonly possible for such components to be obtainable from several different species. For our purposes, we restricted ourselves to attempting to find listings where either the species name or common name were found within the title, keywords, feature bullets and description of each listing.
 
-We passed 4,000 marine taxonomic names to the Amazon API. Amazon listings were returned which matched in some way (as defined by Amazon) to our search terms. 31,864 listings were returned. This initial return contained information relating to title and price, information which may be seen on a “results” page when entering a search term. [[Table 25]{.underline}](#tbl-original-result) below shows a preview of the original return. This initial return did not contain detailed information from the product page itself. In order to get more detailed information about a listing, the ASIN (Amazon Standard Identification Number) must be passed along to the API again, this creates a return which includes the product description and key words, allowing us more insight into the product, its usage and any relevance to marine organisms.
+We passed 4,000 marine taxonomic names to the Amazon API. Amazon listings were returned which matched in some way (as defined by Amazon) to our search terms. 31,864 listings were returned. This initial return contained information relating to title and price, information which may be seen on a “results” page when entering a search term. [Table 25]{.underline} below shows a preview of the original return. This initial return did not contain detailed information from the product page itself. In order to get more detailed information about a listing, the ASIN (Amazon Standard Identification Number) must be passed along to the API again, this creates a return which includes the product description and key words, allowing us more insight into the product, its usage and any relevance to marine organisms.
 
 [Table 25: Amazon Original search results]{style="font-size: 0.9em; color: grey;"}
 ```{r}
@@ -739,7 +745,7 @@ We passed 4,000 marine taxonomic names to the Amazon API. Amazon listings were r
 knitr::include_graphics("images/web/table-3-17.png")
 ```
 
-The majority of listings were irrelevant to our purposes. We first removed listings from our original return where stop words were present in the title. Stop words are words that, when present, indicate that it is highly unlikely that the listing is relevant to our present purposes. For example, the presence of words such as “book”, “microphone” or “sofa” in the title of the listing strongly suggest that the product referred to does not contain organic compounds. [[Table 26]{.underline}](#tbl-example-junk) is an example of the type of irrelevant listings that come through. After parsing our listings for stop words, 9,435 listings remained. These listings were returned as results relating to 1,817 of our original 4,000 species, though it was clear that many listings present still were not relevant. After the removal of duplicates, the remaining ASINS were then sent off through the Amazon API. 4,361 listings were returned. These were then joined onto our original listings.
+The majority of listings were irrelevant to our purposes. We first removed listings from our original return where stop words were present in the title. Stop words are words that, when present, indicate that it is highly unlikely that the listing is relevant to our present purposes. For example, the presence of words such as “book”, “microphone” or “sofa” in the title of the listing strongly suggest that the product referred to does not contain organic compounds. [Table 26]{.underline} is an example of the type of irrelevant listings that come through. After parsing our listings for stop words, 9,435 listings remained. These listings were returned as results relating to 1,817 of our original 4,000 species, though it was clear that many listings present still were not relevant. After the removal of duplicates, the remaining ASINS were then sent off through the Amazon API. 4,361 listings were returned. These were then joined onto our original listings.
 
 [Table 26: Examples of Junk Results]{style="font-size: 0.9em; color: grey;"}
 ```{r}
@@ -759,7 +765,7 @@ Due to the persistence of noise and junk at this level, results were then reduce
 
 Several listings were found for canned tuna species including skipjack tuna (*Katsuwonus pelamis*) and bigeye tuna (*Thunnus obesus*). Sea sponge species were found for sale for homeopathic purposes, including the use of roasted sea sponge for coughs, croup and breathing difficulties. Calcareous sponges were also found for sale for use in homeopathy, for the treatment of sprains, growing pains and acne. The roe of *Cheilopogon heterurus*, a species of flying fish, was also sold.
 
-In the final return, we found 66 listings referring to krill species mostly *Euphausia superba*. Krill was marketed in the form of krill oil as a source of Omega-3 fatty acids for human consumption, and in some cases directly marketed towards women, with multiple health benefits ascribed to it. Listings also referred to the use of freeze dried krill as fish feed. Table 27 shows the final results for krill species.
+In the final return, we found 66 listings referring to krill species mostly *Euphausia superba*. Krill was marketed in the form of krill oil as a source of Omega-3 fatty acids for human consumption, and in some cases directly marketed towards women, with multiple health benefits ascribed to it. Listings also referred to the use of freeze dried krill as fish feed. [Table 27]{.underline} shows the final results for krill species.
 
 [Table 27: Final results for krill species]{style="font-size: 0.9em; color: grey;"}
 ```{r}
@@ -770,7 +776,7 @@ In the final return, we found 66 listings referring to krill species mostly *Eup
 knitr::include_graphics("images/web/table-3-19.png")
 ```
 
-We found 28 listings for products related to sea cucumber species. These listings referred to sea cucumber extract, sea cucumber essence, or whole sea cucumber marketed for wellness benefits. Table 28 shows the final results for sea cucumber species.
+We found 28 listings for products related to sea cucumber species. These listings referred to sea cucumber extract, sea cucumber essence, or whole sea cucumber marketed for wellness benefits. [Table 28]{.underline} shows the final results for sea cucumber species.
 
 [Table 28: Final results for sea cucumber species (sample)]{style="font-size: 0.9em; color: grey;"}
 ```{r}
@@ -781,7 +787,7 @@ We found 28 listings for products related to sea cucumber species. These listing
 knitr::include_graphics("images/web/table-3-20.png")
 ```
 
-We found 14 listings for products related to species from the genus Calanus, a genus of marine copepods. Calanus oil appears most frequently as a source of Omega-3 fatty acids, marketed for human consumption for health benefits. Freeze dried calanus species were also found for sale for use as fish feed. Table 29 shows the results for calanus species.
+We found 14 listings for products related to species from the genus Calanus, a genus of marine copepods. Calanus oil appears most frequently as a source of Omega-3 fatty acids, marketed for human consumption for health benefits. Freeze dried calanus species were also found for sale for use as fish feed. [Table 29]{.underline} shows the results for calanus species.
 
 [Table 29: Final results for calanus species]{style="font-size: 0.9em; color: grey;"}
 ```{r}
@@ -792,11 +798,11 @@ We found 14 listings for products related to species from the genus Calanus, a g
 knitr::include_graphics("images/web/table-3-21.png")
 ```
 
-[[**Figure *70***]{.underline}](#fig-calanus-distribution) is a map of *Calanus finmarchicus* distribution courtesy of GBIF which shows that, while the species is most densely found within ABNJ, it is also found within the EEZ of several countries. This is also the case for many of the other widely distributed species for which results were found.
+[**Figure 70**](#fig-calanus-distribution) is a map of *Calanus finmarchicus* distribution courtesy of GBIF which shows that, while the species is most densely found within ABNJ, it is also found within the EEZ of several countries. This is also the case for many of the other widely distributed species for which results were found.
 
 ```{r}
 #| echo: false
-##| label: fig-calanus-distribution
+#| label: fig-calanus-distribution
 # fig-cap: Distribution of calanus finmarchicus from GBIF
 knitr::include_graphics("images/web/calanus_gbif_distribution.png")
 ```
@@ -815,11 +821,3 @@ An important limitation of web scale data and snapshots such as C4 relates to th
 In a second independent experiment we explored the use of commercial AI and API services to automate search and summary of Amazon product listings. This experiment revealed that more widely known species such as krill will yield informative results. However, the efforts of commercial sites to always show the customer a results can confound efforts to identify activity for lesser known organisms by flooding the raw results with noise that is very difficult to control. Nevertheless, the promise of this approach is that it may be possible to gain an insight into the emergence of commercial products involving organisms from BBNJ.
 
 The results presented in this section should therefore be seen as an initial experiment in exploring the possibilities of web scale research using AI for the automation of searches and reporting to support implementation of the BBNJ Treaty. We anticipate that these types of approaches, with due regard to the limitations and the need for appropriate controls, will become increasingly useful in informing policy decision-making in future years.
-
-[\[1\]](#_ftnref1) [*https://en.wikipedia.org/wiki/Common_Crawl*](https://en.wikipedia.org/wiki/Common_Crawl)
-
-[\[2\]](#_ftnref2) A more recent snapshot from the Allen Institute for AI is called [*MADLAD-400 (Multilingual Audited Dataset: Low-resource And Document-level*](https://arxiv.org/abs/2309.04662) and contains precleaned data until mid-2022. However, the dataset does not contain the url for the web-based texts which limits its utility for our purposes. The full dataset is also 7 terabytes in size.
-
-[\[3\]](#_ftnref3) Search Engine Optimization (SEO) is a widespread practice and increasingly uses AI in order to bump up the presence of a page to the top of search results with search engines such as Google or Bing. Search engines now automatically penalise well known practices such as keyword stuffing. However, this does not mean that people will not attempt it or similar practices.
-
-[\[4\]](#_ftnref4) Patent applicants are simultaneously noisy, in that they may be expressed in a variety of forms, and dynamic. The use of an AI assisted ‘company to domain name matcher’ revealed that a significant number of companies do not have an obvious public site on the web, have been acquired by other companies or have gone out of business. Traces of these companies were typically found in business news websites and listings. We did not pursue those names further.

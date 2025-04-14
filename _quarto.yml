@@ -8,6 +8,7 @@ book:
   date: "January 2025"
   chapters:
     - index.qmd
+    - introduction.qmd
     - scientific_literature.qmd
     - patent_activity_for_marine_genetic_resources.qmd
     - marine_genetic_resources_on_the_web.qmd
@@ -29,4 +30,4 @@ format:
     theme: lux
     css: styles.css
     toc: true
-    number-depth: 1
+    number-depth: 0
