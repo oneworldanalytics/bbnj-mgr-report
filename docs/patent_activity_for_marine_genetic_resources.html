@@ -153,7 +153,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-patent-data" id="toc-the-patent-data" class="nav-link active" data-scroll-target="#the-patent-data">The Patent Data</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#the-patent-data" id="toc-the-patent-data" class="nav-link" data-scroll-target="#the-patent-data">The Patent Data</a></li>
   <li><a href="#general-overview" id="toc-general-overview" class="nav-link" data-scroll-target="#general-overview">General Overview</a></li>
   <li><a href="#marine-organisms" id="toc-marine-organisms" class="nav-link" data-scroll-target="#marine-organisms">Marine Organisms</a></li>
   <li><a href="#abnj-organisms" id="toc-abnj-organisms" class="nav-link" data-scroll-target="#abnj-organisms">ABNJ Organisms</a></li>
@@ -170,6 +172,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#plasmids" id="toc-plasmids" class="nav-link" data-scroll-target="#plasmids">Plasmids</a></li>
   <li><a href="#phylogenetic-analysis-1" id="toc-phylogenetic-analysis-1" class="nav-link" data-scroll-target="#phylogenetic-analysis-1">Phylogenetic Analysis</a></li>
   <li><a href="#cosmetics-abnj-reference" id="toc-cosmetics-abnj-reference" class="nav-link" data-scroll-target="#cosmetics-abnj-reference">Cosmetics (ABNJ reference)</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -195,6 +198,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>Patent activity for marine genetic resources was an important focus of debate during the negotiation of the BBNJ Treaty. In the economics and science policy literature, patent data is important because it provides a proxy indicator for underlying investments in research and development that is otherwise invisible. That is, trends in patent activity serve as a proxy <em>output</em> <em>indicator</em> for trends in research and development. As such, patent data provides an indicator for whether a particular area of technology is currently an important focus of investment in research and development or not.</p>
 <p>Patent data can be counted in a variety of ways in order to provide different insights into areas of activity:</p>
 <p>The first time a patent application is filed anywhere in the world is known as a “priority” or “first” filing. Because the date of a priority or first filing is the closest to the date of the underlying investment in research and development this is the most commonly used count for patent activity in the economics literature and is widely used for statistical purposes by organisations such as the OECD, Eurostat and patent offices. However, its use as an indicator suffers from the lag time between the date of first filing and publication (typically at least two years) meaning that patent data always lags behind actual activity. As such, patent activity describes historic activity. We use INPADOC patent families, as contained in the EPO World Patent Statistical Database (PATSTAT, spring edition 2024) as the basis for the counts in this section.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
@@ -217,10 +222,10 @@ ul.task-list li input[type="checkbox"] {
 <p>In order to introduce the reader to the issues involved in patent data, we will begin with a general overview of patent activity involving <em>any</em> binomial species name that is classified in OBIS as appearing in a marine environment, including model organisms, as set out in <a href="#fig-patent-overview"><strong>Figure 45</strong></a>. In total, we identified 4,903 binomial taxonomic names in the OBIS marine group in patent data from 1891 to 2023 (available data to date in PATSTAT Spring 2024). For greater clarity in the presentation of data on applicants, we exclude the names of individual persons and focus on organisations.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
 <div class="cell" data-tbl-cap="Overview of First Filings for Marine Organisms in Patent Data">
 <div class="cell-output-display">
-<div id="fig-patent-overview" class="quarto-float quarto-figure quarto-figure-center anchored" width="1000">
+<div id="fig-patent-overview" class="quarto-float quarto-figure quarto-figure-center anchored" width="977">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-patent-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/images2024/patents/Figure 2.1_any_marine.png" id="fig-patent-overview" class="img-fluid figure-img" width="1000">
+<img src="images/images2024/patents/Figure 2.1_any_marine.png" id="fig-patent-overview" class="img-fluid figure-img" width="977">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-patent-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 </figcaption>
@@ -254,10 +259,10 @@ ul.task-list li input[type="checkbox"] {
 <p>An important purpose of this overview is to introduce different ways of counting patent data and outline some of the issues involved in counting data for marine organisms and ABNJ in particular. These issues come into sharper focus when we consider the data on the taxonomy of the organisms inside the patent documents in <a href="#fig-patent-taxonomy"><strong>Figure 47</strong></a>. <a href="#fig-patent-taxonomy"><strong>Figure 47</strong></a> displays the counts of first filings (patent families), applications and publications (family members) to show how follow on filings and republications of patent applications in multiple countries dramatically increases the scale of the counts. Thus, for fungi, 42,792 first filings led to 201,764 applications which in turn resulted in the 278,382 publications of applications and grants around the world.</p>
 <div class="cell" data-tbl-cap="Overview of Organisms Classified As Marine in OBIS">
 <div class="cell-output-display">
-<div id="fig-patent-taxonomy" class="quarto-float quarto-figure quarto-figure-center anchored" width="1000">
+<div id="fig-patent-taxonomy" class="quarto-float quarto-figure quarto-figure-center anchored" width="976">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-patent-taxonomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/images2024/patents/Figure 2.3 Taxonomy.png" id="fig-patent-taxonomy" class="img-fluid figure-img" width="1000">
+<img src="images/images2024/patents/Figure 2.3 Taxonomy.png" id="fig-patent-taxonomy" class="img-fluid figure-img" width="976">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-patent-taxonomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 </figcaption>
@@ -277,10 +282,10 @@ ul.task-list li input[type="checkbox"] {
 <p>Following a similar approach to that used for the scientific literature, we can use OBIS data to impose a set of filters on the patent data. <a href="#fig-patent-marineonly-taxonomy"><strong>Figure 48</strong></a> displays the results of filtering the data onto taxonomic names that are only recorded in a marine environment according to the available data in OBIS (the ‘marine only’ grouping used in the analysis of the scientific literature). The data is also filtered to exclude model organisms.</p>
 <div class="cell" data-tbl-cap="Overview of Marine Only Organisms in Patent Filings and Patent Claims">
 <div class="cell-output-display">
-<div id="fig-patent-marineonly-taxonomy" class="quarto-float quarto-figure quarto-figure-center anchored" width="1000">
+<div id="fig-patent-marineonly-taxonomy" class="quarto-float quarto-figure quarto-figure-center anchored" width="982">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-patent-marineonly-taxonomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/images2024/patents/Figure 2.5 marinenonly Taxonomy.png" id="fig-patent-marineonly-taxonomy" class="img-fluid figure-img" width="1000">
+<img src="images/images2024/patents/Figure 2.5 marinenonly Taxonomy.png" id="fig-patent-marineonly-taxonomy" class="img-fluid figure-img" width="982">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-patent-marineonly-taxonomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 </figcaption>
@@ -327,10 +332,10 @@ ul.task-list li input[type="checkbox"] {
 <p>We can go a step further by refining this data to species that have been recorded in ABNJ in OBIS occurrence data. <a href="#fig-patent-abnj-taxonomy"><strong>Figure 51</strong></a> displays the rankings of marine organisms that have been recorded in ABNJ.</p>
 <div class="cell" data-tbl-cap="Overview of Organisms Recorded in ABNJ in Patent Filings and Patent Claims">
 <div class="cell-output-display">
-<div id="fig-patent-abnj-taxonomy" class="quarto-float quarto-figure quarto-figure-center anchored" width="1000">
+<div id="fig-patent-abnj-taxonomy" class="quarto-float quarto-figure quarto-figure-center anchored" width="976">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-patent-abnj-taxonomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/images2024/patents/Figure 2.8 abnj Taxonomy.png" id="fig-patent-abnj-taxonomy" class="img-fluid figure-img" width="1000">
+<img src="images/images2024/patents/Figure 2.8 abnj Taxonomy.png" id="fig-patent-abnj-taxonomy" class="img-fluid figure-img" width="976">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-patent-abnj-taxonomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 </figcaption>
@@ -342,10 +347,10 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="#fig-patent-abnj-trends"><strong>Figure 52</strong></a> displays an overview of trends in activity for organisms that have been recorded in ABNJ.</p>
 <div class="cell" data-tbl-cap="Overview of Organisms Recorded in ABNJ Organisms in Patent Filings">
 <div class="cell-output-display">
-<div id="fig-patent-abnj-trends" class="quarto-float quarto-figure quarto-figure-center anchored" width="1000">
+<div id="fig-patent-abnj-trends" class="quarto-float quarto-figure quarto-figure-center anchored" width="974">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-patent-abnj-trends-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/images2024/patents/Figure 2.9 abnj Overview.png" id="fig-patent-abnj-trends" class="img-fluid figure-img" width="1000">
+<img src="images/images2024/patents/Figure 2.9 abnj Overview.png" id="fig-patent-abnj-trends" class="img-fluid figure-img" width="974">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-patent-abnj-trends-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 </figcaption>
@@ -377,10 +382,10 @@ ul.task-list li input[type="checkbox"] {
 <p>When ranked in terms of the appearance of an organism in the claims of patent documents other species begin to become prominent such as the cold water shrimp <em>Pandalus borealis</em> which is used both as a food and as a source of an enzyme alkaline phosphatase and the commercially important compound chitosan from the skeleton of shrimps for medical use. Other species of interest, although perhaps not likely to be from ABNJ, include the giant clam <em>Hippopus hippopus</em> which has a low frequency in terms of the number of filings but a higher frequency in appearing in patent claims in relation to a semisynthetic powder composition from modifying natural biomaterial and a primer kit for identifying clams (<a href="https://www.lens.org/lens/patent/193-590-331-885-889/frontpage?l=en"><em>EP3673926B1</em></a>). The north Atlantic copepod <em>Calanus finmarchicus</em> appears in patent claims in relation to sources of Omega-3, antihypertensive food ingredients, antimicrobial compositions from copepods (<a href="https://www.lens.org/lens/patent/179-777-934-317-082/frontpage?l=en"><em>US8647676B2</em></a>), its use as a treatment for ectoparasites in fish (<a href="https://www.lens.org/lens/patent/098-952-901-487-201/frontpage?l=en"><em>US8057809B2</em></a>) and copepod oil compositions, suggesting a quite wide range of actual and potential uses of this organism.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-patent-abnjonly-taxonomy" class="quarto-float quarto-figure quarto-figure-center anchored" width="1000">
+<div id="fig-patent-abnjonly-taxonomy" class="quarto-float quarto-figure quarto-figure-center anchored" width="977">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-patent-abnjonly-taxonomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/images2024/patents/Figure 2.11 abnjonly Taxonomy.png" id="fig-patent-abnjonly-taxonomy" class="img-fluid figure-img" width="1000">
+<img src="images/images2024/patents/Figure 2.11 abnjonly Taxonomy.png" id="fig-patent-abnjonly-taxonomy" class="img-fluid figure-img" width="977">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-patent-abnjonly-taxonomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 </figcaption>
@@ -392,10 +397,10 @@ ul.task-list li input[type="checkbox"] {
 <p>Turning now to trends in activity, <a href="#fig-patent-abnjonly-trends"><strong>Figure 55</strong></a> reveals that filing activity involving marine organisms that may exist only in ABNJ is typically under 150 filings per year. Taking into account that the classification of ABNJ only organisms is dependent on the accuracy of OBIS data, in reality trends are likely to be somewhat lower than this already limited activity suggests. Nevertheless, while activity is limited there is a rising trend overall, bearing in mind the lag time with more recent data.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-patent-abnjonly-trends" class="quarto-float quarto-figure quarto-figure-center anchored" width="1000">
+<div id="fig-patent-abnjonly-trends" class="quarto-float quarto-figure quarto-figure-center anchored" width="978">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-patent-abnjonly-trends-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/images2024/patents/Figure 2.12 abnjonly Overview.png" id="fig-patent-abnjonly-trends" class="img-fluid figure-img" width="1000">
+<img src="images/images2024/patents/Figure 2.12 abnjonly Overview.png" id="fig-patent-abnjonly-trends" class="img-fluid figure-img" width="978">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-patent-abnjonly-trends-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 </figcaption>
@@ -429,7 +434,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="images/images2024/patents_table_1.png" class="img-fluid figure-img" width="420"></p>
+<p><img src="images/images2024/patents_table_1.png" class="img-fluid figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -439,7 +444,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="images/images2024/patents_table_2.png" class="img-fluid figure-img" width="420"></p>
+<p><img src="images/images2024/patents_table_2.png" class="img-fluid figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -448,10 +453,10 @@ ul.task-list li input[type="checkbox"] {
 <p>For the present we will display the data for organisms with ten or more occurrence records in ABNJ. <a href="#fig-patent-abnjonly-taxonomy-refined"><strong>Figure 57</strong></a>. This reduces the data to 257 binomial names. Because patent applicants may use higher order taxonomic ranks in patent claims, we include counts for uninomial names in patent claims (US, EP and Patent Cooperation Treaty documents).</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-patent-abnjonly-taxonomy-refined" class="quarto-float quarto-figure quarto-figure-center anchored" width="1000">
+<div id="fig-patent-abnjonly-taxonomy-refined" class="quarto-float quarto-figure quarto-figure-center anchored" width="978">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-patent-abnjonly-taxonomy-refined-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/images2024/patents/Figure 2.13 abnjonlyrefined Taxonomy.png" id="fig-patent-abnjonly-taxonomy-refined" class="img-fluid figure-img" width="1000">
+<img src="images/images2024/patents/Figure 2.13 abnjonlyrefined Taxonomy.png" id="fig-patent-abnjonly-taxonomy-refined" class="img-fluid figure-img" width="978">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-patent-abnjonly-taxonomy-refined-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 </figcaption>
@@ -504,10 +509,10 @@ ul.task-list li input[type="checkbox"] {
 <p>In total, across all data between 1990 and 2021 we identified 30,695 taxonomic and related names in the sequence data including common model organisms. By far the most prominent terms in terms of counts of patent families was ‘unknown/artificial’ (210,945 patent families), <em>Homo sapiens</em> (77,103 families) and <em>Mus musculus</em> (18,059 families). As with the data discussed above, we removed common model organisms from the analysis. We then restricted the data to our OBIS marine only grouping. The top taxonomic names for the ‘marine only’ grouping are presented in <a href="#fig-patent-seq-marine-taxonomy"><strong>Figure 60</strong></a>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-patent-seq-marine-taxonomy" class="quarto-float quarto-figure quarto-figure-center anchored" width="1000">
+<div id="fig-patent-seq-marine-taxonomy" class="quarto-float quarto-figure quarto-figure-center anchored" width="974">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-patent-seq-marine-taxonomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/images2024/patents/sequences/seq_marine_taxonomy_dashnoard.png" id="fig-patent-seq-marine-taxonomy" class="img-fluid figure-img" width="1000">
+<img src="images/images2024/patents/sequences/seq_marine_taxonomy_dashnoard.png" id="fig-patent-seq-marine-taxonomy" class="img-fluid figure-img" width="974">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-patent-seq-marine-taxonomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 </figcaption>
@@ -1107,6 +1112,7 @@ ul.task-list li input[type="checkbox"] {
 <p>However, in practice the specific focus of the invention is <em>Alteromonas macleodii</em> that are “derived from the fermentation of nine distinct species of bacteria from microbial mats originating from French Polynesia”. The granted patent claims EPS from the fermentation of <em>Alteromonas macleodii</em> and <em>Vibrio alginolyticus</em>. As such, this is an illustration of how the discussion of marine organisms from ABNJ does not necessarily mean that they are the focus of the invention. At the same time, this type of example also suggests the <em>potential</em> range of applications that can arise from the use of marine genetic resources.</p>
 
 
+</section>
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>

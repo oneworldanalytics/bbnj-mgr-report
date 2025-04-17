@@ -261,10 +261,11 @@ new EchartsRunner()
 ```{r}
 #| echo: false
 #| eval: false
-#| label: fig-network_1
+##| label: fig-network_1
 # fig-cap: Collaboration network for institutions publishing research on marine organisms
 knitr::include_graphics("images/scientific/network_1_2025.png") # SEE WORD VERSION
 ```
+
 [Figure 9: The academic collaboration network of institutions publishing research on marine biodiversity]{style="font-size: 0.9em; color: grey;"}
 
 This snapshot displays institutions that have published 1,000 or more scientific papers relating to marine biodiversity. Nodes are sized based on the number of publications produced by each institution and edges (lines) between nodes indicate that authors from these institutions have collaborated on a publication containing reference to a marine species. The numbers in the visuals reflect the total number of publications on marine biodiversity research output by each institution.
@@ -274,8 +275,10 @@ This snapshot displays institutions that have published 1,000 or more scientific
 ```{r}
 #| echo: false
 #| label: fig-network_11
+#| out.width: "100%"
 # fig-cap: The collaboration network for the University of Tokyo.
-knitr::include_graphics("images/scientific/network_2_2025.png")
+#knitr::include_graphics("images/scientific/network_2_2025.png")
+knitr::include_graphics("images/scientific/network_2_2025_cropped.png")
 ```
 [Figure 10: The academic collaboration network for the French National Centre for Scientific Research.]{style="font-size: 0.9em; color: grey;"}
 
@@ -284,6 +287,7 @@ These networks of relations between researchers reflect underlying investments b
 ```{r}
 #| echo: false
 #| label: fig-network_12
+#| out.width: "100%"
 # fig-cap: Chinese Academy of Sciences Collaboration Network.
 knitr::include_graphics("images/scientific/chinese_academy_of_sciences_network_2025.png")
 ```
@@ -296,6 +300,7 @@ knitr::include_graphics("images/scientific/chinese_academy_of_sciences_network_2
 ```{r totalPublicationsTable}
 #| echo: false
 #| output: true
+#| out.width: "100%"
 ##| label: tbl-totalPublicationsTable
 ##| tbl-cap: Table of total publications by institution (selected only)
 
@@ -346,6 +351,7 @@ The data presented above can be broken down by number of publications per countr
 ```{r}
 #| echo: false
 #| label: fig-marine-unregions
+#| out.width: "100%"
 # fig-cap: Country rankings by number of publications for UN major regions and UN sub-regions 
 
 knitr::include_graphics("images/images2024/Figure_1_8_Country_Rankings.png")
@@ -357,6 +363,7 @@ Authors often collaborate with authors in different institutions across the glob
 ```{r}
 #| echo: false
 #| eval: false
+#| out.width: "100%"
 #| label: fig-network_2_0
 # fig-cap: Country Collaboration Network
 knitr::include_graphics("images/scientific/country_collaborations_2025.png")
@@ -480,6 +487,7 @@ According to our data, researchers from the United States have the highest rate 
 ```{r}
 #| echo: false
 #| label: fig-network_21
+#| out.width: "100%"
 # fig-cap: This collaboration network shows instances of collaboration between institutions in Madagascar and institutions in other countries.
 knitr::include_graphics("images/scientific/usa_collaborations_2025.png") # WORD ONLY
 ```
@@ -490,6 +498,7 @@ The countries with the lowest number of international collaborations are the Low
 ```{r}
 #| echo: false
 #| label: fig-network_22
+#| out.width: "100%"
 # fig-cap: This collaboration network shows instances of collaboration between institutions in Madagascar and institutions in other countries.
 knitr::include_graphics("images/scientific/madagascar_collaborations_2025.png") # WORD ONLY
 ```
@@ -498,6 +507,7 @@ knitr::include_graphics("images/scientific/madagascar_collaborations_2025.png") 
 ```{r}
 #| echo: false
 #| label: fig-network_23
+#| out.width: "100%"
 # fig-cap: This collaboration network shows instances of collaboration between institutions in Senegal and institutions in other countries.
 knitr::include_graphics("images/scientific/senegal_collaborations_2025.png") # WORD ONLY
 ```
@@ -515,6 +525,7 @@ Within scientific publications, funding information has typically been provided 
 #| echo: false
 #| label: fig-funding-network
 #| eval: true
+#| out.width: "100%"
 #| tbl-cap: Research Funding Organisations by funding body and country
 # fig-cap: This figure shows available information for marine biodiversity related publications in a set of 55,700 publications as well as trends in the publications that include funding information. Information on Open Access suggests that funding agencies increasingly promote and require open access publications.
 
@@ -531,6 +542,7 @@ It is possible to create collaboration networks for funding institutions showing
 ```{r}
 #| echo: false
 #| label: fig-funding-network-2
+#| out.width: "100%"
 #| eval: false
 #| tbl-cap: Research Funding Organisations by funding body and country
 #fig-cap: This 
@@ -637,6 +649,7 @@ new EchartsRunner()
 ```{r}
 #| echo: false
 #| eval: true
+#| out.width: "100%"
 #| label: fig-network_2
 # fig-cap: Country Collaboration Network
 knitr::include_graphics("images/scientific/natural_science_foundation_of_china_network_funding_2025.png")
@@ -649,6 +662,7 @@ knitr::include_graphics("images/scientific/natural_science_foundation_of_china_n
 #| echo: false
 #| eval: true
 #| label: fig-network_eu
+#| out.width: "100%"
 # fig-cap: Country Collaboration Network
 knitr::include_graphics("images/scientific/european_union_funding_network_2025.png") # WORD ONLY
 ```
@@ -661,6 +675,7 @@ Research on marine biodiversity and the deep sea is made possible by individual 
 ```{r}
 #| echo: false
 #| label: fig-marine-authors
+#| out.width: "100%"
 #| tbl-cap: Author Profiles for Marine Biodiversity
 # fig-cap: This figure shows rankings of authors by the number of papers involving marine biodiversity in the citation graph.
 
@@ -675,6 +690,7 @@ We can gain an appreciation of the diversity of researchers and their research b
 ```{r}
 #| echo: false
 #| label: fig-marine-lee
+#| out.width: "100%"
 #| tbl-cap: Jehee Lee profile
 # fig-cap: This figure offers insights into the publication history of Jehee Lee, who has frequently published on subjects relating to marine biodiversity.
 
@@ -769,11 +785,12 @@ We can visually illustrate the application of this approach using geographic pla
 ```{r}
 #| echo: false
 #| label: fig-marine-map
+#| out.width: "100%"
 # fig-cap:  A compilation of 17,777 named underwater places with coordinates from four sources. Large features in the GEBCO Gazetteer such as ridges, trenches etc. have been reduced to their centroid coordinates.
 
-knitr::include_graphics("images/scientific/map_1_2025.png")
+knitr::include_graphics("images/scientific/underwater_data_sources.png")
 ```
-[Figure 27: A compilation of 17,777 named underwater places with coordinates from four sources. Large features in the GEBCO Gazetteer such as ridges, trenches etc. have been reduced to their centroid coordinates.]{style="font-size: 0.9em; color: grey;"}
+[Figure 27: A compilation of 17,777 named underwater places with coordinates from four sources. Large features in the GEBCO Gazetteer such as ridges, trenches etc. have been reduced to their centroid coordinates. (<a href="images/scientific/lit_underwater_places_12122023_cropped.png" target="_blank">Click to expand the image in a new tab</a>)]{style="font-size: 0.9em; color: grey;"}
 
 In considering [**Figure 27**](#fig-marine-map) it is important to note that some of the named places may appear in freshwater terrestrial settings. These are mainly from the open access Geonames dataset and include, for example, subglacial basins in Antarctica and are derived from entries coded U for Undersea in Geonames or appearing in the Geonames ‘no country’ dataset. Other named places are found in lakes and rivers.
 
@@ -786,20 +803,22 @@ The use of named places with coordinates allows the relationship between a named
 ```{r}
 #| echo: false
 #| label: fig-marine-map-3
+#| out.width: "100%"
 # fig-cap: Named marine places that are located in the EEZ and ABNJ.
 
-knitr::include_graphics("images/scientific/map_2_2025.png")
+knitr::include_graphics("images/scientific/underwater_eez_abnj.png")
 ```
-[Figure 28: Named marine places that are located in the EEZ and ABNJ.]{style="font-size: 0.9em; color: grey;"}
+[Figure 28: Named marine places that are located in the EEZ and ABNJ. (<a href="images/scientific/underwater_eez_abnj.png" target="_blank">Click to expand the image in a new tab</a>)]{style="font-size: 0.9em; color: grey;"}
 
 ```{r}
 #| echo: false
 #| label: fig-marine-map-4
+#| out.width: "100%"
 # fig-cap:  Named marine places that are located in the High Seas (ABNJ).
 
-knitr::include_graphics("images/scientific/map_3_2025.png")
+knitr::include_graphics("images/scientific/underwater_abnj_only.png")
 ```
-[Figure 29: Named marine places that are located in the High Seas (ABNJ).]{style="font-size: 0.9em; color: grey;"}
+[Figure 29: Named marine places that are located in the High Seas (ABNJ). (<a href="images/scientific/underwater_abnj_only.png" target="_blank">Click to expand the image in a new tab</a>)]{style="font-size: 0.9em; color: grey;"}
 
 [**Figure 29**](#fig-marine-map-4) shows the impact of removing those named places falling inside the EEZ from the display.
 
@@ -1028,7 +1047,7 @@ A brief review of the titles of publications in [**Figure 35**](#fig-definition-
 # fig-cap: Available data on Medical Subjects For Level 4 and Above
 knitr::include_graphics("images/images2024/Figure_1_28_Chemicals.png")
 ```
-[Figure 36:: Available data on Medical Subject Headings For Level 4 and Above]{style="font-size: 0.9em; color: grey;"}
+[Figure 36: Available data on Medical Subject Headings For Level 4 and Above]{style="font-size: 0.9em; color: grey;"}
 
 In considering the data in [**Figure 36**](#fig-definition-rank2-chemicals) we see an emphasis on basic research including classification as well as references in the more detailed topic qualifiers to isolation and purification, pharmacology and enzymology suggesting applied research. Albeit at a lower level (not shown), the titles of publications also suggest a growing focus on hydrothermal vents in a range of different areas, including work on a candidate new species of epibiont living on the deep-sea hydrothermal vent shrimp *Rimicaris exoculata*.
 
@@ -1109,10 +1128,15 @@ The working definition presented above reveals that a fundamental precondition f
 ```{r}
 #| echo: false
 #| label: fig-definition-places
+#| results: asis
 # fig-cap: Named Underwater Places in the Scientific Literature in the EEZ and ABNJ
-knitr::include_graphics("images/images2024/lit_underwater_places_12122023.png")
+
+knitr::include_graphics("images/scientific/lit_underwater_places_12122023_cropped.png")
 ```
-[Figure 42: Named Underwater Places in the Scientific Literature in the EEZ and ABNJ]{style="font-size: 0.9em; color: grey;"}
+
+[Figure 42: Named Underwater Places in the Scientific Literature in the EEZ and ABNJ (<a href="images/scientific/lit_underwater_places_12122023_cropped.png" target="_blank">Click to expand the image in a new tab</a>)]{style="font-size: 0.9em; color: grey;"}
+
+
 
 ------------------------------------------------------------------------
 

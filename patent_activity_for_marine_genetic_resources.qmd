@@ -5,6 +5,8 @@ editor: source
 bibliography: references.bib
 ---
 
+## Introduction
+
 Patent activity for marine genetic resources was an important focus of debate during the negotiation of the BBNJ Treaty. In the economics and science policy literature, patent data is important because it provides a proxy indicator for underlying investments in research and development that is otherwise invisible. That is, trends in patent activity serve as a proxy *output* *indicator* for trends in research and development. As such, patent data provides an indicator for whether a particular area of technology is currently an important focus of investment in research and development or not.
 
 Patent data can be counted in a variety of ways in order to provide different insights into areas of activity:
@@ -224,6 +226,7 @@ One approach to this challenge is to identify a proxy metric that can assist wit
 
 ```{r}
 #| echo: false
+#| out.width: "100%"
 ##| label: fig-patent-abnjonly-occurrence-table
 knitr::include_graphics("images/images2024/patents_table_1.png")
 ```
@@ -232,6 +235,7 @@ knitr::include_graphics("images/images2024/patents_table_1.png")
 
 ```{r}
 #| echo: false
+#| out.width: "100%"
 ##| label: fig-patent-abnjonly-table-end
 knitr::include_graphics("images/images2024/patents_table_2.png")
 ```

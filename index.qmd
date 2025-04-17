@@ -60,20 +60,44 @@ Although country-specific patterns align with the general marine dataset above, 
 
 Level 6, which accounts for a **mere 0.3%** of the overall marine dataset analyzed indicating **low-level research activity as the likelihood of exclusivity to ABNJ increases**. Within this level, taxonomic focus narrows to specific species, including **Antarctic krill, blind shrimp like *Rimicarisexoculata*, the mollusc *Bathymodiolus azoricus*, and the polychaete worm *Alvinella pompejana*.** Other notable organisms include the **abyssal grenadier fish *Coryphaenoides armatus*** and the **copepod *Calanus finmarchicus***. Research publications peaked in 2008 with 61 articles, with a notable increase in mentions of concepts related to hydrothermal circulation and vent systems. **France** has further secured its position as a significant contributor, with institutions like **IFREMER** and the **French National Centre for Scientific Research** leading in publication output **(Fig. 1)**. The US maintains a strong presence, while Europe's share of activity is on the rise **(Fig. 2)**. Overall, Level 6 marks a transition to more specialized research, with distinct patterns in publication activity and research focus.
 
-```{r}
-#| echo: false
-#| label: exec-summary-1
-# fig-cap: A summary of the number of publications and rankings of terms across labels for Taxonomic, Common, Habitat and Place Names.
-knitr::include_graphics("images/images2024/exec_summary1.png")
-```
+::: {layout="[[1,1], [1]]"}
+
+<div style="text-align: center;">
+  <img src="images/images2024/exec_summary_general.png" width="100%">
+  <p style="font-size: 0.8em; color: grey; font-style: normal;">General Marine Biodiversity</p>
+</div>
+
+<div style="text-align: center;">
+  <img src="images/images2024/exec_summary_level_4.png" width="100%">
+  <p style="font-size: 0.8em; color: grey; font-style: normal;">Level 4</p>
+</div>
+
+:::
+
+<div style="text-align: center;">
+  <img src="images/images2024/exec_summary_level_6.png" width="50%">
+  <p style="font-size: 0.8em; color: grey; font-style: normal;">Level 6</p>
+</div>
+
 [Figure 1. Publication Activity by Affiliation at Increasingly Narrow Scope]{style="font-size: 0.9em; color: grey;"}
 
-```{r}
-#| echo: false
-#| label: exec-summary-2
-# fig-cap: A summary of the number of publications and rankings of terms across labels for Taxonomic, Common, Habitat and Place Names.
-knitr::include_graphics("images/images2024/exec_summary2.png")
-```
+<br>
+<br>
+
+::: {layout="[1,1]"}
+
+<div style="text-align: center;">
+  <img src="images/definition/definition_rank2_unregionspng_cropped.png" width="100%">
+  <p style="font-size: 0.8em; color: grey; font-style: normal;">Level 4</p>
+</div>
+
+<div style="text-align: center;">
+  <img src="images/images2024/Figure_131_level6Country_Rankings_cropped.png" width="100%">
+  <p style="font-size: 0.8em; color: grey; font-style: normal;">Level 6</p>
+</div>
+
+:::
+
 [Figure 2. Regional Share of Publications at Increasingly Narrow Scope]{style="font-size: 0.9em; color: grey;"}
 
 #### Geographical distribution 
@@ -87,6 +111,7 @@ Marine scientific research often encompasses collaboration among researchers fro
 ```{r}
 #| echo: false
 #| label: fig-network_22
+#| out.width: "100%"
 # fig-cap: This collaboration network shows instances of collaboration between institutions in Madagascar and institutions in other countries.
 knitr::include_graphics("images/scientific/madagascar_collaborations_2025.png") # WORD ONLY
 ```
@@ -104,13 +129,26 @@ A focused filter on **marine-only organisms showed 534 filings in 2017**, with a
 
 A third and narrower filter, analyzing patents involving **marine organisms that may exist only in ABNJ** showed that patent filing activity was typically under **150 filings per year (Fig. 4).** Interestingly, narrowed focus again resulted in a shift concerning applicant rankings, with different **subsidiaries of BayerAG** taking over the top. **Pioner Hi-Bred International** is also present among the top 5, whilst University of California ranking sinks down to the 5th position.
 
-```{r}
-#| echo: false
-#| label: exec-summary-3
-# fig-cap: A summary of the number of publications and rankings of terms across labels for Taxonomic, Common, Habitat and Place Names.
-knitr::include_graphics("images/images2024/exec_summary3.png")
-```
-[Figure 4. First Filing of Patent Families with Narrowing Scope]{style="font-size: 0.9em; color: grey;"}
+::: {layout="[[1,1], [1]]"}
+
+<div style="text-align: center;">
+  <img src="images/images2024/patents/Figure 2.1_any_marine_cropped.png" width="100%">
+  <p style="font-size: 0.8em; color: grey; font-style: normal;">Marine Organisms Mentioned</p>
+</div>
+
+<div style="text-align: center;">
+  <img src="images/images2024/patents/Figure 2.9 abnj Overview_cropped.png" width="100%">
+  <p style="font-size: 0.8em; color: grey; font-style: normal;">ABNJ Recorded</p>
+</div>
+
+:::
+
+<div style="text-align: center;">
+  <img src="images/images2024/patents/Figure 2.12 abnjonly Overview_cropped.png" width="50%">
+  <p style="font-size: 0.8em; color: grey; font-style: normal;">ABNJ Exclusive</p>
+</div>
+
+[Figure 4: First Filing of Patent Families with Narrowing Scope]{style="font-size: 0.9em; color: grey;"}
 
 With respect to the patent analysis, there are growing references to marine organisms in patent data, as well as to organisms recorded in ABNJ. In a small number of cases, notably *Calanus finmarchius* as well as the enzymes from *Thermococcus 9N,* there is evidence of the intent to commercialize explicitly from ABNJ. However, the outputs of this search reiterate the concept that the existence of a patent family does not equate to the existence of a product on the market. **Overall, definitive evidence for the collection of organisms from ABNJ that later appear in patent documents remains low in the overall landscape.**
 

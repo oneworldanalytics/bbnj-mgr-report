@@ -259,6 +259,7 @@ Filtering to specific product areas and removing duplicates reduces the number o
 ```{r}
 #| echo: false
 #| output: true
+#| out.width: "100%"
 ##| label: tbl-marine-products-domains-subset
 
 # Execute me
@@ -293,6 +294,7 @@ The outcome of the filtering process outlined above was a reduced set of 463,205
 #| echo: false
 #| warning: false
 #| output: true
+#| out.width: "100%"
 ##| label: tbl-mfn
 
 #library(arrow)
@@ -329,6 +331,7 @@ The objective of this exercise was to identify sentences in the marine products 
 ```{r}
 #| echo: false
 #| output: true
+#| out.width: "100%"
 ##| label: tbl-marine-words-phrases
 
 # Execute this
@@ -367,6 +370,7 @@ A more precise view begins to emerge when we focus on the common names of marine
 ```{r}
 #| echo: false
 #| output: true
+#| out.width: "100%"
 ##| label: tbl-marine-words-common
 
 # Execute from here
@@ -402,6 +406,7 @@ In terms of taxonomic names, we identified 1,224 taxonomic names in the ‘ABNJ 
 ```{r}
 #| echo: false
 #| output: true
+#| out.width: "100%"
 ##| label: tbl-marine-words-taxonomic
 
 # remove junk from uninomial names
@@ -478,6 +483,7 @@ In the previous section we identified 3,531 raw names of patent applicants who w
 ```{r}
 #| echo: false
 #| output: true
+#| out.width: "100%"
 ##| label: tbl-patent-applicant-ranks
 
 # reference code
@@ -506,6 +512,7 @@ knitr::include_graphics("images/web/table-3-10.png")
 ```{r}
 #| echo: false
 #| output: true
+#| out.width: "100%"
 ##| label: tbl-patent-applicant-species
 
 # get the count of ngrams and pages and domains for the description
@@ -551,6 +558,7 @@ This procedure produced a list of 75 web pages for further analysis. [Table 20]{
 ```{r}
 #| echo: false
 #| output: true
+#| out.width: "100%"
 ##| label: tbl-patent-applicant-domains
 
 # Execute from here
@@ -605,6 +613,7 @@ We used a research agent as part of an exercise in identifying commercial produc
 ```{r}
 #| echo: false
 #| output: true
+#| out.width: "100%"
 ##| label: tbl-occ-rank
 
 # load data from location
@@ -646,6 +655,7 @@ The results are summarised in [Table 22]{.underline} focusing on organisms where
 ```{r}
 #| echo: false
 #| output: true
+#| out.width: "100%"
 ##| label: tbl-occ-ranktaxa
 
 # responses_corrected <- read_csv("data/web/responses_corrected_10012024.csv", show_col_types = FALSE)
@@ -670,6 +680,7 @@ Of a total of 970 of the top occurring species names in our working dataset, a t
 ```{r}
 #| echo: false
 #| output: true
+#| out.width: "100%"
 ##| label: tbl-products-commercial
 
 knitr::include_graphics("images/web/example_summary.png")
@@ -681,6 +692,7 @@ In addition to the generation of summaries, the model is also capable of providi
 ```{r}
 #| echo: false
 #| output: true
+#| out.width: "100%"
 ##| label: tbl-products-commercial-example-2
 
 # commercial_products <- read_csv("data/web/commercial_products_true.csv", show_col_types = FALSE) %>% 
@@ -727,6 +739,7 @@ We passed 4,000 marine taxonomic names to the Amazon API. Amazon listings were r
 ##| label: tbl-original-result
 #| warning: false
 #| message: false
+#| out.width: "100%"
 
 #library(dplyr)
 
@@ -753,6 +766,7 @@ The majority of listings were irrelevant to our purposes. We first removed listi
 #| output: true
 ##| label: tbl-example-junk
 #| warning: false
+#| out.width: "100%"
 
 knitr::include_graphics("images/web/table-3-18.png")
 ```
@@ -771,6 +785,7 @@ In the final return, we found 66 listings referring to krill species mostly *Eup
 ```{r}
 #| echo: false
 #| output: true
+#| out.width: "100%"
 ##| label: tbl-krill-results
 
 knitr::include_graphics("images/web/table-3-19.png")
@@ -782,6 +797,7 @@ We found 28 listings for products related to sea cucumber species. These listing
 ```{r}
 #| echo: false
 #| output: true
+#| out.width: "100%"
 ##| label: tbl-sea-cucumber-results
 
 knitr::include_graphics("images/web/table-3-20.png")
@@ -793,6 +809,7 @@ We found 14 listings for products related to species from the genus Calanus, a g
 ```{r}
 #| echo: false
 #| output: true
+#| out.width: "100%"
 ##| label: tbl-calanus-results
 
 knitr::include_graphics("images/web/table-3-21.png")
@@ -803,6 +820,7 @@ knitr::include_graphics("images/web/table-3-21.png")
 ```{r}
 #| echo: false
 #| label: fig-calanus-distribution
+#| out.width: "100%"
 # fig-cap: Distribution of calanus finmarchicus from GBIF
 knitr::include_graphics("images/web/calanus_gbif_distribution.png")
 ```

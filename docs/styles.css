@@ -1,3 +1,22 @@
+/* Ensure bold text shows up clearly */
+
 strong, b {
   font-weight: 900 !important;
+}
+
+/* Control padding beneath figures*/
+/* Reduce spacing below Quarto code chunk figures */
+.cell-output-display > figure {
+  margin-bottom: 0.5rem !important;
+}
+
+/* Remove bottom spacing from figcaption itself */
+.cell-output-display figcaption {
+  margin-bottom: 0 !important;
+}
+
+/* Optional: shrink margin below the entire chunk output container */
+.cell-output-display {
+  margin-bottom: 0.5rem !important;
+  padding-bottom: 0 !important;
 }
