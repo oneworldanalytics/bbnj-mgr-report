@@ -1021,7 +1021,7 @@ A wider view of trends in activity by country and United Nations Region is provi
 #| echo: false
 #| label: fig-definition-rank2-unregions
 # fig-cap: Trends in Activity by Country and UN Regions and Sub-Regions (n = 26,413 of which 16,325 have country information) 
-knitr::include_graphics("images/definition/definition_rank2_unregionspng.png")
+knitr::include_graphics("images/images2024/Figure 1_26_Country Rankings_updated.png")
 ```
 [Figure 34: Trends in Activity by Country and UN Regions and Sub-Regions (n = 26,413 of which 16,325 have country information)]{style="font-size: 0.9em; color: grey;"}
 
