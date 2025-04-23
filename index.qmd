@@ -58,7 +58,7 @@ Although country-specific patterns align with the general marine dataset above, 
 
 #### Very Likely from ABNJ (Level 6)
 
-Level 6, which accounts for a **mere 0.3%** of the overall marine dataset analyzed indicating **low-level research activity as the likelihood of exclusivity to ABNJ increases**. Within this level, taxonomic focus narrows to specific species, including **Antarctic krill, blind shrimp like *Rimicarisexoculata*, the mollusc *Bathymodiolus azoricus*, and the polychaete worm *Alvinella pompejana*.** Other notable organisms include the **abyssal grenadier fish *Coryphaenoides armatus*** and the **copepod *Calanus finmarchicus***. Research publications peaked in 2008 with 61 articles, with a notable increase in mentions of concepts related to hydrothermal circulation and vent systems. **France** has further secured its position as a significant contributor, with institutions like **IFREMER** and the **French National Centre for Scientific Research** leading in publication output **(Fig. 1)**. The US maintains a strong presence, while Europe's share of activity is on the rise **(Fig. 2)**. Overall, Level 6 marks a transition to more specialized research, with distinct patterns in publication activity and research focus.
+Level 6, which accounts for a **mere 0.3%** of the overall marine dataset analyzed indicating **low-level research activity as the likelihood of exclusivity to ABNJ increases**. Within this level, taxonomic focus narrows to specific species, including **Antarctic krill, blind shrimp like *Rimicaris exoculata*, the mollusc *Bathymodiolus azoricus*, and the polychaete worm *Alvinella pompejana*.** Other notable organisms include the **abyssal grenadier fish *Coryphaenoides armatus*** and the **copepod *Calanus finmarchicus***. Research publications peaked in 2008 with 61 articles, with a notable increase in mentions of concepts related to hydrothermal circulation and vent systems. **France** has further secured its position as a significant contributor, with institutions like **IFREMER** and the **French National Centre for Scientific Research** leading in publication output **(Fig. 1)**. The US maintains a strong presence, while Europe's share of activity is on the rise **(Fig. 2)**. Overall, Level 6 marks a transition to more specialized research, with distinct patterns in publication activity and research focus.
 
 ::: {layout="[[1,1], [1]]"}
 
@@ -82,25 +82,26 @@ Level 6, which accounts for a **mere 0.3%** of the overall marine dataset analyz
 [Figure 1. Publication Activity by Affiliation at Increasingly Narrow Scope]{style="font-size: 0.9em; color: grey;"}
 
 <br>
-<br>
 
 ::: {layout="[1,1]"}
 
 <div style="text-align: center;">
-  <img src="images/definition/definition_rank2_unregionspng_cropped.png" width="100%">
+  <img src="images/images2024/Figure_1_26_Country_Rankings_percent23_04_25_cropped.png" width="100%">
   <p style="font-size: 0.8em; color: grey; font-style: normal;">Level 4</p>
 </div>
 
 <div style="text-align: center;">
-  <img src="images/images2024/Figure_131_level6Country_Rankings_cropped.png" width="100%">
+  <img src="images/images2024/Figure_131_level6Country_Rankings23_04_25_cropped.png" width="100%">
   <p style="font-size: 0.8em; color: grey; font-style: normal;">Level 6</p>
 </div>
 
 :::
 
-[Figure 2. Regional Share of Publications at Increasingly Narrow Scope]{style="font-size: 0.9em; color: grey;"}
+[Figure 2. Regional Share of Publications at Increasingly Narrow Scope[^percentage_footnote_1]]{style="font-size: 0.9em; color: grey;"}
 
 #### Geographical distribution 
+
+[^percentage_footnote_1]: A single record may include multiple countries, which can cause the percentage shares by region and sub-region to add up to more than 100%.
 
 One of the weighted criteria applied focused on geographical distribution, as our study mapped ABNJ MGR research both vertically (depth) and horizontally (features). This distribution links research data to ABNJ-specific locations and named underwater locations, such as seamounts and hydrothermal vents. The analysis reveals 7,204 publications for marine organisms involving 607 underwater places either in the EEZ or ABNJ. Of these, 89 underwater places were identified as ABNJ-alone involving 2,491 publications.
 

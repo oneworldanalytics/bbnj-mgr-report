@@ -1021,9 +1021,11 @@ A wider view of trends in activity by country and United Nations Region is provi
 #| echo: false
 #| label: fig-definition-rank2-unregions
 # fig-cap: Trends in Activity by Country and UN Regions and Sub-Regions (n = 26,413 of which 16,325 have country information) 
-knitr::include_graphics("images/images2024/Figure 1_26_Country Rankings_updated.png")
+knitr::include_graphics("images/images2024/Figure_1_26_Country_Rankings_percent23_04_25.png")
 ```
-[Figure 34: Trends in Activity by Country and UN Regions and Sub-Regions (n = 26,413 of which 16,325 have country information)]{style="font-size: 0.9em; color: grey;"}
+[Figure 34: Trends in Activity by Country and UN Regions and Sub-Regions (n = 26,413 of which 16,325 have country information)[^percentage_footnote_sci_1]]{style="font-size: 0.9em; color: grey;"}
+
+[^percentage_footnote_sci_1]: A single record may include multiple countries, which can cause the percentage shares by region and sub-region to add up to more than 100%.
 
 [**Figure 35**](#fig-definition-rank2-authors) displays an overview of author rankings for the data at level 4 and above. This is mainly intended to assist with community sanity checking of the data at different levels but also to highlight that contributions to marine scientific research ultimately originate from the work of individual researchers and research teams.
 
@@ -1087,9 +1089,11 @@ In considering the country rankings we observe that the US remains the single st
 #| echo: false
 #| label: fig-definition-rank4-unregions
 # fig-cap: Publication Rankings by Country and UN Region at Level 6 and above (n = 1,749, 1,212 with affiliation country data)
-knitr::include_graphics("images/images2024/Figure_131_level6Country_Rankings.png")
+knitr::include_graphics("images/images2024/Figure_131_level6Country_Rankings23_04_25.png")
 ```
-[Figure 39: Publication Rankings by Country and UN Region at Level 6 and above (n = 1,749, 1,212 with affiliation country data)]{style="font-size: 0.9em; color: grey;"}
+[Figure 39: Publication Rankings by Country and UN Region at Level 6 and above (n = 1,749, 1,212 with affiliation country data)[^percentage_footnote_sci_2]]{style="font-size: 0.9em; color: grey;"}
+
+[^percentage_footnote_sci_2]: A single record may include multiple countries, which can cause the percentage shares by region and sub-region to add up to more than 100%.
 
 [**Figure 40**](#fig-definition-rank4-authors) displays authors ranked by publication at level 6 and above in the working definition. The publication counts have a narrow range and this measure is intended to highlight that marine scientific research is conducted by real people and teams and to encourage community suggestions for improvements to the working definition.
 
