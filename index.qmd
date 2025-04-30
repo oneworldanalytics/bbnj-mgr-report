@@ -12,6 +12,8 @@ This is an electronic version of several chapters from ***"Study on ‘Marine Ge
 
 # Corrections 
 
+The following corrections have been made in the electronic version.
+
 1.  A legacy version of Figure 34 used in the pdf version has been updated. 
 2.  The relevant panel of Figure 2 for Level 4 percentage shares by UN region has been updated to reflect the update to Figure 34.
 3.  The number of publications in the legend for Figure 41 has been corrected to n = 1,749.
