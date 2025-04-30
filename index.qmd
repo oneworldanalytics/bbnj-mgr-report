@@ -10,6 +10,12 @@ This is an electronic version of several chapters from ***"Study on ‘Marine Ge
 
 [Paul Oldham, Jasmine Kindness, Emmanuel Davidson, Amelia Westmoreland, Thomas Vanagt and Marcel Jaspars. Study on ‘Marine Genetic Resources’ Market Value and State of the Art of Commercialisation of Related Products in the Context of the BBNJ Negotiations. Publications Office of the European Union, 2025. DOI: https://doi.org/10.2926/7945806]{style="font-size: 0.8em; font-style: italic; color: grey;"}
 
+# Corrections 
+
+1.  A legacy version of Figure 34 used in the pdf version has been updated. 
+2.  The relevant panel of Figure 2 for Level 4 percentage shares by UN region has been updated to reflect the update to Figure 34.
+3.  The number of publications in the legend for Figure 41 has been corrected to n = 1,749.
+
 # Executive Summary
 
 In 2023 a groundbreaking international treaty on the conservation and sustainable use of biodiversity of Areas Beyond National Jurisdiction was adopted by the United Nations. This so-called High Seas Treaty or BBNJ Agreement consists of four main chapters respectively on: Marine Genetic Resources (MGR) and the fair and equitable sharing of benefits; area-based management tools; environmental impact assessments; and capacity building and transfer of marine technology.
