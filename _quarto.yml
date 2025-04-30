@@ -6,6 +6,10 @@ book:
   title: "Study on Marine Genetic Resources"
   author: "Paul Oldham, Jasmine Kindness, Emmanuel Davidson, Amelia Westmoreland, Thomas Vanagt and Marcel Jaspars"
   date: "February 20 2025"
+  body-footer: |
+        <!-- 100% privacy-first analytics -->
+        <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+        <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
   chapters:
     - index.qmd
     - introduction.qmd
