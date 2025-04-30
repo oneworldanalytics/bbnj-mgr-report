@@ -5,7 +5,7 @@ project:
 book:
   title: "Study on Marine Genetic Resources"
   author: "Paul Oldham, Jasmine Kindness, Emmanuel Davidson, Amelia Westmoreland, Thomas Vanagt and Marcel Jaspars"
-  date: "January 2025"
+  date: "February 20 2025"
   chapters:
     - index.qmd
     - introduction.qmd

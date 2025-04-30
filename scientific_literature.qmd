@@ -1119,7 +1119,7 @@ In total, and prior to data cleaning, over 4,000 researchers appear on publicati
 # fig-cap: Publication Rankings involving Chemical Compounds at level 6 and above (n = 3,189)
 knitr::include_graphics("images/images2024/Figure_1_33_Chemicals.png")
 ```
-[Figure 41: Publication Rankings involving Chemical Compounds at level 6 and above (n = 3,189)]{style="font-size: 0.9em; color: grey;"}
+[Figure 41: Publication Rankings involving Chemical Compounds at level 6 and above (n = 1,749)]{style="font-size: 0.9em; color: grey;"}
 
 This suggests that we have indeed progressed into the deep oceans through the references to the Atlantic and Pacific Oceans and to hydrothermal vents. Our aim has been to progressively refine the focus from general marine biodiversity, through research in the deep oceans inside the EEZ and ABNJ towards research conducted in ABNJ.
 

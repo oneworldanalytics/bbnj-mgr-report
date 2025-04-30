@@ -8,7 +8,7 @@ editor: source
 
 This is an electronic version of several chapters from ***"Study on ‘Marine Genetic Resources’ Market Value and State of the Art of Commercialisation of Related Products in the Context of the BBNJ Negotiations"*** conducted for the European Commission. The full report is available [here](https://cinea.ec.europa.eu/publications/emfaf-study-about-market-value-marine-genetic-resources-context-agreement-biodiversity-beyond_en) should be considered the official version of this document. The full report should be cited as:
 
-[Paul Oldham, Jasmine Kindness, Emmanuel Davidson, Amelia Westmoreland, Thomas Vanagt and Marcel Jaspars. Study on ‘Marine Genetic Resources’ Market Value and State of the Art of Commercialisation of Related Products in the Context of the BBNJ Negotiations. Publications Office of the European Union, 2025]{style="font-size: 0.8em; font-style: italic; color: grey;"}
+[Paul Oldham, Jasmine Kindness, Emmanuel Davidson, Amelia Westmoreland, Thomas Vanagt and Marcel Jaspars. Study on ‘Marine Genetic Resources’ Market Value and State of the Art of Commercialisation of Related Products in the Context of the BBNJ Negotiations. Publications Office of the European Union, 2025. DOI: https://doi.org/10.2926/7945806]{style="font-size: 0.8em; font-style: italic; color: grey;"}
 
 # Executive Summary
 
